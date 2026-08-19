@@ -1,0 +1,192 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "colleges": "Colleges",
+    "courses": "Courses",
+    "trustees": "Trustees",
+    "committeesCells": "Committees & Cells",
+    "downloads": "Downloads",
+    "facilities": "Facilities",
+    "opportunities": "Opportunities",
+    "news": "News",
+    "studentServices": "Student Services",
+    "contact": "Contact",
+    "gallery": "Gallery",
+    "explore": "Explore",
+    "certificates": "Certificates",
+    "privacyPolicy": "Privacy & Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "cta": {
+    "viewAll": "View All",
+    "vaColleges": "View All Colleges",
+    "vaCourses": "View All Courses",
+    "vaFacilities": "View All Facilities",
+    "vaOpportunities": "View All Opportunities",
+    "lmTrustees": "Learn More About Our Trustees",
+    "vfGallery": "View Full Gallery",
+    "learnMore": "Learn More"
+  },
+  "h2": {
+    "relatedFacilities": "Related Facilities",
+    "courseAccessToFacility": "Courses with Access to This Facility",
+    "similarOpportunity": "Similar Opportunities",
+    "courseLeadToOpportunity": "Courses Leading to This Opportunity"
+  },
+  "section": {
+    "contact": {
+      "h21": "We're Here to Help",
+      "h22": "Contact VJKM",
+      "p": "Fill out the form, and we'll get back to you as soon as possible.",
+      "h3One": "Contact Us Directly",
+      "h3Onep": "Reach us through the contact details below.",
+      "h3Two": "Working Hours",
+      "h3Twop": "We are available to assist you during our working hours, Monday to Saturday, from 9:30 AM to 1:00 PM. Feel free to contact or visit us during this time, and we'll be happy to help."
+    },
+    "collegeList": {
+      "h2": "Colleges",
+      "p": "Explore the diverse academic institutions under our mandal, each dedicated to providing quality higher education, modern infrastructure, and robust clinical and academic training."
+    },
+    "studentCorner": {
+      "h2": "Student Corner"
+    },
+    "courseList": {
+      "h2": "Courses",
+      "p": "Discover our comprehensive range of undergraduate, postgraduate, and technical programs engineered to build core professional authority and accelerate your career trajectory."
+    },
+    "facilityList": {
+      "h2": "Facilities",
+      "p": "Take a look at our campus infrastructure, featuring high-precision experimental laboratories, centralized information libraries, and multi-sport athletic complexes."
+    },
+    "opportunityList": {
+      "h2": "Opportunities",
+      "p": "Explore the elite professional scopes, corporate consultation tracks, and strategic placement milestones unlocked by our industry-validated academic certifications."
+    },
+    "trusteeList": {
+      "h2": "Visionaries",
+      "p": "Meet the governing minds driving our institution forward. Our leadership team combines strategic governance with a deep commitment to educational growth, ensuring academic excellence across all campuses."
+    },
+    "galleryList": {
+      "h2": "Gallery",
+      "p": "Gallery."
+    }
+  },
+  "home": {
+    "hero": {
+      "h1": "Dedicated to Advancing Education, Nurturing Talent, and Shaping Future Generations",
+      "p": "Vadodara Jilla Kelavani Mandal is committed to promoting quality education, academic excellence, and the overall development of students and society.",
+      "cta": "View Colleges",
+      "formTitle": "Want to know more?",
+      "formDesc": "Fill out the form, and we'll get back to you as soon as possible."
+    },
+    "notice": {
+      "h2": "Notice Board",
+      "p": "Keep up with the latest news, events, and announcements from VJKM. Explore upcoming activities and stay connected with our educational initiatives.",
+      "h3": "Latest Updates"
+    },
+    "gallery": {
+      "h2": "Moments at VJKM",
+      "p": "Discover a glimpse of campus life, academic excellence, cultural events, sports activities, and memorable moments across Vadodara Jilla Kelavani Mandal and its institutions.",
+      "h3": "Latest Updates"
+    },
+    "stats": {
+      "h2One": "Nurturing talent!",
+      "h2Two": "Creating tomorrow's leaders!",
+      "p": "At VJKM, we nurture talent, inspire growth, and build strong values. Through quality education and holistic development, we prepare students to lead with confidence and purpose. Our commitment is to shape the leaders of tomorrow.",
+      "tagOne": "Colleges",
+      "tagTwo": "Academic Programs",
+      "tagThree": "Students Enrolled"
+    }
+  },
+  "about": {
+    "hero": {
+      "h1": "About Vadodara Jilla Kelavani Mandal",
+      "p": "Founded with a vision to make quality education accessible to all, Vadodara Jilla Kelavani Mandal (VJKM) has grown into a trusted educational organization serving students across diverse disciplines. Through its institutions, VJKM promotes academic excellence, ethical values, innovation, and holistic development, preparing students to excel in their careers and contribute meaningfully to society."
+    },
+    "history": {
+      "h2": "Our History",
+      "p": "Since its establishment, Vadodara Jilla Kelavani Mandal has been dedicated to expanding educational opportunities throughout the region. Over the years, the organization has established and supported several institutions, continuously adapting to changing educational needs while preserving its commitment to quality, integrity, and community service."
+    },
+    "vision": {
+      "h2": "Our Vision",
+      "p": "To emerge as a globally respected, value-driven Centre of Excellence that nurtures enlightened individuals through excellence in education, research, innovation, and community engagement. Rooted in the rich legacy of over seventy years of dedicated public service, the VJKM Campus aspires to empower learners with knowledge, ethical values, creativity, and leadership, contributing to sustainable development and the advancement of society at the regional, national, and global levels."
+    },
+    "mission": {
+      "h2": "The VJKM Trust shall strive to:",
+      "li1": "Provide high-quality, inclusive, and multidisciplinary education that promotes academic excellence, critical thinking, creativity, and lifelong learning.",
+      "li2": "Foster a culture of research, innovation, entrepreneurship, and interdisciplinary collaboration to address contemporary societal and industrial challenges.",
+      "li3": "Uphold the highest standards of ethics, integrity, transparency, and good govemance in all academic and administrative endeavours.",
+      "li4": "Integrate professional competence with human values, social responsibility, environmental consciousness, and constitutional ideals to develop responsible citizens and compassionate leaders.",
+      "li5": "Strengthen partnerships with industry, government, academic institutions, and civil society to enhance learning, research, skill development, and employability.",
+      "li6": "Promote equitable access to quality education through scholarships, outreach programmes, and inclusive policies, particularly for underserved and marginalized sections of society.",
+      "li7": "Preserve and promote India's cultural heritage while embracing global perspectives, emerging technologies, and international academic collaborations.",
+      "li8": "Contribute to the socio-economic development of Gujarat and the nation through extension activities, knowledge dissemination, innovation, and community service, in keeping with the Trust's longstanding commitment to public welfare."
+    },
+    "motto": "Learning for Life, Leadership for Society"
+  },
+  "college": {
+    "hero": {
+      "h1": "Colleges Managed by Vadodara Jilla Kelavani Mandal",
+      "p": "Vadodara Jilla Kelavani Mandal proudly oversees a network of colleges committed to excellence in higher education. Each institution upholds the Mandal's values of academic integrity, innovation, and holistic development while offering programs tailored to meet the evolving needs of students and society. Together, these colleges create an environment where learners are encouraged to develop knowledge, skills, leadership, and a strong sense of social responsibility."
+    },
+    "h2": {
+      "about": "About College",
+      "vision": "College's Vision",
+      "mission": "College's Mission"
+    }
+  },
+  "course": {
+    "hero": {
+      "h1": "Courses at Vadodara Jilla Kelavani Mandal Colleges",
+      "p": "Explore our extensive portfolio of academic tracks spanning commerce, humanities, law, healthcare, and advanced natural sciences. Engineered around practical application and industry alignment, our programs ensure that students master operational competencies and tactical frameworks required for immediate global and local success."
+    }
+  },
+  "facility": {
+    "hero": {
+      "h1": "Facilities at Vadodara Jilla Kelavani Mandal Colleges",
+      "p": "Discover an ecosystem built to support continuous empirical discovery and student wellness. Our campuses feature high-precision testing laboratories, extensive reference archives, specialized legal simulation halls, and expansive athletic spaces structured to provide a comprehensive, industry-grade training environment."
+    }
+  },
+  "opportunity": {
+    "hero": {
+      "h1": "Opportunities at Vadodara Jilla Kelavani Mandal Colleges",
+      "p": "Our educational certifications act as definitive career accelerators across modern corporate, public administrative, and research networks. From technical factory setups to corporate financial analytics and high-tier medical positions, our training unlocks specialized professional scopes and leadership capabilities."
+    }
+  },
+  "trustees": {
+    "hero": {
+      "h1": "Trustees",
+      "p": "Meet the dedicated trustees guiding Vadodara Jilla Kelavani Mandal with vision, integrity, and a commitment to academic excellence. Their collective leadership drives the organization's growth and continued success."
+    },
+    "principal": {
+      "h2": "Principals of Our Colleges",
+      "p": "Meet the principals of VJKM-managed colleges, whose leadership and commitment drive academic excellence, innovation, and the overall growth of their institutions."
+    }
+  },
+  "commCells": {
+    "hero": {
+      "h1": "Committees & Cells",
+      "p": "Explore the various committees, student support cells, and campus facilities established to promote academic excellence, student welfare, safety, discipline, and the holistic development of every learner."
+    }
+  },
+  "search": {
+    "hero": {
+      "h1": "Search Everything",
+      "p": "Find colleges, courses, facilities, opportunities, and more from across the VJKM ecosystem-all in one place."
+    }
+  },
+  "gallery": {
+    "hero": {
+      "h1": "Gallery",
+      "p": "Explore moments, milestones, campus life, and memorable events that reflect the journey and achievements of Vadodara Jilla Kelavani Mandal and its institutions."
+    }
+  },
+  "form": {
+    "yourName": "Your Name",
+    "vikasSharma": "Vikas Sharma",
+    "phoneNo": "Phone No.",
+    "message": "Vikas Sharma",
+    "messageNote": "Leave a message"
+  }
+}
