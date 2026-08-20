@@ -5,70 +5,70 @@ import { Badge } from '@/components/ui/badge'
 import { buttonVariants } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import { MousePointerClick, Building, FileCheck, ExternalLink, HelpCircle, ChevronRight } from 'lucide-react'
+import { MousePointerClick, Building, FileCheck, ExternalLink, ChevronRight } from 'lucide-react'
 
 export default function GcasThreeStepGuide() {
     return (
-        <Section className="bg-slate-900 text-slate-100 border-y border-slate-800">
-            <SectionHeader className="text-center max-w-3xl mx-auto mb-14">
-                <Badge variant="outline" className="mx-auto bg-amber-500/10 text-amber-400 border-amber-500/30 px-3 py-1 font-semibold text-xs rounded-full uppercase tracking-wider mb-2">
+        <Section className="bg-slate text-slate-foreground">
+            <SectionHeader align="center">
+                <Badge variant="sky-outline" type="heading">
                     Admission Walkthrough 2026-27
                 </Badge>
-                <SectionTitle className="text-3xl md:text-4xl font-extrabold text-white">
+                <SectionTitle>
                     How to Apply via Gujarat Common Admission Services (GCAS)
                 </SectionTitle>
-                <SectionDescription className="text-slate-400 text-base md:text-lg">
+                <SectionDescription className="text-sky-muted max-w-xl">
                     Admissions for BSW and MSW courses are centralized through the official Gujarat Government Portal. Follow these 3 easy steps.
                 </SectionDescription>
             </SectionHeader>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <SectionContent className="md:grid-cols-3 gap-8 relative">
                 {/* Step 1 */}
-                <Card className="bg-slate-800/80 border-slate-700 text-slate-100 relative overflow-hidden shadow-lg hover:border-emerald-500/50 transition-all group">
-                    <div className="absolute top-0 right-0 bg-emerald-600 text-white font-extrabold text-lg px-4 py-2 rounded-bl-xl shadow-sm">
+                <Card className="bg-slate-800/80 border-slate-700 text-slate-100 relative overflow-hidden shadow-lg hover:border-emerald/50 transition-all group">
+                    <div className="absolute top-0 right-0 bg-emerald text-white font-extrabold text-lg px-4 py-2 rounded-bl-xl shadow-sm">
                         01
                     </div>
                     <CardContent className="p-6 pt-8 space-y-4">
-                        <div className="p-3.5 rounded-xl bg-emerald-500/10 text-emerald-400 w-fit">
+                        <div className="p-3.5 rounded-xl bg-emerald/10 text-emerald-tone w-fit">
                             <MousePointerClick className="w-7 h-7" />
                         </div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white group-hover:text-emerald-tone transition-colors">
                             Online GCAS Portal Registration
                         </h3>
                         <p className="text-sm text-slate-300 leading-relaxed">
-                            Visit <strong className="text-emerald-400">gcasstudent.gujgov.edu.in</strong>, register with your mobile number, fill basic personal details, and upload qualifying marksheets.
+                            Visit <strong className="text-emerald-tone">gcasstudent.gujgov.edu.in</strong>, register with your mobile number, fill basic personal details, and upload qualifying marksheets.
                         </p>
                     </CardContent>
                 </Card>
 
                 {/* Step 2 */}
-                <Card className="bg-slate-800/80 border-slate-700 text-slate-100 relative overflow-hidden shadow-lg hover:border-sky-500/50 transition-all group">
-                    <div className="absolute top-0 right-0 bg-sky-600 text-white font-extrabold text-lg px-4 py-2 rounded-bl-xl shadow-sm">
+                <Card className="bg-slate-800/80 border-slate-700 text-slate-100 relative overflow-hidden shadow-lg hover:border-sky/50 transition-all group">
+                    <div className="absolute top-0 right-0 bg-sky text-white font-extrabold text-lg px-4 py-2 rounded-bl-xl shadow-sm">
                         02
                     </div>
                     <CardContent className="p-6 pt-8 space-y-4">
-                        <div className="p-3.5 rounded-xl bg-sky-500/10 text-sky-400 w-fit">
+                        <div className="p-3.5 rounded-xl bg-sky/10 text-sky-tone w-fit">
                             <Building className="w-7 h-7" />
                         </div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white group-hover:text-sky-tone transition-colors">
                             Select VJKM SF College (SGGU)
                         </h3>
                         <p className="text-sm text-slate-300 leading-relaxed">
-                            Under university preference, select <strong className="text-sky-400">Shri Govind Guru University (SGGU)</strong> and choose VJKM Self-Finance College for BSW or MSW programs.
+                            Under university preference, select <strong className="text-sky-tone">Shri Govind Guru University (SGGU)</strong> and choose VJKM Self-Finance College for BSW or MSW programs.
                         </p>
                     </CardContent>
                 </Card>
 
                 {/* Step 3 */}
-                <Card className="bg-slate-800/80 border-slate-700 text-slate-100 relative overflow-hidden shadow-lg hover:border-amber-500/50 transition-all group">
-                    <div className="absolute top-0 right-0 bg-amber-600 text-white font-extrabold text-lg px-4 py-2 rounded-bl-xl shadow-sm">
+                <Card className="bg-slate-800/80 border-slate-700 text-slate-100 relative overflow-hidden shadow-lg hover:border-amber/50 transition-all group">
+                    <div className="absolute top-0 right-0 bg-amber text-white font-extrabold text-lg px-4 py-2 rounded-bl-xl shadow-sm">
                         03
                     </div>
                     <CardContent className="p-6 pt-8 space-y-4">
-                        <div className="p-3.5 rounded-xl bg-amber-500/10 text-amber-400 w-fit">
+                        <div className="p-3.5 rounded-xl bg-amber/10 text-amber-tone w-fit">
                             <FileCheck className="w-7 h-7" />
                         </div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white group-hover:text-amber-tone transition-colors">
                             Campus Verification & Admission
                         </h3>
                         <p className="text-sm text-slate-300 leading-relaxed">
@@ -76,12 +76,12 @@ export default function GcasThreeStepGuide() {
                         </p>
                     </CardContent>
                 </Card>
-            </div>
+            </SectionContent>
 
             {/* Direct Action Bar */}
-            <div className="px-4 py-2 rounded-2xl bg-gradient-to-r from-emerald-950/60 via-slate-800 to-sky-950/60 border border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+            <div className="p-4 rounded-2xl bg-linear-to-r from-slate-700 via-slate-800 to-sky-950 border border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
                 <div className="space-y-1 text-center sm:text-left">
-                    <h4 className="text-lg font-bold text-white flex items-center gap-2 justify-center sm:justify-start">
+                    <h4 className="text-lg font-bold flex items-center gap-2 justify-center sm:justify-start">
                         <span>Need help filling your GCAS application?</span>
                     </h4>
                     <p className="text-xs sm:text-sm text-slate-300">
@@ -95,7 +95,6 @@ export default function GcasThreeStepGuide() {
                         rel="noopener noreferrer"
                         className={cn(
                             buttonVariants({ variant: "default", size: "lg" }),
-                            "bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm h-auto py-2.5 px-4"
                         )}
                     >
                         Open Official GCAS Portal
@@ -105,7 +104,6 @@ export default function GcasThreeStepGuide() {
                         href="/admission/gcas-guidance"
                         className={cn(
                             buttonVariants({ variant: "outline", size: "lg" }),
-                            "border-slate-600 bg-slate-800 text-slate-200 hover:bg-slate-700 text-sm h-auto py-2.5 px-4"
                         )}
                     >
                         View Full Step-by-Step Guide

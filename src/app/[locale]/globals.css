@@ -40,6 +40,39 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
+  --color-amber: var(--amber);
+  --color-amber-foreground: var(--amber-foreground);
+  --color-amber-tone: var(--amber-tone);
+  --color-amber-muted: var(--amber-muted);
+
+  --color-emerald: var(--emerald);
+  --color-emerald-foreground: var(--emerald-foreground);
+  --color-emerald-tone: var(--emerald-tone);
+  --color-emerald-muted: var(--emerald-muted);
+
+  --color-sky: var(--sky);
+  --color-sky-foreground: var(--sky-foreground);
+  --color-sky-tone: var(--sky-tone);
+  --color-sky-muted: var(--sky-muted);
+
+  --color-teal: var(--teal);
+  --color-teal-foreground: var(--teal-foreground);
+
+  --color-rose: var(--rose);
+  --color-rose-foreground: var(--rose-foreground);
+
+  --color-purple: var(--purple);
+  --color-purple-foreground: var(--purple-foreground);
+
+  --color-blue: var(--blue);
+  --color-blue-foreground: var(--blue-foreground);
+
+  --color-slate: var(--slate);
+  --color-slate-foreground: var(--slate-foreground);
+  --color-slate-tone: var(--slate-tone);
+  --color-slate-muted: var(--slate-muted);
+
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -54,6 +87,38 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
+
+  --emerald: oklch(0.55 0.17 160);
+  --emerald-foreground: oklch(0.98 0.01 160);
+  --emerald-tone: oklch(0.68 0.16 160);
+  --emerald-muted: oklch(0.96 0.03 160);
+
+  --amber: oklch(0.62 0.19 75);
+  --amber-foreground: oklch(0.98 0.01 75);
+  --amber-tone: oklch(0.78 0.17 75);
+  --amber-muted: oklch(0.96 0.04 75);
+
+  --sky: oklch(0.58 0.17 230);
+  --sky-foreground: oklch(0.98 0.01 230);
+  --sky-tone: oklch(0.72 0.15 230);
+  --sky-muted: oklch(0.96 0.03 230);
+
+  --teal: oklch(0.60 0.15 180);
+  --teal-foreground: oklch(0.98 0.01 180);
+
+  --rose: oklch(0.58 0.22 25);
+  --rose-foreground: oklch(0.98 0.01 25);
+
+  --purple: oklch(0.55 0.22 300);
+  --purple-foreground: oklch(0.98 0.01 300);
+
+  --blue: oklch(0.55 0.22 260);
+  --blue-foreground: oklch(0.98 0.01 260);
+
+  --slate: oklch(0.20 0.02 260);
+  --slate-foreground: oklch(0.98 0 0);
+  --slate-tone: oklch(0.50 0.02 260);
+  --slate-muted: oklch(0.96 0.01 260);
   --primary: oklch(0.488 0.243 264.376);
   --primary-foreground: oklch(0.97 0.014 254.604);
   --secondary: oklch(0.967 0.001 286.375);
@@ -85,6 +150,38 @@
 }
 
 .dark {
+  --emerald: oklch(0.68 0.16 160);
+  --emerald-foreground: oklch(0.15 0.03 160);
+  --emerald-tone: oklch(0.78 0.14 160);
+  --emerald-muted: oklch(0.22 0.05 160);
+
+  --amber: oklch(0.75 0.18 75);
+  --amber-foreground: oklch(0.15 0.03 75);
+  --amber-tone: oklch(0.82 0.16 75);
+  --amber-muted: oklch(0.24 0.06 75);
+
+  --sky: oklch(0.72 0.15 230);
+  --sky-foreground: oklch(0.15 0.03 230);
+  --sky-tone: oklch(0.80 0.14 230);
+  --sky-muted: oklch(0.22 0.05 230);
+
+  --teal: oklch(0.72 0.15 180);
+  --teal-foreground: oklch(0.15 0.03 180);
+
+  --rose: oklch(0.68 0.20 25);
+  --rose-foreground: oklch(0.15 0.03 25);
+
+  --purple: oklch(0.68 0.20 300);
+  --purple-foreground: oklch(0.15 0.03 300);
+
+  --blue: oklch(0.68 0.20 260);
+  --blue-foreground: oklch(0.15 0.03 260);
+
+  --slate: oklch(0.12 0.02 260);
+  --slate-foreground: oklch(0.98 0 0);
+  --slate-tone: oklch(0.60 0.02 260);
+  --slate-muted: oklch(0.20 0.02 260);
+
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -219,6 +316,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }

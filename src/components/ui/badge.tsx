@@ -10,6 +10,20 @@ const badgeVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground [a]:hover:bg-primary/80",
+        amber: "bg-amber text-amber-foreground [a]:hover:bg-amber/80",
+        sky: "bg-sky text-sky-foreground [a]:hover:bg-sky/80",
+        slate: "bg-slate text-slate-foreground [a]:hover:bg-slate/80",
+        teal: "bg-teal text-teal-foreground [a]:hover:bg-teal/80",
+        rose: "bg-rose text-rose-foreground [a]:hover:bg-rose/80",
+        purple: "bg-purple text-purple-foreground [a]:hover:bg-purple/80",
+        blue: "bg-blue text-blue-foreground [a]:hover:bg-blue/80",
+        "amber-outline": "bg-transparent border-amber text-amber [a]:hover:bg-amber/80",
+        "sky-outline": "bg-transparent border-sky text-sky [a]:hover:bg-sky/80",
+        "slate-outline": "bg-transparent border-slate text-slate [a]:hover:bg-slate/80",
+        "teal-outline": "bg-transparent border-teal text-teal [a]:hover:bg-teal/80",
+        "rose-outline": "bg-transparent border-rose text-rose [a]:hover:bg-rose/80",
+        "purple-outline": "bg-transparent border-purple text-purple [a]:hover:bg-purple/80",
+        "blue-outline": "bg-transparent border-blue text-blue [a]:hover:bg-blue/80",
         secondary:
           "bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80",
         destructive:
@@ -20,6 +34,10 @@ const badgeVariants = cva(
           "hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50",
         link: "text-primary underline-offset-4 hover:underline",
       },
+      type: {
+        default: "",
+        heading: "h-6 font-semibold text-xs uppercase tracking-wider"
+      }
     },
     defaultVariants: {
       variant: "default",
@@ -30,6 +48,7 @@ const badgeVariants = cva(
 function Badge({
   className,
   variant = "default",
+  type = "default",
   render,
   ...props
 }: useRender.ComponentProps<"span"> & VariantProps<typeof badgeVariants>) {
@@ -37,7 +56,7 @@ function Badge({
     defaultTagName: "span",
     props: mergeProps<"span">(
       {
-        className: cn(badgeVariants({ variant }), className),
+        className: cn(badgeVariants({ variant, type }), className),
       },
       props
     ),

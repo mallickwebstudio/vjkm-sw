@@ -42,54 +42,39 @@ const amenities = [
 
 export default function CampusAmenitiesPreview() {
     return (
-        <Section className="">
-            <div className="container mx-auto px-4 md:px-6">
-                <SectionHeader className="text-center max-w-3xl mx-auto mb-12">
-                    <Badge variant="outline" className="mx-auto bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/30 px-3 py-1 font-semibold text-xs rounded-full uppercase tracking-wider mb-2">
-                        Campus Life & Facilities
-                    </Badge>
-                    <SectionTitle className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">
-                        Modern Infrastructure Built for Growth
-                    </SectionTitle>
-                    <SectionDescription className="text-slate-600 dark:text-slate-300 text-base md:text-lg">
-                        Designed to provide students with a holistic learning environment, combining tech-enabled learning with lush campus spaces.
-                    </SectionDescription>
-                </SectionHeader>
+        <Section>
+            <SectionHeader align="center">
+                <Badge variant="sky-outline" type="heading">
+                    Campus Life & Facilities
+                </Badge>
+                <SectionTitle>
+                    Modern Infrastructure Built for Growth
+                </SectionTitle>
+                <SectionDescription>
+                    Designed to provide students with a holistic learning environment, combining tech-enabled learning with lush campus spaces.
+                </SectionDescription>
+            </SectionHeader>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {amenities.map((item, idx) => {
-                        const IconComp = item.icon
-                        return (
-                            <Card key={idx} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-sky-500/40 hover:shadow-md transition-all group">
-                                <CardContent className="p-6 space-y-3">
-                                    <div className="p-3 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 w-fit group-hover:scale-105 transition-transform">
-                                        <IconComp className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                                        {item.description}
-                                    </p>
-                                </CardContent>
-                            </Card>
-                        )
-                    })}
-                </div>
-
-                <div className="mt-10 text-center">
-                    <Link
-                        href="/campus/virtual-tour"
-                        className={cn(
-                            buttonVariants({ variant: "outline" }),
-                            "border-slate-300 dark:border-slate-700 inline-flex items-center px-4 py-2 rounded-md text-sm font-medium"
-                        )}
-                    >
-                        Take Interactive 360° Virtual Campus Tour
-                        <ArrowRight className="w-4 h-4 ml-2 text-sky-500" />
-                    </Link>
-                </div>
-            </div>
+            <SectionContent className="sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {amenities.map((item, idx) => {
+                    const IconComp = item.icon
+                    return (
+                        <Card key={idx} className="border shadow-sm hover:border-sky/40 hover:shadow-md transition-all group">
+                            <CardContent className="py-4 space-y-3">
+                                <div className="p-3 rounded-xl bg-sky-muted text-sky w-fit group-hover:scale-105 transition-transform">
+                                    <IconComp className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-lg font-bold group-hover:text-sky-tone transition-colors">
+                                    {item.title}
+                                </h3>
+                                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                                    {item.description}
+                                </p>
+                            </CardContent>
+                        </Card>
+                    )
+                })}
+            </SectionContent>
         </Section>
     )
 }

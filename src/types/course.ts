@@ -4,6 +4,7 @@ export type CourseShared = {
     slug: CourseSlugs;
     thumbnail: string;
     seats: string | null;
+    aisheCode: string;
     collegeSlug: CollegeSlugs;
     duration: string;
 };

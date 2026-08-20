@@ -50,7 +50,7 @@ const sectionHeaderVariants = cva("max-w-2xl flex flex-col gap-2 w-full", {
     variants: {
         align: {
             left: "items-start text-left",
-            center: "items-center text-center self-center",
+            center: "items-center justify-center text-center self-center",
             right: "items-end text-right self-end",
         },
     },
@@ -113,7 +113,7 @@ function SectionDescription({
     return (
         <Comp
             data-slot="section-description"
-            className={cn("text-base/relaxed text-muted-foreground sm:text-lg/snug", className)}
+            className={cn("text-base/relaxed text-muted-foreground sm:text-lg/snug max-w-xl", className)}
             {...props}
         />
     )

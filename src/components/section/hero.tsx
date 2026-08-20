@@ -32,7 +32,7 @@ function Hero({
         <section
             data-slot="hero"
             data-variant={variant}
-            className={cn("group/hero relative bg-background overflow-hidden", className)}
+            className={cn("group/hero min-h-[85vh] relative bg-background overflow-hidden", className)}
             {...props}
         >
             {/* Background Image */}
@@ -65,7 +65,7 @@ function Hero({
             {/* Container */}
             <div
                 data-slot="hero-container"
-                className="relative container mx-auto px-6 py-20 md:py-28 md:px-16 flex z-10"
+                className="relative container mx-auto px-6 py-12 md:px-16 lg:py-16 flex z-10"
             >
                 {children}
             </div>

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
   });
 }
 
-export default function Page() {
+export default async function Page() {
   return (
     <main>
       <HeroSection />

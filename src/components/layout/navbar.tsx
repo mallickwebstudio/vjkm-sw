@@ -86,7 +86,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <header className="sticky top-0 z-50 backdrop-blur-md border-b bg-black/70 py-2 shadow-lg md:py-0 lg:h-12">
+            <header className="sticky top-0 z-50 backdrop-blur-md border-b bg-amber! py-2 shadow-lg md:py-0 lg:h-12">
                 <div className="container mx-auto h-full px-4 md:px-8 lg:px-12">
                     <div className="lg:hidden">
                         <MobileNav />
