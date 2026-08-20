@@ -268,7 +268,7 @@ function DesktopNav() {
 
             {/* Utility Actions */}
             <div className="flex items-center gap-2 shrink-0">
-                <Link className={cn(buttonVariants({ variant: "secondary", size: "sm" }))} href="/contact-us">
+                <Link className={cn(buttonVariants({ variant: "secondary", size: "sm" }), "bg-primary text-primary-foreground hover:bg-primary/70")} href="/contact-us">
                     {t("navigation.contact")}
                 </Link>
                 <SearchCommand />

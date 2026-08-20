@@ -32,10 +32,8 @@ export function BreadcrumbNavigation({ items }: CustomBreadcrumbProps) {
               <React.Fragment key={index}>
                 <BreadcrumbItem>
                   {item.href && !isLast ? (
-                    <BreadcrumbLink asChild className="px-1 focus-highlight">
-                      <Link href={item.href}>
-                        {item.label}
-                      </Link>
+                    <BreadcrumbLink render={<Link href={item.href} />} className="px-1 focus-highlight">
+                      {item.label}
                     </BreadcrumbLink>
                   ) : (
                     <BreadcrumbPage className="line-clamp-1">{item.label}</BreadcrumbPage>

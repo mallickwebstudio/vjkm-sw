@@ -3,7 +3,7 @@ import { Slot } from "radix-ui"
 
 import { cn } from "@/lib/utils"
 
-const sectionContainerVariants = cva("container mx-auto flex flex-col gap-8 lg:gap-12", {
+const sectionContainerVariants = cva("container mx-auto flex flex-col gap-8 lg:gap-10", {
     variants: {
         padding: {
             default: "px-6 py-12 lg:px-16 xl:py-16",

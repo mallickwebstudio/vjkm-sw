@@ -10,7 +10,7 @@ export default function GcasProcessFlowchart() {
             </SectionHeader>
             <SectionContent>
                 <div className="p-6 border border-dashed rounded-lg text-sm text-muted-foreground">
-                    Layout: 4-Step visual flowchart (1. Online Registration -> 2. College Selection -> 3. Merit List -> 4. Document Verification).
+                    Layout: 4-Step visual flowchart (1. Online Registration &rarr; 2. College Selection &rarr; 3. Merit List &rarr; 4. Document Verification).
                 </div>
             </SectionContent>
         </Section>
