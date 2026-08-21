@@ -1,57 +1,54 @@
 import React from 'react'
-import Link from 'next/link'
 import { Section, SectionContent, SectionDescription, SectionHeader, SectionTitle } from '@/components/section/section'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
-import { Monitor, BookOpenCheck, Laptop, Video, Trophy, ShieldCheck, ArrowRight } from 'lucide-react'
+import { Monitor, BookOpenCheck, Laptop, Video, Trophy, ShieldCheck } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-const amenities = [
-    {
-        icon: Monitor,
-        title: "Smart AV Classrooms",
-        description: "Equipped with interactive projectors, high-speed Wi-Fi, and acoustic seating for dynamic seminars.",
-    },
-    {
-        icon: BookOpenCheck,
-        title: "Central Social Work Library",
-        description: "5,000+ volumes, government research reports, international journals, and digital e-catalog access.",
-    },
-    {
-        icon: Laptop,
-        title: "Computer & Field Data Lab",
-        description: "Dedicated IT hub with statistical analysis software (SPSS) for field survey & research projects.",
-    },
-    {
-        icon: Video,
-        title: "Multipurpose Conference Hall",
-        description: "Host venue for university workshops, guest lectures, state level NGO meets, and student cultural fests.",
-    },
-    {
-        icon: Trophy,
-        title: "Sports Turf & Recreation",
-        description: "Outdoor sports grounds for cricket, volleyball, and indoor games facilities fostering student wellness.",
-    },
-    {
-        icon: ShieldCheck,
-        title: "Safe & Inclusive Campus",
-        description: "CCTV monitored premises, dedicated Girls' Common Room, and active Anti-Ragging Cell.",
-    }
-]
+export default async function CampusAmenitiesPreview() {
+    const t = await getTranslations("home.amenities");
 
-export default function CampusAmenitiesPreview() {
+    const amenities = [
+        {
+            icon: Monitor,
+            title: t("item1Title"),
+            description: t("item1Desc"),
+        },
+        {
+            icon: BookOpenCheck,
+            title: t("item2Title"),
+            description: t("item2Desc"),
+        },
+        {
+            icon: Laptop,
+            title: t("item3Title"),
+            description: t("item3Desc"),
+        },
+        {
+            icon: Video,
+            title: t("item4Title"),
+            description: t("item4Desc"),
+        },
+        {
+            icon: Trophy,
+            title: t("item5Title"),
+            description: t("item5Desc"),
+        },
+        {
+            icon: ShieldCheck,
+            title: t("item6Title"),
+            description: t("item6Desc"),
+        }
+    ];
+
     return (
         <Section>
             <SectionHeader align="center">
-                <Badge variant="sky-outline" type="heading">
-                    Campus Life & Facilities
-                </Badge>
                 <SectionTitle>
-                    Modern Infrastructure Built for Growth
+                    {t("h2")}
                 </SectionTitle>
                 <SectionDescription>
-                    Designed to provide students with a holistic learning environment, combining tech-enabled learning with lush campus spaces.
+                    {t("subheading")}
                 </SectionDescription>
             </SectionHeader>
 
@@ -78,4 +75,3 @@ export default function CampusAmenitiesPreview() {
         </Section>
     )
 }
-

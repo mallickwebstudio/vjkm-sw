@@ -6,19 +6,19 @@ import { buttonVariants } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import { MousePointerClick, Building, FileCheck, ExternalLink, ChevronRight } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-export default function GcasThreeStepGuide() {
+export default async function GcasThreeStepGuide() {
+    const t = await getTranslations("home.gcasGuide");
+
     return (
         <Section className="bg-slate text-slate-foreground">
             <SectionHeader align="center">
-                <Badge variant="sky-outline" type="heading">
-                    Admission Walkthrough 2026-27
-                </Badge>
                 <SectionTitle>
-                    How to Apply via Gujarat Common Admission Services (GCAS)
+                    {t("h2")}
                 </SectionTitle>
                 <SectionDescription className="text-sky-muted max-w-xl">
-                    Admissions for BSW and MSW courses are centralized through the official Gujarat Government Portal. Follow these 3 easy steps.
+                    {t("subheading")}
                 </SectionDescription>
             </SectionHeader>
 
@@ -33,10 +33,10 @@ export default function GcasThreeStepGuide() {
                             <MousePointerClick className="w-7 h-7" />
                         </div>
                         <h3 className="text-xl font-bold text-white group-hover:text-emerald-tone transition-colors">
-                            Online GCAS Portal Registration
+                            {t("step1Title")}
                         </h3>
                         <p className="text-sm text-slate-300 leading-relaxed">
-                            Visit <strong className="text-emerald-tone">gcasstudent.gujgov.edu.in</strong>, register with your mobile number, fill basic personal details, and upload qualifying marksheets.
+                            {t("step1Desc")}
                         </p>
                     </CardContent>
                 </Card>
@@ -51,10 +51,10 @@ export default function GcasThreeStepGuide() {
                             <Building className="w-7 h-7" />
                         </div>
                         <h3 className="text-xl font-bold text-white group-hover:text-sky-tone transition-colors">
-                            Select VJKM SF College (SGGU)
+                            {t("step2Title")}
                         </h3>
                         <p className="text-sm text-slate-300 leading-relaxed">
-                            Under university preference, select <strong className="text-sky-tone">Shri Govind Guru University (SGGU)</strong> and choose VJKM Self-Finance College for BSW or MSW programs.
+                            {t("step2Desc")}
                         </p>
                     </CardContent>
                 </Card>
@@ -69,10 +69,10 @@ export default function GcasThreeStepGuide() {
                             <FileCheck className="w-7 h-7" />
                         </div>
                         <h3 className="text-xl font-bold text-white group-hover:text-amber-tone transition-colors">
-                            Campus Verification & Admission
+                            {t("step3Title")}
                         </h3>
                         <p className="text-sm text-slate-300 leading-relaxed">
-                            Visit our dedicated campus helpdesk (Room 102) with original marksheets, caste certificate, and LC for instant verification and seat confirmation.
+                            {t("step3Desc")}
                         </p>
                     </CardContent>
                 </Card>
@@ -82,10 +82,10 @@ export default function GcasThreeStepGuide() {
             <div className="p-4 rounded-2xl bg-linear-to-r from-slate-700 via-slate-800 to-sky-950 border border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
                 <div className="space-y-1 text-center sm:text-left">
                     <h4 className="text-lg font-bold flex items-center gap-2 justify-center sm:justify-start">
-                        <span>Need help filling your GCAS application?</span>
+                        <span>{t("helpTitle")}</span>
                     </h4>
                     <p className="text-xs sm:text-sm text-slate-300">
-                        Our campus admission counselors assist students free of charge with document scanning and online form submission.
+                        {t("helpDesc")}
                     </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 shrink-0">
@@ -97,16 +97,16 @@ export default function GcasThreeStepGuide() {
                             buttonVariants({ variant: "default", size: "lg" }),
                         )}
                     >
-                        Open Official GCAS Portal
+                        {t("ctaPortal")}
                         <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                     <Link
-                        href="/admission/gcas-guidance"
+                        href="/admission#gcas-guidance"
                         className={cn(
                             buttonVariants({ variant: "outline", size: "lg" }),
                         )}
                     >
-                        View Full Step-by-Step Guide
+                        {t("ctaGuide")}
                         <ChevronRight className="w-4 h-4 ml-1" />
                     </Link>
                 </div>
@@ -114,4 +114,3 @@ export default function GcasThreeStepGuide() {
         </Section>
     )
 }
-

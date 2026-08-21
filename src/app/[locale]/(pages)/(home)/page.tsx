@@ -36,7 +36,6 @@ export default async function Page() {
       <CareerFieldworkGrid />
       <CampusAmenitiesPreview />
       <RecentUpdatesFeed />
-      <TestimonialCarousel />
     </main>
   );
 }

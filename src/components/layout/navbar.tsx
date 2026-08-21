@@ -192,7 +192,7 @@ function DesktopNav() {
                                 size="sm"
                             >
                                 <MoreHorizontal />
-                                <span>More</span>
+                                <span>{t("navigation.more")}</span>
                                 <ChevronDown />
                             </Button>
                         } />
@@ -226,7 +226,7 @@ function DesktopNav() {
                                                         href={item.href}
                                                         className="block text-xs font-bold text-primary p-2 hover:bg-accent rounded-md border-b border-border/40 mb-1"
                                                     >
-                                                        Overview: {displayLabel} →
+                                                        {t("navigation.overview")}: {displayLabel} →
                                                     </Link>
                                                     {item.children.map((sub, sIdx) => {
                                                         const subLabel = sub.label.startsWith("navigation.")
@@ -339,7 +339,7 @@ function MobileNav() {
                                                         onClick={closeSheet}
                                                         className="block py-2 px-3 text-xs font-bold text-primary hover:bg-background/60 rounded-md transition-colors border-b border-border/30 mb-2"
                                                     >
-                                                        Overview: {displayLabel} →
+                                                        {t("navigation.overview")}: {displayLabel} →
                                                     </Link>
                                                     {item.children?.map((sub, sIdx) => {
                                                         const subLabel = sub.label.startsWith("navigation.")
@@ -409,8 +409,8 @@ function LogoLink({ className }: { className?: string }) {
                 unoptimized
             />
             <div>
-                <span className="block text-xs md:text-sm font-bold font-serif text-inherit">Vadodara Jilla <br className='md:hidden' /> Kelavani Mandal</span>
-                <span className="block text-xs md:text-sm font-bold font-serif mt-1 text-blue-300 lg:text-primary">વડોદરા જિલ્લા કેળવણી મંડળ</span>
+                <span className="block text-xs md:text-sm font-bold font-serif text-inherit">{siteConfig.name.en}</span>
+                <span className="block text-xs font-semibold text-primary">{siteConfig.name.gu}</span>
             </div>
         </Link>
     );

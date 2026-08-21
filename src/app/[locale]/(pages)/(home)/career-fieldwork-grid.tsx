@@ -6,50 +6,50 @@ import { Card, CardContent } from '@/components/ui/card'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { Building2, HeartPulse, TreePine, ShieldAlert, ArrowRight } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-const sectors = [
-    {
-        icon: Building2,
-        title: "Corporate Social Responsibility (CSR)",
-        description: "Placement in leading industrial houses managing community initiatives, ESG compliance, and rural development grants.",
-        roles: ["CSR Coordinator", "Community Relations Officer", "ESG Analyst"],
-        color: "text-blue bg-blue/10 border-blue/30"
-    },
-    {
-        icon: TreePine,
-        title: "NGOs & Rural Development",
-        description: "Direct field immersion with national and grassroots non-profits focusing on tribal welfare, water sanitation, and women empowerment.",
-        roles: ["NGO Project Manager", "Field Coordinator", "Rural Development Officer"],
-        color: "text-emerald bg-emerald/10 border-emerald/30"
-    },
-    {
-        icon: HeartPulse,
-        title: "Medical & Psychiatric Health",
-        description: "Clinical social work roles in district hospitals, mental health institutes, and rehabilitation centers across Gujarat.",
-        roles: ["Medical Social Worker", "Psychiatric Counselor", "Hospital Welfare Officer"],
-        color: "text-rose bg-rose/10 border-rose/30"
-    },
-    {
-        icon: ShieldAlert,
-        title: "Government & Social Justice",
-        description: "Collaborations with District Child Protection Units (DCPU), Social Defense Department, and Panchayati Raj institutions.",
-        roles: ["Child Protection Officer", "Probation Officer", "Social Audit Specialist"],
-        color: "text-amber bg-amber/10 border-amber/30"
-    }
-]
+export default async function CareerFieldworkGrid() {
+    const t = await getTranslations("home.careerFieldwork");
 
-export default function CareerFieldworkGrid() {
+    const sectors = [
+        {
+            icon: Building2,
+            title: t("csrTitle"),
+            description: t("csrDesc"),
+            roles: [t("csrRole1"), t("csrRole2"), t("csrRole3")],
+            color: "text-blue bg-blue/10 border-blue/30"
+        },
+        {
+            icon: TreePine,
+            title: t("ngoTitle"),
+            description: t("ngoDesc"),
+            roles: [t("ngoRole1"), t("ngoRole2"), t("ngoRole3")],
+            color: "text-emerald bg-emerald/10 border-emerald/30"
+        },
+        {
+            icon: HeartPulse,
+            title: t("healthTitle"),
+            description: t("healthDesc"),
+            roles: [t("healthRole1"), t("healthRole2"), t("healthRole3")],
+            color: "text-rose bg-rose/10 border-rose/30"
+        },
+        {
+            icon: ShieldAlert,
+            title: t("govtTitle"),
+            description: t("govtDesc"),
+            roles: [t("govtRole1"), t("govtRole2"), t("govtRole3")],
+            color: "text-amber bg-amber/10 border-amber/30"
+        }
+    ];
+
     return (
         <Section className="bg-slate-muted">
             <SectionHeader align="center">
-                <Badge variant="slate-outline" type="heading" >
-                    Field Practicum & Career Pathways
-                </Badge>
                 <SectionTitle className="text-3xl md:text-4xl font-extrabold text-foreground">
-                    50+ NGO & CSR Fieldwork Partners
+                    {t("h2")}
                 </SectionTitle>
                 <SectionDescription className="text-slate-tone text-base md:text-lg">
-                    Practical field experience is the core of our curriculum. Students gain 500+ hours of hands-on community service and corporate exposure.
+                    {t("subheading")}
                 </SectionDescription>
             </SectionHeader>
 
@@ -73,7 +73,7 @@ export default function CareerFieldworkGrid() {
                                     {sector.description}
                                 </p>
                                 <div className="pt-2 border-t border-border">
-                                    <span className="text-xs font-bold uppercase text-slate-tone tracking-wider">Career Roles:</span>
+                                    <span className="text-xs font-bold uppercase text-slate-tone tracking-wider">{t("rolesLabel")}</span>
                                     <div className="flex flex-wrap gap-2 mt-2">
                                         {sector.roles.map((role, rIdx) => (
                                             <Badge key={rIdx} variant="secondary" className="bg-muted text-muted-foreground text-xs">
@@ -96,11 +96,10 @@ export default function CareerFieldworkGrid() {
                         "border-border inline-flex items-center px-4 py-2 rounded-md text-sm font-medium"
                     )}
                 >
-                    Explore Fieldwork Manual
+                    {t("cta")}
                     <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
             </div>
         </Section>
     )
 }
-

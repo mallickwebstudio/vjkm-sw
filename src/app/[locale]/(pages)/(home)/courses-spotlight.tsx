@@ -6,19 +6,19 @@ import { Badge } from '@/components/ui/badge'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { GraduationCap, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-export default function CoursesSpotlight() {
+export default async function CoursesSpotlight() {
+    const t = await getTranslations("home.coursesSpotlight");
+
     return (
         <Section>
             <SectionHeader align="center">
-                <Badge variant="amber-outline" type="heading">
-                    Academic Degree Programs
-                </Badge>
                 <SectionTitle>
-                    Undergraduate & Postgraduate Social Work Excellence
+                    {t("h2")}
                 </SectionTitle>
                 <SectionDescription className='max-w-xl'>
-                    Affiliated with Shri Govind Guru University (SGGU), Godhra. Designed to blend academic theory with intensive fieldwork exposure.
+                    {t("subheading")}
                 </SectionDescription>
             </SectionHeader>
 
@@ -36,15 +36,15 @@ export default function CoursesSpotlight() {
                                 </div>
                                 <div>
                                     <Badge variant="secondary">
-                                        Undergraduate Program
+                                        {t("bsw.badge")}
                                     </Badge>
                                     <CardTitle className="mt-1 text-2xl font-bold">
-                                        Bachelor of Social Work (BSW)
+                                        {t("bsw.title")}
                                     </CardTitle>
                                 </div>
                             </div>
                             <p className="text-sm text-muted-foreground pt-2 leading-relaxed">
-                                A foundational 3-year degree equipping students with community development skills, field survey techniques, and social intervention frameworks.
+                                {t("bsw.desc")}
                             </p>
                         </CardHeader>
 
@@ -52,28 +52,28 @@ export default function CoursesSpotlight() {
                             <div className="grid grid-cols-2 gap-3 py-3 border-y text-xs">
                                 <div className="flex items-center gap-2 text-muted-foreground">
                                     <Clock className="w-4 h-4 text-emerald shrink-0" />
-                                    <span><strong>Duration:</strong> 3 Years (6 Semesters)</span>
+                                    <span><strong>{t("bsw.durationLabel")}</strong> {t("bsw.duration")}</span>
                                 </div>
                                 <div className="flex items-center gap-2 text-muted-foreground">
                                     <Users className="w-4 h-4 text-emerald shrink-0" />
-                                    <span><strong>Eligibility:</strong> 10+2 Any Stream</span>
+                                    <span><strong>{t("bsw.eligibilityLabel")}</strong> {t("bsw.eligibility")}</span>
                                 </div>
                             </div>
 
                             <div className="space-y-2">
-                                <h4 className="text-xs font-bold uppercase text-muted-foreground tracking-wider">Key Highlights</h4>
+                                <h4 className="text-xs font-bold uppercase text-muted-foreground tracking-wider">{t("bsw.highlightsTitle")}</h4>
                                 <ul className="space-y-2 text-xs text-muted-foreground">
                                     <li className="flex items-center gap-2">
                                         <CheckCircle className="w-3.5 h-3.5 text-emerald shrink-0" />
-                                        <span>Weekly mandatory field visits to local NGOs & Panchayats</span>
+                                        <span>{t("bsw.highlight1")}</span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <CheckCircle className="w-3.5 h-3.5 text-emerald shrink-0" />
-                                        <span>7-Day Annual Rural Orientation Camp</span>
+                                        <span>{t("bsw.highlight2")}</span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <CheckCircle className="w-3.5 h-3.5 text-emerald shrink-0" />
-                                        <span>Foundation in Psychology, Sociology & Social Legislation</span>
+                                        <span>{t("bsw.highlight3")}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -87,7 +87,7 @@ export default function CoursesSpotlight() {
                                 buttonVariants({ variant: "outline", size: "sm" }),
                             )}
                         >
-                            Course Syllabus & Details
+                            {t("bsw.ctaDetails")}
                             <ArrowRight />
                         </Link>
                         <a
@@ -98,7 +98,7 @@ export default function CoursesSpotlight() {
                                 buttonVariants({ variant: "emerald", size: "sm" }),
                             )}
                         >
-                            Apply BSW via GCAS
+                            {t("bsw.ctaApply")}
                         </a>
                     </CardFooter>
                 </Card>
@@ -116,15 +116,15 @@ export default function CoursesSpotlight() {
                                 </div>
                                 <div>
                                     <Badge variant="secondary">
-                                        Postgraduate Program
+                                        {t("msw.badge")}
                                     </Badge>
                                     <CardTitle className="mt-1 text-2xl font-bold">
-                                        Master of Social Work (MSW)
+                                        {t("msw.title")}
                                     </CardTitle>
                                 </div>
                             </div>
                             <p className="text-sm text-muted-foreground pt-2 leading-relaxed">
-                                An advanced 2-year master&apos;s program specializing in Human Resource Management, CSR Leadership, and Medical & Psychiatric Social Work.
+                                {t("msw.desc")}
                             </p>
                         </CardHeader>
 
@@ -132,28 +132,28 @@ export default function CoursesSpotlight() {
                             <div className="grid grid-cols-2 gap-3 py-3 border-y text-xs">
                                 <div className="flex items-center gap-2 text-muted-foreground">
                                     <Clock className="w-4 h-4 text-sky shrink-0" />
-                                    <span><strong>Duration:</strong> 2 Years (4 Semesters)</span>
+                                    <span><strong>{t("msw.durationLabel")}</strong> {t("msw.duration")}</span>
                                 </div>
                                 <div className="flex items-center gap-2 text-muted-foreground">
                                     <Users className="w-4 h-4 text-sky shrink-0" />
-                                    <span><strong>Eligibility:</strong> Bachelor Degree Any Stream</span>
+                                    <span><strong>{t("msw.eligibilityLabel")}</strong> {t("msw.eligibility")}</span>
                                 </div>
                             </div>
 
                             <div className="space-y-2">
-                                <h4 className="text-xs font-bold uppercase text-muted-foreground tracking-wider">Key Highlights</h4>
+                                <h4 className="text-xs font-bold uppercase text-muted-foreground tracking-wider">{t("msw.highlightsTitle")}</h4>
                                 <ul className="space-y-2 text-xs text-muted-foreground">
                                     <li className="flex items-center gap-2">
                                         <CheckCircle className="w-3.5 h-3.5 text-sky shrink-0" />
-                                        <span>Specialization tracks: HR/IR, Medical Social Work & Rural Development</span>
+                                        <span>{t("msw.highlight1")}</span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <CheckCircle className="w-3.5 h-3.5 text-sky shrink-0" />
-                                        <span>30-Day Mandatory Corporate / NGO Block Internship</span>
+                                        <span>{t("msw.highlight2")}</span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <CheckCircle className="w-3.5 h-3.5 text-sky shrink-0" />
-                                        <span>Research Dissertation & Published Project Work</span>
+                                        <span>{t("msw.highlight3")}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -167,7 +167,7 @@ export default function CoursesSpotlight() {
                                 buttonVariants({ variant: "outline", size: "sm" }),
                             )}
                         >
-                            Course Syllabus & Details
+                            {t("msw.ctaDetails")}
                             <ArrowRight />
                         </Link>
                         <a
@@ -178,7 +178,7 @@ export default function CoursesSpotlight() {
                                 buttonVariants({ variant: "sky", size: "sm" }),
                             )}
                         >
-                            Apply MSW via GCAS
+                            {t("msw.ctaApply")}
                         </a>
                     </CardFooter>
                 </Card>
@@ -186,4 +186,3 @@ export default function CoursesSpotlight() {
         </Section>
     )
 }
-

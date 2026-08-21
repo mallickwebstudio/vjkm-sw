@@ -5,6 +5,8 @@ export type LocalizedString = Record<Locale, string>;
 
 export type SiteConfig = {
   name: LocalizedString;
+  trustName: LocalizedString;
+  trustUrl: string;
   baseUrl: string;
   ogImage: string;
   links: {
@@ -14,12 +16,17 @@ export type SiteConfig = {
   };
 };
 
-export const siteConfig = {
+export const siteConfig: SiteConfig = {
   name: {
     en: "VJKM Self Finance College BSW - MSW",
-    gu: "વડોદરા જિલ્લા કેળવણી મંડળ (VJKM)",
+    gu: "વી.જે.કે.એમ. સેલ્ફ ફાઇનાન્સ કોલેજ BSW - MSW",
   },
-  baseUrl: "https://vjkm-sf-college.in", // Updated for your official domain
+  trustName: {
+    en: "Vadodara Jilla Kelavani Mandal",
+    gu: "વડોદરા જિલ્લા કેળવણી મંડળ",
+  },
+  trustUrl: "https://vadodarajillakelavanimandal.com",
+  baseUrl: "https://vjkm-sf-college.in",
   ogImage: "https://vjkm-sf-college.in/og.png",
   links: {
     phone: "tel:+919409580986",
@@ -32,17 +39,16 @@ export const siteConfig = {
 export const staticMetadataRegistry = {
   home: {
     en: {
-      title: "VJKM Self Finance College - Gujarat's best college for MSW and BSW aspirants.",
+      title: `${siteConfig.name.en} | ${siteConfig.trustName.en}`,
       description:
-        "Start your bright career with VJKM Self Finance BSW – MSW college after 12th and graduation.",
+        `Start your professional career with ${siteConfig.name.en} after 12th and graduation. Managed by ${siteConfig.trustName.en}.`,
     },
     gu: {
-      title: "",
-      description:"",
+      title: `${siteConfig.name.gu} | ${siteConfig.trustName.gu}`,
+      description:
+        `ધોરણ ૧૨ અને ગ્રેજ્યુએશન પછી ${siteConfig.name.gu} સાથે તમારી વ્યાવસાયિક કારકિર્દી શરૂ કરો. સંચાલિત: ${siteConfig.trustName.gu}.`,
     },
   },
-
-  // ...
 } as const satisfies Record<
   string,
   Record<Locale, {

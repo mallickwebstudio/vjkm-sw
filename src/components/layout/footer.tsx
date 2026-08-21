@@ -20,22 +20,22 @@ export default function Footer() {
 
     // Extract quick links for student corner & fieldwork
     const studentCornerLinks = [
-        { label: "BSW Course Track", href: "/courses/bsw" },
-        { label: "MSW Course Track", href: "/courses/msw" },
-        { label: "Fieldwork Practicum", href: "/fieldwork/fieldwork-practicum" },
-        { label: "Placement Cell & Drives", href: "/fieldwork/placement-cell" },
-        { label: "NSS & Social Outreach", href: "/student-life/nss-and-social-outreach" },
-        { label: "Media & Event Gallery", href: "/student-life/media-gallery" },
+        { label: t("footer.studentCornerLinks.bsw"), href: "/courses/bsw" },
+        { label: t("footer.studentCornerLinks.msw"), href: "/courses/msw" },
+        { label: t("footer.studentCornerLinks.fieldwork"), href: "/fieldwork#fieldwork-practicum" },
+        { label: t("footer.studentCornerLinks.placement"), href: "/fieldwork#placement-cell" },
+        { label: t("footer.studentCornerLinks.nss"), href: "/student-life#nss-and-social-outreach" },
+        { label: t("footer.studentCornerLinks.gallery"), href: "/student-life#media-gallery" },
     ];
 
     // Governance & Compliance links
     const governanceLinks = [
-        { label: "IQAC Quality Cell", href: "/committees/iqac" },
-        { label: "Anti-Ragging Compliance", href: "/committees/anti-ragging-cell" },
-        { label: "Internal Complaints Cell (POSH)", href: "/committees/internal-complaint-committee" },
-        { label: "SC / ST / OBC Redressal", href: "/committees/sc-st-obc-minority-cell" },
-        { label: "RTI & Public Disclosures", href: "/committees/rti-and-disclosures" },
-        { label: "GCAS Guidance Desk", href: "/admission/gcas-guidance" },
+        { label: t("footer.governanceLinks.iqac"), href: "/committees#iqac" },
+        { label: t("footer.governanceLinks.antiRagging"), href: "/committees#anti-ragging-cell" },
+        { label: t("footer.governanceLinks.posh"), href: "/committees#internal-complaint-committee" },
+        { label: t("footer.governanceLinks.redressal"), href: "/committees#sc-st-obc-minority-cell" },
+        { label: t("footer.governanceLinks.rti"), href: "/committees#rti-and-disclosures" },
+        { label: t("footer.governanceLinks.gcas"), href: "/admission#gcas-guidance" },
     ];
 
     return (
@@ -55,13 +55,13 @@ export default function Footer() {
 
                     {/* Student & Fieldwork */}
                     <LinkColumn
-                        h3="Student Corner"
+                        h3={t("footer.studentCorner")}
                         data={studentCornerLinks}
                     />
 
                     {/* Governance */}
                     <LinkColumn
-                        h3="Governance & Policy"
+                        h3={t("footer.governance")}
                         data={governanceLinks}
                     />
                 </div>
@@ -77,7 +77,7 @@ export default function Footer() {
                         >
                             {formatWebsiteHref(siteConfig.baseUrl)}
                         </Link>
-                        . All rights reserved |{" "}
+                        . {t("footer.allRightsReserved")} |{" "}
                         <Link className="underline-offset-4 hover:underline hover:text-primary" href="/privacy-policy">
                             {t("navigation.privacyPolicy")}
                         </Link>{" "}
@@ -93,7 +93,7 @@ export default function Footer() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            ❤️ Designed & Developed by Mallick Web Studio
+                            {t("footer.designedBy")}
                         </NextLink>
                     </div>
                 </div>
@@ -103,6 +103,8 @@ export default function Footer() {
 }
 
 function LogoColumn() {
+    const t = useTranslations();
+
     return (
         <div>
             <Link className="flex items-center gap-2" href="/">
@@ -115,17 +117,15 @@ function LogoColumn() {
                     unoptimized
                 />
                 <div>
-                    <span className="block font-bold font-serif text-sm">Vadodara Jilla Kelavani Mandal</span>
-                    <span className="block text-xs font-semibold text-primary">વડોદરા જિલ્લા કેળવણી મંડળ</span>
+                    <span className="block font-bold font-serif text-sm">{siteConfig.name.en}</span>
+                    <span className="block text-xs font-semibold text-primary">{siteConfig.name.gu}</span>
                 </div>
             </Link>
 
             <div className="mt-4 flex items-start gap-2 text-muted-foreground">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
-                <span className="text-sm">
-                    College Campus, Ta. Dabhoi, <br />
-                    Dist. Vadodara, Gujarat, <br />
-                    391110
+                <span className="text-sm leading-relaxed">
+                    {t("footer.address")}
                 </span>
             </div>
 

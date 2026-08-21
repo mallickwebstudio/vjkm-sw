@@ -1,52 +1,55 @@
 import React from 'react'
-import { Bell, Megaphone, Calendar, FileText, ArrowRight, AlertCircle } from 'lucide-react'
+import { Megaphone } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
+import { getTranslations } from 'next-intl/server'
 
-const notices = [
-    {
-        id: 1,
-        title: "GCAS Admission 2026-27 Portal Open",
-        description: "Register online via gcasstudent.gujgov.edu.in for BSW & MSW admissions.",
-        tag: "GCAS Alert",
-        variant: "bg-amber/15 text-amber-tone border-amber/30",
-        isUrgent: true,
-    },
-    {
-        id: 2,
-        title: "Document Verification Desk Active",
-        description: "Visit college administrative room 102 daily between 10:00 AM - 4:00 PM.",
-        tag: "Campus Helpdesk",
-        variant: "bg-emerald/15 text-emerald-tone border-emerald/30",
-        isUrgent: false,
-    },
-    {
-        id: 3,
-        title: "SGGU Semester Exam Schedule Announced",
-        description: "Official datesheet published for BSW Sem 2, 4, 6 & MSW Sem 2, 4.",
-        tag: "Exam Cell",
-        variant: "bg-sky/15 text-sky-tone border-sky/30",
-        isUrgent: false,
-    },
-    {
-        id: 4,
-        title: "7-Day Rural Camp Orientation for MSW",
-        description: "Mandatory pre-fieldwork orientation meeting scheduled for all MSW first-year scholars.",
-        tag: "Fieldwork",
-        variant: "bg-purple/15 text-purple border-purple/30",
-        isUrgent: false,
-    },
-]
+export default async function NoticeBoard() {
+    const t = await getTranslations("home.notice");
 
-export default function NoticeBoard() {
+    const notices = [
+        {
+            id: 1,
+            title: t("notices.n1Title"),
+            description: t("notices.n1Desc"),
+            tag: t("notices.n1Tag"),
+            variant: "bg-amber/15 text-amber-tone border-amber/30",
+            isUrgent: true,
+        },
+        {
+            id: 2,
+            title: t("notices.n2Title"),
+            description: t("notices.n2Desc"),
+            tag: t("notices.n2Tag"),
+            variant: "bg-emerald/15 text-emerald-tone border-emerald/30",
+            isUrgent: false,
+        },
+        {
+            id: 3,
+            title: t("notices.n3Title"),
+            description: t("notices.n3Desc"),
+            tag: t("notices.n3Tag"),
+            variant: "bg-sky/15 text-sky-tone border-sky/30",
+            isUrgent: false,
+        },
+        {
+            id: 4,
+            title: t("notices.n4Title"),
+            description: t("notices.n4Desc"),
+            tag: t("notices.n4Tag"),
+            variant: "bg-purple/15 text-purple border-purple/30",
+            isUrgent: false,
+        },
+    ];
+
     return (
         <section className="bg-slate border-y border-slate-tone/30 text-slate-foreground py-3 overflow-hidden">
             <div className="container mx-auto px-4 flex items-center gap-4">
                 {/* Fixed Label */}
                 <div className={cn(buttonVariants({ variant: "emerald", size: "sm" }), "hover:bg-emerald")}>
                     <Megaphone className="animate-pulse text-amber-tone" />
-                    <span><span className="hidden sm:inline">Urgent</span> Notices</span>
+                    <span>{t("urgentNotices")}</span>
                 </div>
 
                 {/* Marquee Container */}
@@ -73,4 +76,3 @@ export default function NoticeBoard() {
         </section>
     )
 }
-

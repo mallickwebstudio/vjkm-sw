@@ -5,44 +5,44 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { Calendar, Tag, ArrowRight } from 'lucide-react'
+import { Calendar, ArrowRight } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-const updates = [
-    {
-        title: "Annual 7-Day Rural Immersion Camp Organized in Panchmahal",
-        category: "Rural Camp",
-        date: "August 15, 2026",
-        summary: "MSW scholars conducted PRA (Participatory Rural Appraisal) surveys, health awareness camps, and literacy drives across 5 village panchayats.",
-        badgeVariant: "bg-emerald/10 text-emerald-tone border-emerald/30"
-    },
-    {
-        title: "State Level Workshop on CSR Policy & Environmental Ethics",
-        category: "Academic Seminar",
-        date: "July 28, 2026",
-        summary: "Keynote lectures by leading CSR heads from Vadodara industrial cluster detailing modern ESG reporting frameworks for social workers.",
-        badgeVariant: "bg-sky/10 text-sky-tone border-sky/30"
-    },
-    {
-        title: "Blood Donation & Health Checkup Drive at VJKM Campus",
-        category: "Community Welfare",
-        date: "June 14, 2026",
-        summary: "In collaboration with Red Cross Society, over 180 units of blood were collected with participation from BSW & MSW student volunteers.",
-        badgeVariant: "bg-amber/10 text-amber-tone border-amber/30"
-    }
-]
+export default async function RecentUpdatesFeed() {
+    const t = await getTranslations("home.recentUpdates");
 
-export default function RecentUpdatesFeed() {
+    const updates = [
+        {
+            title: t("u1Title"),
+            category: t("u1Category"),
+            date: t("u1Date"),
+            summary: t("u1Summary"),
+            badgeVariant: "bg-emerald/10 text-emerald-tone border-emerald/30"
+        },
+        {
+            title: t("u2Title"),
+            category: t("u2Category"),
+            date: t("u2Date"),
+            summary: t("u2Summary"),
+            badgeVariant: "bg-sky/10 text-sky-tone border-sky/30"
+        },
+        {
+            title: t("u3Title"),
+            category: t("u3Category"),
+            date: t("u3Date"),
+            summary: t("u3Summary"),
+            badgeVariant: "bg-amber/10 text-amber-tone border-amber/30"
+        }
+    ];
+
     return (
         <Section className="bg-slate-muted">
             <SectionHeader align="center">
-                <Badge variant="amber-outline" type="heading">
-                    News & Events
-                </Badge>
                 <SectionTitle>
-                    Latest Campus Activities & Field Highlights
+                    {t("h2")}
                 </SectionTitle>
                 <SectionDescription>
-                    Stay informed about recent rural camps, academic seminars, blood donation drives, and research publications.
+                    {t("subheading")}
                 </SectionDescription>
             </SectionHeader>
 
@@ -77,11 +77,10 @@ export default function RecentUpdatesFeed() {
                         buttonVariants({ variant: "outline" }),
                     )}
                 >
-                    View All News, Events & Circulars
+                    {t("cta")}
                     <ArrowRight />
                 </Link>
             </div>
         </Section>
     )
 }
-

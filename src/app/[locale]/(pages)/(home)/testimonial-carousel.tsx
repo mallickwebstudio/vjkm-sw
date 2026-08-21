@@ -2,94 +2,91 @@ import React from 'react'
 import { Section, SectionContent, SectionDescription, SectionHeader, SectionTitle } from '@/components/section/section'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
-import { Quote, Star, Award, Building } from 'lucide-react'
+import { Quote, Star } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-const testimonials = [
-    {
-        quote: "The intensive field practicals at VJKM College laid the exact foundation I needed for corporate CSR. The faculty guided us through real field challenges, from rural PRA surveys to corporate project management.",
-        name: "Priyanka Parmar",
-        degree: "MSW Batch 2022",
-        role: "CSR Project Manager",
-        organization: "Leading Chemical Industrial Group, Vadodara",
-        avatarInitial: "PP",
-        color: "bg-emerald text-white"
-    },
-    {
-        quote: "Starting with BSW at VJKM gave me deep clarity on social legislations and community psychology. The on-campus GCAS helpdesk and career counseling ensured a seamless transition into professional practice.",
-        name: "Ramesh Solanki",
-        degree: "BSW Batch 2021 & MSW Batch 2023",
-        role: "District Welfare Officer",
-        organization: "Department of Social Justice, Gujarat",
-        avatarInitial: "RS",
-        color: "bg-sky text-white"
-    },
-    {
-        quote: "VJKM Trust's 67-year educational legacy is evident in their rich NGO network. My 30-day block internship in a healthcare NGO landed me my first role as a Medical Social Worker right after graduation.",
-        name: "Anjali Patel",
-        degree: "MSW Batch 2024",
-        role: "Medical Social Worker",
-        organization: "Multi-Specialty Civil Hospital Network",
-        avatarInitial: "AP",
-        color: "bg-amber text-white"
-    }
-]
+export default async function TestimonialCarousel() {
+    const t = await getTranslations("home.testimonials");
 
-export default function TestimonialCarousel() {
+    const testimonials = [
+        {
+            quote: t("t1Quote"),
+            name: t("t1Name"),
+            degree: t("t1Degree"),
+            role: t("t1Role"),
+            organization: t("t1Org"),
+            avatarInitial: "PP",
+            color: "bg-emerald text-white"
+        },
+        {
+            quote: t("t2Quote"),
+            name: t("t2Name"),
+            degree: t("t2Degree"),
+            role: t("t2Role"),
+            organization: t("t2Org"),
+            avatarInitial: "RS",
+            color: "bg-sky text-white"
+        },
+        {
+            quote: t("t3Quote"),
+            name: t("t3Name"),
+            degree: t("t3Degree"),
+            role: t("t3Role"),
+            organization: t("t3Org"),
+            avatarInitial: "AP",
+            color: "bg-amber text-white"
+        }
+    ];
+
     return (
-        <Section className="">
-            <div className="container mx-auto px-4 md:px-6">
-                <SectionHeader className="text-center max-w-3xl mx-auto mb-12">
-                    <Badge variant="outline" className="bg-amber/10 text-amber-tone border-amber/30 px-3 py-1 font-semibold text-xs rounded-full uppercase tracking-wider mb-2">
-                        Alumni Impact & Voices
-                    </Badge>
-                    <SectionTitle className="text-3xl md:text-4xl font-extrabold text-foreground">
-                        Empowering Careers Across CSR, Healthcare & Public Sector
-                    </SectionTitle>
-                    <SectionDescription className="text-slate-tone text-base md:text-lg">
-                        Hear from VJKM graduates who are leading transformative social initiatives across Gujarat and India.
-                    </SectionDescription>
-                </SectionHeader>
+        <Section>
+            <SectionHeader align="center">
+                <SectionTitle>
+                    {t("h2")}
+                </SectionTitle>
+                <SectionDescription>
+                    {t("subheading")}
+                </SectionDescription>
+            </SectionHeader>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {testimonials.map((item, idx) => (
-                        <Card key={idx} className="bg-card border border-border shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
-                            <div className="absolute top-4 right-4 text-muted/30 pointer-events-none">
-                                <Quote className="w-12 h-12 opacity-80" />
+            <SectionContent className="md:grid-cols-3 gap-6">
+                {testimonials.map((item, idx) => (
+                    <Card key={idx} className="bg-card border border-border shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+                        <div className="absolute top-4 right-4 text-muted/30 pointer-events-none">
+                            <Quote className="w-12 h-12 opacity-80" />
+                        </div>
+                        <CardContent className="p-6 space-y-4 relative z-10 flex flex-col justify-between h-full">
+                            <div className="space-y-3">
+                                <div className="flex items-center gap-1 text-amber-tone">
+                                    {[...Array(5)].map((_, i) => (
+                                        <Star key={i} className="w-4 h-4 fill-amber-tone" />
+                                    ))}
+                                </div>
+                                <p className="text-xs sm:text-sm text-slate-tone leading-relaxed italic">
+                                    &quot;{item.quote}&quot;
+                                </p>
                             </div>
-                            <CardContent className="p-6 space-y-4 relative z-10 flex flex-col justify-between h-full">
-                                <div className="space-y-3">
-                                    <div className="flex items-center gap-1 text-amber-tone">
-                                        {[...Array(5)].map((_, i) => (
-                                            <Star key={i} className="w-4 h-4 fill-amber-tone" />
-                                        ))}
-                                    </div>
-                                    <p className="text-xs sm:text-sm text-slate-tone leading-relaxed italic">
-                                        &quot;{item.quote}&quot;
+
+                            <div className="pt-4 border-t border-border flex items-center gap-3 mt-4">
+                                <div className={`w-10 h-10 rounded-full ${item.color} flex items-center justify-center font-bold text-sm shrink-0 shadow-xs`}>
+                                    {item.avatarInitial}
+                                </div>
+                                <div className="space-y-0.5 min-w-0">
+                                    <h4 className="text-sm font-bold text-foreground truncate">
+                                        {item.name}
+                                    </h4>
+                                    <p className="text-xs font-semibold text-emerald-tone truncate">
+                                        {item.role}
+                                    </p>
+                                    <p className="text-[11px] text-slate-tone truncate">
+                                        {item.organization} • <span className="text-slate-tone font-medium">{item.degree}</span>
                                     </p>
                                 </div>
-
-                                <div className="pt-4 border-t border-border flex items-center gap-3 mt-4">
-                                    <div className={`w-10 h-10 rounded-full ${item.color} flex items-center justify-center font-bold text-sm shrink-0 shadow-xs`}>
-                                        {item.avatarInitial}
-                                    </div>
-                                    <div className="space-y-0.5 min-w-0">
-                                        <h4 className="text-sm font-bold text-foreground truncate">
-                                            {item.name}
-                                        </h4>
-                                        <p className="text-xs font-semibold text-emerald-tone truncate">
-                                            {item.role}
-                                        </p>
-                                        <p className="text-[11px] text-slate-tone truncate">
-                                            {item.organization} • <span className="text-slate-tone font-medium">{item.degree}</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
-            </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                ))}
+            </SectionContent>
         </Section>
     )
 }
-

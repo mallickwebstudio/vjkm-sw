@@ -28,7 +28,7 @@ export function DesktopNavDropdown({ item, onItemClick }: DesktopNavDropdownProp
         onClick={onItemClick}
         className="group flex items-center justify-between p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors border border-primary/20 mb-1.5"
       >
-        <span className="text-xs font-bold text-primary">Overview: {displayLabel}</span>
+        <span className="text-xs font-bold text-primary">{t("navigation.overview")}: {displayLabel}</span>
         <ChevronRight className="size-3.5 text-primary transition-transform group-hover:translate-x-0.5" />
       </Link>
 
