@@ -399,7 +399,7 @@ function LogoLink({ className }: { className?: string }) {
     return (
         <Link className={cn("relative flex items-center gap-2", className)} href="/">
             <Image
-                className="size-14 lg:size-16 object-contain select-none pointer-events-none"
+                className="size-14 lg:size-16 object-contain select-none pointer-events-none rounded-full"
                 src="/images/logo/logo.webp"
                 width={56}
                 height={56}

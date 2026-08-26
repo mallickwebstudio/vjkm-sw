@@ -61,11 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     //   priority: 0.8,
     //   changeFrequency: "daily",
     // },
-    {
-      path: "/committees-cells",
-      priority: 0.7,
-      changeFrequency: "monthly",
-    },
+
     {
       path: "/contact",
       priority: 0.7,

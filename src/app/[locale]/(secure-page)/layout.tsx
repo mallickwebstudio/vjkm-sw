@@ -13,6 +13,10 @@ export default function LayoutSecure({
   const [authorized, setAuthorized] = useState(false);
   const [password, setPassword] = useState("");
 
+  if (process.env.NEXT_PUBLIC_CURRENT_ENV === "development") {
+    return <>{children}</>
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 

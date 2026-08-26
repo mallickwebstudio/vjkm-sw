@@ -193,10 +193,10 @@ export default function InvoicePageClient() {
     }
 
     return (
-        <Section>
-            <SectionContent className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:items-start overflow-hidden">
+        <Section padding="xs" className="bg-teal-muted">
+            <SectionContent className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:items-start overflow-hidden">
                 {/* LEFT COLUMN: Input Form Controls */}
-                <div className="lg:col-span-5 space-y-6 print:hidden">
+                <div className="lg:col-span-4 space-y-6 print:hidden">
                     <Card className="overflow-auto">
                         <CardHeader className="flex flex-row items-center justify-between">
                             <CardTitle>Fees Receipt Details</CardTitle>
@@ -412,7 +412,7 @@ export default function InvoicePageClient() {
                 </div>
 
                 {/* RIGHT COLUMN: Live Printable Canvas (788px x 555px - Landscape A5) */}
-                <div className="relative lg:col-span-7 flex justify-center items-center overflow-x-auto w-full">
+                <div className="relative lg:col-span-8 flex justify-center items-center overflow-x-auto w-full">
                     {/* Visible Preview */}
                     <div id="printable-receipt" className="relative w-[788px] h-[555px] shadow-xl overflow-hidden bg-white shrink-0">
                         <ReceiptContent {...receiptProps} />
@@ -465,59 +465,59 @@ function ReceiptContent({
             </div>
 
             {/* Receipt No & Receipt Date Overlays */}
-            <div className="absolute top-[134px] left-[140px] text-[13px] font-semibold text-gray-800">
+            <div className="absolute top-[47px] left-[490px] text-[10px] font-semibold text-gray-800">
+                {formatDateForDisplay(receiptDate)}
+            </div>
+            <div className="absolute top-[47px] left-[670px] text-[10px] font-semibold text-gray-800">
                 {receiptNo}
             </div>
-            <div className="absolute top-[134px] left-[650px] text-[13px] font-semibold text-gray-800">
-                {formatDateForDisplay(receiptDate)}
+
+            {/* Payment Section Overlays */}
+            <div className="absolute top-[66px] left-[490px] text-[10px] font-semibold text-gray-800 truncate max-w-[220px]">
+                {paymentMode || "—"}
+            </div>
+            <div className="absolute top-[66px] left-[670px] text-[10px] font-semibold text-gray-800 truncate max-w-[190px]">
+                {paymentId || "—"}
             </div>
 
             {/* Grid Information Overlays */}
             {/* Row 1: Name & Enrollment No */}
-            <div className="absolute top-[162px] left-[140px] text-[13px] font-semibold text-gray-800 truncate max-w-[280px]">
+            <div className="absolute top-[94px] left-[120px] text-[10px] font-semibold text-gray-800 truncate max-w-[280px]">
                 {studentName || "—"}
             </div>
-            <div className="absolute top-[162px] left-[550px] text-[13px] font-semibold text-gray-800 truncate max-w-[210px]">
+            <div className="absolute top-[94px] left-[500px] text-[10px] font-semibold text-gray-800 truncate max-w-[210px]">
                 {enrollmentNo || "—"}
             </div>
 
             {/* Row 2: Phone No. & Admission Yr */}
-            <div className="absolute top-[188px] left-[140px] text-[13px] font-semibold text-gray-800 truncate max-w-[280px]">
+            <div className="absolute top-[109px] left-[120px] text-[10px] font-semibold text-gray-800 truncate max-w-[280px]">
                 {phone || "—"}
             </div>
-            <div className="absolute top-[188px] left-[550px] text-[13px] font-semibold text-gray-800 truncate max-w-[210px]">
+            <div className="absolute top-[109px] left-[500px] text-[10px] font-semibold text-gray-800 truncate max-w-[210px]">
                 {admissionYr || "—"}
             </div>
 
             {/* Row 3: Course & Academic Yr */}
-            <div className="absolute top-[214px] left-[140px] text-[13px] font-semibold text-gray-800 truncate max-w-[280px]">
+            <div className="absolute top-[124px] left-[120px] text-[10px] font-semibold text-gray-800 truncate max-w-[280px]">
                 {course || "—"}
             </div>
-            <div className="absolute top-[214px] left-[550px] text-[13px] font-semibold text-gray-800 truncate max-w-[210px]">
+            <div className="absolute top-[124px] left-[500px] text-[10px] font-semibold text-gray-800 truncate max-w-[210px]">
                 {academicYr || "—"}
             </div>
 
             {/* Row 4: College */}
-            <div className="absolute top-[240px] left-[140px] text-[12px] font-semibold text-gray-800 truncate max-w-[620px]">
+            <div className="absolute top-[139px] left-[120px] text-[10px] font-semibold text-gray-800 truncate max-w-[620px]">
                 {college || "—"}
             </div>
 
-            {/* Payment Section Overlays */}
-            <div className="absolute top-[284px] left-[160px] text-[13px] font-semibold text-gray-800 truncate max-w-[220px]">
-                {paymentMode || "—"}
-            </div>
-            <div className="absolute top-[284px] left-[570px] text-[13px] font-semibold text-gray-800 truncate max-w-[190px]">
-                {paymentId || "—"}
-            </div>
-
             {/* Main Table Items Overlay */}
-            <div className="absolute top-[320px] left-[20px] w-[748px]">
+            <div className="absolute top-[156px] left-[14px] w-[760px]">
                 <Table className="border-collapse w-full">
                     <TableHeader>
-                        <TableRow className="border-b border-gray-400 text-xs font-bold text-gray-900">
-                            <TableHead className="h-8 w-[10%] text-center text-inherit font-bold">Sr. No.</TableHead>
-                            <TableHead className="h-8 w-[65%] text-left text-inherit font-bold">Particulars / Name</TableHead>
-                            <TableHead className="h-8 w-[25%] text-right text-inherit font-bold pr-4">Amount (₹)</TableHead>
+                        <TableRow className="border-b-2 border-black text-xs font-bold text-gray-900">
+                            <TableHead className="h-5 w-[5%] text-xs text-center text-inherit font-bold">Sr. No.</TableHead>
+                            <TableHead className="h-5 w-[80%] text-xs text-left text-inherit font-bold">Particulars / Name</TableHead>
+                            <TableHead className="h-5 w-[15%] text-xs text-right text-inherit font-bold pr-4">Amount (₹)</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -526,22 +526,22 @@ function ReceiptContent({
                                 key={row.id}
                                 className="border-b border-gray-200 text-xs text-gray-800"
                             >
-                                <TableCell className="py-2 w-[10%] text-center font-medium">{index + 1}</TableCell>
-                                <TableCell className="py-2 w-[65%] text-left font-medium text-wrap whitespace-break-spaces">{row.name || "—"}</TableCell>
-                                <TableCell className="py-2 w-[25%] text-right font-semibold pr-4">₹{(Number(row.amount) || 0).toLocaleString()}</TableCell>
+                                <TableCell className="py-px w-[5%] text-[11px] text-center font-medium">{index + 1}</TableCell>
+                                <TableCell className="py-px w-[80%] text-[11px] text-left font-medium text-wrap whitespace-break-spaces">{row.name || "—"}</TableCell>
+                                <TableCell className="py-px w-[15%] text-[11px] text-right font-semibold pr-4">₹{(Number(row.amount) || 0).toLocaleString()}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
 
                 {/* Total Summary Row */}
-                <div className="mt-4 flex justify-end pr-2">
-                    <div className="w-[260px] border border-gray-400 rounded p-2 bg-gray-50/80 flex justify-between items-center text-xs font-bold">
-                        <span className="text-gray-700">Total Amount:</span>
-                        <span className="text-emerald-700 text-sm">₹{totalAmount.toLocaleString()}</span>
+                <div className="mt-2 flex justify-end pr-2">
+                    <div className="px-2 py-1 w-fit border border-gray-400 rounded bg-gray-50/80 flex justify-between items-center text-xs font-bold">
+                        <span className="text-gray-700">Total Amount: </span>
+                        <span className="text-emerald-700 text-sm"> ₹{totalAmount.toLocaleString()}</span>
                     </div>
                 </div>
             </div>
         </>
     )
-}
+}

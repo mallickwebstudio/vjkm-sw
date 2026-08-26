@@ -30,12 +30,11 @@ export default function Footer() {
 
     // Governance & Compliance links
     const governanceLinks = [
-        { label: t("footer.governanceLinks.iqac"), href: "/committees#iqac" },
-        { label: t("footer.governanceLinks.antiRagging"), href: "/committees#anti-ragging-cell" },
-        { label: t("footer.governanceLinks.posh"), href: "/committees#internal-complaint-committee" },
-        { label: t("footer.governanceLinks.redressal"), href: "/committees#sc-st-obc-minority-cell" },
-        { label: t("footer.governanceLinks.rti"), href: "/committees#rti-and-disclosures" },
+        { label: t("navigation.governingBody"), href: "/about-us#governing-body" },
+        { label: t("navigation.aboutTrust"), href: "/about-us#about-trust" },
         { label: t("footer.governanceLinks.gcas"), href: "/admission#gcas-guidance" },
+        { label: t("navigation.privacyPolicy"), href: "/privacy-policy" },
+        { label: t("navigation.termsOfService"), href: "/terms-of-service" },
     ];
 
     return (

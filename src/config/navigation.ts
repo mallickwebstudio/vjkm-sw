@@ -253,45 +253,7 @@ export const navigationData: NavItem[] = [
       },
     ],
   },
-  {
-    type: "dropdown",
-    label: "navigation.committees",
-    href: "/committees",
-    description: "Internal Quality Assurance Cell (IQAC), Anti-Ragging, and statutory compliance.",
-    featured: {
-      title: "IQAC Quality Standards",
-      description: "Continuous institutional quality improvement and transparency ATRs.",
-      href: "/committees#iqac",
-      badge: "Compliance",
-    },
-    children: [
-      {
-        label: "navigation.iqac",
-        href: "/committees#iqac",
-        description: "IQAC committee composition, quality initiatives, & downloadable ATRs.",
-      },
-      {
-        label: "navigation.antiRaggingCell",
-        href: "/committees#anti-ragging-cell",
-        description: "UGC anti-ragging policy, squad helplines, & online affidavit link.",
-      },
-      {
-        label: "navigation.icc",
-        href: "/committees#internal-complaint-committee",
-        description: "POSH mandate, gender equity, & grievance filing procedure.",
-      },
-      {
-        label: "navigation.scStObcCell",
-        href: "/committees#sc-st-obc-minority-cell",
-        description: "Equal opportunity pillars & online grievance redressal form.",
-      },
-      {
-        label: "navigation.rtiDisclosures",
-        href: "/committees#rti-and-disclosures",
-        description: "Public Information Officer details, affiliation letters, & mandatory PDFs.",
-      },
-    ],
-  },
+
   {
     type: "dropdown",
     label: "navigation.news",

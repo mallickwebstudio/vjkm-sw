@@ -23,7 +23,7 @@ export default async function HeroSection() {
                     <Badge variant="outline" className="h-6 bg-sky/10 text-sky-tone border-sky/30 font-medium text-sm [&>svg]:size-3.5!">
                         <ShieldCheck />
                         Managed by
-                        <Link className='underline underline-offset-2 hover:underline-offset-4' href={siteConfig.trustUrl} target='_blank' rel="noopener noreferrer">{siteConfig.trustName.en}</Link> Trust Legacy Since 1957
+                        <Link className='underline underline-offset-2 hover:underline-offset-4' href={siteConfig.trustUrl} target='_blank' rel="noopener noreferrer">{siteConfig.trustName.en}</Link>
                     </Badge> <br />
                     <Badge variant="outline" className="h-6 bg-amber/10 text-amber-tone border-amber/30 font-medium text-sm [&>svg]:size-3.5!">
                         <Award />
