@@ -29,3 +29,5 @@ export async function getNoticeDb() {
         active: item.active
     }));
 }
+
+export * from "./article";

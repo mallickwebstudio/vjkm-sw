@@ -122,35 +122,7 @@ export const navigationData: NavItem[] = [
       },
     ],
   },
-  {
-    type: "dropdown",
-    label: "navigation.campus",
-    href: "/campus",
-    description: "State-of-the-art academic environment, smart classrooms, and infrastructure.",
-    featured: {
-      title: "360° Virtual Campus Tour",
-      description: "Take an interactive virtual walk through our classrooms, labs, and grounds.",
-      href: "/campus#virtual-tour",
-      badge: "Virtual Tour",
-    },
-    children: [
-      {
-        label: "navigation.virtualTour",
-        href: "/campus#virtual-tour",
-        description: "Interactive 360° tour of classrooms, grounds, & corridors.",
-      },
-      {
-        label: "navigation.classroomsLabs",
-        href: "/campus#classrooms-and-labs",
-        description: "Smart podium classrooms, computer lab, & audio-visual seminar halls.",
-      },
-      {
-        label: "navigation.auditorium",
-        href: "/campus#auditorium",
-        description: "Central auditorium seating capacity, acoustics, & event stage.",
-      },
-    ],
-  },
+
   {
     type: "dropdown",
     label: "navigation.facilities",
@@ -282,6 +254,11 @@ export const navigationData: NavItem[] = [
         description: "Press articles, media coverage, & university highlights gallery.",
       },
     ],
+  },
+  {
+    type: "link",
+    label: "navigation.articles",
+    href: "/articles",
   },
 ];
 

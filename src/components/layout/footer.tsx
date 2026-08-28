@@ -108,7 +108,7 @@ function LogoColumn() {
         <div>
             <Link className="flex items-center gap-2" href="/">
                 <Image
-                    className="size-16 object-contain"
+                    className="size-16 object-contain rounded-full select-none pointer-events-none"
                     src="/images/logo/logo.webp"
                     width={56}
                     height={56}
