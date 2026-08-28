@@ -17,7 +17,7 @@ export default async function CoursesSpotlight() {
                 <SectionTitle>
                     {t("h2")}
                 </SectionTitle>
-                <SectionDescription className='max-w-xl'>
+                <SectionDescription>
                     {t("subheading")}
                 </SectionDescription>
             </SectionHeader>

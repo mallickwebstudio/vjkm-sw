@@ -13,17 +13,6 @@ export default async function HeroSection() {
     return (
         <Hero variant="left" className="flex items-center bg-slate min-h-[60vh]">
             <HeroContent className="max-w-3xl">
-                {/* Badges Bar */}
-                <div className="space-y-2 mb-2">
-                    <Badge variant="outline" className="h-6 bg-sky/10 text-sky-tone border-sky/30 font-medium text-sm [&>svg]:size-3.5!">
-                        <ShieldCheck />
-                        {t("badge1")}
-                    </Badge> <br />
-                    <Badge variant="outline" className="h-6 bg-amber/10 text-amber-tone border-amber/30 font-medium text-sm [&>svg]:size-3.5!">
-                        <Award />
-                        {t("badge2")}
-                    </Badge>
-                </div>
 
                 <HeroH1 className="h1 font-extrabold text-white">
                     {t("h1Title")}

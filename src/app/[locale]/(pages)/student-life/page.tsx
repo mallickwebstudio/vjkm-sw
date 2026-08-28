@@ -4,8 +4,6 @@ import { getSeoMetadata } from "@/lib/metadata";
 
 import { NssOutreachSection } from "./nss-outreach-section";
 import { EventsCelebrationsSection } from "./events-celebrations-section";
-import { ClubsCellsSection } from "./clubs-cells-section";
-import { MediaGallerySection } from "./media-gallery-section";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -21,8 +19,6 @@ export default function Page() {
     <main className="space-y-0">
       <NssOutreachSection />
       <EventsCelebrationsSection />
-      <ClubsCellsSection />
-      <MediaGallerySection />
     </main>
   );
 }

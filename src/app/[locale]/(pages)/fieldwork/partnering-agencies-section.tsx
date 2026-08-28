@@ -14,7 +14,7 @@ export function PartneringAgenciesSection() {
         <Section id="partnering-agencies" className="bg-slate text-slate-foreground scroll-mt-20">
             <SectionHeader align="center">
                 <SectionTitle>Partnering Agencies & CSR Units</SectionTitle>
-                <SectionDescription className="text-sky-muted max-w-xl">
+                <SectionDescription>
                     Strong collaborative network across non-profits, government departments, and corporate foundations.
                 </SectionDescription>
             </SectionHeader>

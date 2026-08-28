@@ -45,10 +45,10 @@ export default async function CareerFieldworkGrid() {
     return (
         <Section className="bg-slate-muted">
             <SectionHeader align="center">
-                <SectionTitle className="text-3xl md:text-4xl font-extrabold text-foreground">
+                <SectionTitle>
                     {t("h2")}
                 </SectionTitle>
-                <SectionDescription className="text-slate-tone text-base md:text-lg">
+                <SectionDescription>
                     {t("subheading")}
                 </SectionDescription>
             </SectionHeader>

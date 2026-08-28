@@ -41,7 +41,7 @@ export default async function AffiliationCompliance() {
                 <SectionTitle>
                     {t("h2")}
                 </SectionTitle>
-                <SectionDescription className="text-sky-muted max-w-xl">
+                <SectionDescription>
                     {t("subheading")}
                 </SectionDescription>
             </SectionHeader>

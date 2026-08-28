@@ -170,16 +170,16 @@ function DesktopNav() {
                     }
 
                     return (
-                        <Button
+                        <Link
                             key={`${item.label}-${index}-desktop`}
-                            variant="ghost"
-                            size="sm"
-                            className="text-white hover:bg-white/10 hover:text-white font-semibold text-xs px-2.5 shrink-0"
-                            render={
-                                <Link href={item.href}>{displayLabel}</Link>
-                            }
+                            className={cn(
+                                buttonVariants({ variant: "ghost", size: "sm" }),
+                                "text-white hover:bg-white/10 hover:text-white font-semibold text-xs px-2.5 shrink-0"
+                            )}
+                            href={item.href}
                         >
-                        </Button>
+                            {displayLabel}
+                        </Link>
                     );
                 })}
 

@@ -34,10 +34,10 @@ export default async function PrincipalMessage() {
     return (
         <Section id="principal-message" className="bg-slate-muted">
             <SectionHeader align="center">
-                <SectionTitle className="text-3xl md:text-4xl font-extrabold text-foreground">
+                <SectionTitle>
                     {t("h2")}
                 </SectionTitle>
-                <SectionDescription className="text-slate-tone text-base md:text-lg max-w-2xl">
+                <SectionDescription>
                     {t("subheading")}
                 </SectionDescription>
             </SectionHeader>

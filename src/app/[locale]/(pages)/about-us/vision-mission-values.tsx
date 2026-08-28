@@ -38,7 +38,7 @@ export default async function VisionMissionValues() {
                 <SectionTitle>
                     {t("h2")}
                 </SectionTitle>
-                <SectionDescription className="max-w-xl">
+                <SectionDescription>
                     {t("subheading")}
                 </SectionDescription>
             </SectionHeader>

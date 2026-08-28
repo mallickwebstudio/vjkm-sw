@@ -10,7 +10,7 @@ export function AdmissionInquirySection() {
         <Section id="admission-inquiry" className="bg-slate-muted scroll-mt-20">
             <SectionHeader align="center">
                 <SectionTitle>Admission Inquiry & Helpdesk</SectionTitle>
-                <SectionDescription>Connect directly with our admission counselors for GCAS portal assistance and seat availability.</SectionDescription>
+                <SectionDescription>Connect directly with our admission counselors for GCAS portal guidance, direct Self-Finance seats, and document verification.</SectionDescription>
             </SectionHeader>
 
             <SectionContent className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -20,7 +20,7 @@ export function AdmissionInquirySection() {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">WhatsApp Instant Helpdesk</h3>
                     <p className="text-xs sm:text-sm text-slate-tone leading-relaxed">
-                        Chat live with our admission coordinators for instant answers regarding GCAS college choice code, fee payments, and document verification.
+                        Chat live with our admission coordinators for instant answers regarding GCAS college choice code, Direct Self-Finance admissions, fee structure, and document verification.
                     </p>
                     <a
                         href="https://wa.me/919876543210"

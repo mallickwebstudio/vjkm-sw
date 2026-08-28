@@ -249,7 +249,7 @@
   }
 
   html {
-    @apply font-sans scroll-smooth scroll-p-22 md:scroll-p-22;
+    @apply font-sans scroll-smooth scroll-p-12;
   }
 }
 

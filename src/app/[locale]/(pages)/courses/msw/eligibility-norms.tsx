@@ -10,7 +10,7 @@ export default function EligibilityNorms() {
             </SectionHeader>
             <SectionContent>
                 <div className="p-6 border border-dashed rounded-lg text-sm text-muted-foreground">
-                    Layout: Minimum passing marks, equivalence guidelines, and GCAS registration eligibility requirements.
+                    Layout: Minimum passing marks, equivalence guidelines, and GCAS / Self-Finance admission eligibility requirements.
                 </div>
             </SectionContent>
         </Section>

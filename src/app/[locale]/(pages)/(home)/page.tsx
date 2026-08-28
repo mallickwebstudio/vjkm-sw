@@ -4,11 +4,9 @@ import HeroSection from "./hero";
 import NoticeBoard from "./notice-board";
 import AboutSnapshot from "./about-snapshot";
 import CoursesSpotlight from "./courses-spotlight";
-import GcasThreeStepGuide from "./gcas-three-step-guide";
+import { GcasGuide } from "@/components/shared/gcas-guide";
 import CareerFieldworkGrid from "./career-fieldwork-grid";
-import CampusAmenitiesPreview from "./campus-amenities-preview";
 import RecentUpdatesFeed from "./recent-updates-feed";
-import TestimonialCarousel from "./testimonial-carousel";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({
@@ -32,9 +30,8 @@ export default async function Page() {
       <NoticeBoard />
       <AboutSnapshot />
       <CoursesSpotlight />
-      <GcasThreeStepGuide />
+      <GcasGuide />
       <CareerFieldworkGrid />
-      <CampusAmenitiesPreview />
       <RecentUpdatesFeed />
     </main>
   );

@@ -48,13 +48,8 @@ export const navigationData: NavItem[] = [
         description: "Principal's message, vision & mission, SGGU affiliation & compliance.",
       },
       {
-        label: "navigation.governingBody",
-        href: "/about-us#governing-body",
-        description: "Board of Governors, College Development Committee (CDC), & Academic Council.",
-      },
-      {
         label: "navigation.facultyStaff",
-        href: "/about-us#faculty-and-staff",
+        href: "/about-us#faculty-and-staff-grid",
         description: "Directory of faculty, research outreach, & administration.",
       },
     ],
@@ -66,9 +61,9 @@ export const navigationData: NavItem[] = [
     description: "Professional BSW and MSW degree tracks tailored for social work & leadership.",
     featured: {
       title: "Admissions Open 2026-27",
-      description: "Apply for BSW (70 Seats) and MSW (200 Seats) via GCAS Gujarat Portal.",
+      description: "Apply for BSW (70 Seats) and MSW (200 Seats) via GCAS Portal or Direct Self-Finance.",
       href: "/admission#admission-process",
-      badge: "GCAS Portal",
+      badge: "GCAS & Self-Finance",
     },
     children: [
       {
@@ -92,7 +87,7 @@ export const navigationData: NavItem[] = [
     type: "dropdown",
     label: "navigation.admission",
     href: "/admission",
-    description: "Complete guidance for GCAS portal registration, eligibility, and scholarships.",
+    description: "Complete guidance for GCAS portal registration, Direct Self-Finance admissions, eligibility, and scholarships.",
     featured: {
       title: "GCAS Registration Guide",
       description: "Step-by-step instructions for gcasstudent.gujgov.edu.in application.",
@@ -127,7 +122,7 @@ export const navigationData: NavItem[] = [
     type: "dropdown",
     label: "navigation.facilities",
     href: "/facilities",
-    description: "Central library, athletic sports turf, gym, and student amenities.",
+    description: "Central library, Book Bank scheme, sports turf, and gym.",
     featured: {
       title: "Digital & Physical Library",
       description: "Access thousands of books, case journals, e-databases & Book Bank scheme.",
@@ -138,17 +133,17 @@ export const navigationData: NavItem[] = [
       {
         label: "navigation.library",
         href: "/facilities#library",
-        description: "Books, e-journals, social science archives, & Book Bank scheme.",
+        description: "Books, e-journals, & social science research archives.",
+      },
+      {
+        label: "navigation.bookBank",
+        href: "/facilities#book-bank-scheme",
+        description: "Free complete semester textbook kits for BSW & MSW students.",
       },
       {
         label: "navigation.sportsFitness",
         href: "/facilities#sports-and-fitness",
         description: "Cricket turf, football ground, fitness gym, & yoga center.",
-      },
-      {
-        label: "navigation.studentAmenities",
-        href: "/facilities#student-amenities",
-        description: "Girls common room, hygienic canteen, first aid, & transport guidance.",
       },
     ],
   },
@@ -195,7 +190,7 @@ export const navigationData: NavItem[] = [
     type: "dropdown",
     label: "navigation.studentLife",
     href: "/student-life",
-    description: "NSS outreach, cultural festivals, student clubs, and media gallery.",
+    description: "NSS outreach, annual cultural festival, and sports meets.",
     featured: {
       title: "NSS & Social Outreach",
       description: "Blood donation camps, village adoption, and community literacy drives.",
@@ -212,16 +207,6 @@ export const navigationData: NavItem[] = [
         label: "navigation.eventsCelebrations",
         href: "/student-life#events-and-celebrations",
         description: "Annual cultural fest, World Social Work Day, & sports meets.",
-      },
-      {
-        label: "navigation.clubsCells",
-        href: "/student-life#clubs-and-cells",
-        description: "Cultural club, debate & civil services circle, & eco club.",
-      },
-      {
-        label: "navigation.mediaGallery",
-        href: "/student-life#media-gallery",
-        description: "Filterable photo grid & student testimonial video gallery.",
       },
     ],
   },

@@ -30,7 +30,7 @@ export default async function Page({ params }: { params: Promise<{ locale: Local
             Get in Touch With Us
           </HeroH1>
           <HeroP className="max-w-2xl">
-            Have questions regarding BSW & MSW admissions, GCAS portal verification, fieldwork partnerships, or trust scholarship guidance? Reach out to our campus team.
+            Have questions regarding BSW & MSW admissions, GCAS portal registration, Direct Self-Finance seats, fieldwork partnerships, or trust scholarship guidance? Reach out to our campus team.
           </HeroP>
         </HeroContent>
       </Hero>

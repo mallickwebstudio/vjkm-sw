@@ -8,7 +8,7 @@ export function NewsClippingsSection() {
         <Section id="news-clippings" className="bg-slate text-slate-foreground scroll-mt-20">
             <SectionHeader align="center">
                 <SectionTitle>Press Coverage & Media Clippings</SectionTitle>
-                <SectionDescription className="text-sky-muted max-w-xl">
+                <SectionDescription>
                     VJKM College in news — press coverage of rural camps, blood donation drives, & SGGU rank holders.
                 </SectionDescription>
             </SectionHeader>

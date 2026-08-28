@@ -16,7 +16,7 @@ export function ScholarshipsSection() {
         <Section id="scholarship-and-financial-aid" className="bg-slate text-slate-foreground scroll-mt-20">
             <SectionHeader align="center">
                 <SectionTitle>Scholarships & Financial Aid</SectionTitle>
-                <SectionDescription className="text-sky-muted max-w-xl">
+                <SectionDescription>
                     Ensuring higher education remains accessible to all deserving social work aspirants.
                 </SectionDescription>
             </SectionHeader>

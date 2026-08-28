@@ -3,8 +3,8 @@ import { Locale, routing } from "@/i18n/routing";
 import { getSeoMetadata } from "@/lib/metadata";
 
 import { LibrarySection } from "./library-section";
-import { SportsFitnessSection } from "./sports-fitness-section";
-import { StudentAmenitiesSection } from "./student-amenities-section";
+import { BookBankSection } from "./book-bank-section";
+import { FacilitiesSection } from "./facilities-section";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -19,8 +19,8 @@ export default function Page() {
   return (
     <main className="space-y-0">
       <LibrarySection />
-      <SportsFitnessSection />
-      <StudentAmenitiesSection />
+      <BookBankSection />
+      <FacilitiesSection />
     </main>
   );
 }

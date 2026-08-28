@@ -44,6 +44,18 @@ export function getCoursesData(locale: Locale): Course[] {
     return courses[locale];
 }
 
+export function getCourseBySlug(slug: string, locale: Locale): Course | undefined {
+    const list = getCoursesData(locale);
+    const normalized = slug.toLowerCase().trim();
+    return list.find((c) => {
+        if (c.slug.toLowerCase() === normalized) return true;
+        if (c.aliasSlugs && c.aliasSlugs.some((alias) => alias.toLowerCase() === normalized)) return true;
+        if (normalized === "bsw" && c.slug.includes("bachelor")) return true;
+        if (normalized === "msw" && c.slug.includes("master")) return true;
+        return false;
+    });
+}
+
 export function getFacilitiesData(locale: Locale): Facility[] {
     return facilities[locale];
 }

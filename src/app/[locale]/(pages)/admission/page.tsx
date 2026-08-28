@@ -3,7 +3,7 @@ import { Locale, routing } from "@/i18n/routing";
 import { getSeoMetadata } from "@/lib/metadata";
 
 import { AdmissionProcessSection } from "./admission-process-section";
-import { GcasGuidanceSection } from "./gcas-guidance-section";
+import { GcasGuide } from "@/components/shared/gcas-guide";
 import { ScholarshipsSection } from "./scholarships-section";
 import { AdmissionInquirySection } from "./admission-inquiry-section";
 
@@ -20,7 +20,7 @@ export default function Page() {
   return (
     <main className="space-y-0">
       <AdmissionProcessSection />
-      <GcasGuidanceSection />
+      <GcasGuide className="bg-background text-foreground scroll-mt-20" />
       <ScholarshipsSection />
       <AdmissionInquirySection />
     </main>

@@ -10,7 +10,7 @@ import { Bell, FileText, ArrowDown, Download } from 'lucide-react'
 export function NoticesCircularsSection() {
     const notices = [
         { date: "Aug 20, 2026", category: "Exam", title: "SGGU End-Semester Examination Timetable 2026", desc: "Official exam schedule for BSW Sem 2, 4, 6 and MSW Sem 2, 4." },
-        { date: "Aug 15, 2026", category: "GCAS Admission", title: "GCAS Gujarat Seat Allotment Round 2 Verification", desc: "Document verification instructions for candidates allotted VJKM College BSW & MSW seats." },
+        { date: "Aug 15, 2026", category: "Admission", title: "GCAS & Direct Self-Finance Seat Allocation Round 2", desc: "Document verification instructions for candidates applying for VJKM BSW & MSW seats via GCAS or Self-Finance." },
         { date: "Aug 10, 2026", category: "Academic", title: "7-Day Rural Immersion Camp Orientation", desc: "Orientation meeting for MSW Semester 3 rural camp practicum allocation." }
     ];
 
@@ -26,7 +26,7 @@ export function NoticesCircularsSection() {
                         Notices & University Circulars
                     </HeroH1>
                     <HeroP className="max-w-2xl">
-                        Official announcements, SGGU exam timetables, GCAS admission verification updates, and administrative circulars.
+                        Official announcements, SGGU exam timetables, GCAS & Direct Self-Finance admission verification updates, and administrative circulars.
                     </HeroP>
                     <HeroCta>
                         <a href="#upcoming-events" className={cn(buttonVariants({ variant: "amber", size: "lg" }))}>

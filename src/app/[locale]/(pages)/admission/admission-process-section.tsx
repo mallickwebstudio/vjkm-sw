@@ -9,8 +9,8 @@ import { MousePointerClick, CheckCircle2, ArrowDown, ExternalLink } from 'lucide
 
 export function AdmissionProcessSection() {
     const seatInfo = [
-        { title: "BSW (Bachelor of Social Work)", count: "70 Intake Seats", mode: "GCAS Gujarat Portal", desc: "Eligibility: 10+2 (Higher Secondary) in any stream from recognized board." },
-        { title: "MSW (Master of Social Work)", count: "200 Intake Seats", mode: "GCAS Gujarat Portal", desc: "Eligibility: Graduation (Bachelor's degree) in any discipline from recognized university." }
+        { title: "BSW (Bachelor of Social Work)", count: "70 Intake Seats", mode: "GCAS Portal & Direct Self-Finance", desc: "Eligibility: 10+2 (Higher Secondary) in any stream from recognized board." },
+        { title: "MSW (Master of Social Work)", count: "200 Intake Seats", mode: "GCAS Portal & Direct Self-Finance", desc: "Eligibility: Graduation (Bachelor's degree) in any discipline from recognized university." }
     ];
 
     return (
@@ -19,13 +19,13 @@ export function AdmissionProcessSection() {
                 <HeroContent className="max-w-3xl">
                     <Badge variant="outline" className="h-6 bg-amber/10 text-amber-tone border-amber/30 font-medium text-sm [&>svg]:size-3.5! mb-2">
                         <MousePointerClick />
-                        GCAS Portal Registration Open 2026-27
+                        GCAS Portal & Direct Self-Finance Admissions Open 2026-27
                     </Badge>
                     <HeroH1 className="h1 font-extrabold text-white">
                         Admission Process & Eligibility
                     </HeroH1>
                     <HeroP className="max-w-2xl">
-                        Admissions for BSW and MSW courses are conducted through Gujarat Common Admission Services (GCAS) portal as per SGGU and Gujarat Government guidelines.
+                        Admissions for BSW and MSW courses can be secured through the GCAS Gujarat Portal or directly via College Self-Finance quota as per SGGU and Gujarat Government guidelines.
                     </HeroP>
                     <HeroCta>
                         <a
