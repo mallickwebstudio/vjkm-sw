@@ -44,14 +44,27 @@ export default async function CareerFieldworkGrid() {
 
     return (
         <Section className="bg-slate-muted">
-            <SectionHeader align="center">
-                <SectionTitle>
-                    {t("h2")}
-                </SectionTitle>
-                <SectionDescription>
-                    {t("subheading")}
-                </SectionDescription>
-            </SectionHeader>
+            <div className="lg:flex lg:justify-between lg:items-end">
+                <SectionHeader align="left">
+                    <SectionTitle>
+                        {t("h2")}
+                    </SectionTitle>
+                    <SectionDescription>
+                        {t("subheading")}
+                    </SectionDescription>
+                </SectionHeader>
+
+                <Link
+                    href="/fieldwork"
+                    className={cn(
+                        buttonVariants({ variant: "outline", size: "lg" }),
+                        "mt-2"
+                    )}
+                >
+                    {t("cta")}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+            </div>
 
             {/* Sector Cards */}
             <SectionContent className="md:grid-cols-2 gap-6">
@@ -87,19 +100,6 @@ export default async function CareerFieldworkGrid() {
                     )
                 })}
             </SectionContent>
-
-            <div className="text-center">
-                <Link
-                    href="/fieldwork"
-                    className={cn(
-                        buttonVariants({ variant: "outline" }),
-                        "border-border inline-flex items-center px-4 py-2 rounded-md text-sm font-medium"
-                    )}
-                >
-                    {t("cta")}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-            </div>
         </Section>
     )
 }

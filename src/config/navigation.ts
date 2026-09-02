@@ -208,6 +208,11 @@ export const navigationData: NavItem[] = [
         href: "/student-life#events-and-celebrations",
         description: "Annual cultural fest, World Social Work Day, & sports meets.",
       },
+      {
+        label: "navigation.mediaGallery",
+        href: "/gallery",
+        description: "Filterable photo grid by Course, Academic Year, and Campus Events.",
+      },
     ],
   },
 
@@ -239,6 +244,11 @@ export const navigationData: NavItem[] = [
         description: "Press articles, media coverage, & university highlights gallery.",
       },
     ],
+  },
+  {
+    type: "link",
+    label: "navigation.gallery",
+    href: "/gallery",
   },
   {
     type: "link",

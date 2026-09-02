@@ -16,7 +16,12 @@ export function LibrarySection() {
 
     return (
         <div id="library" className="scroll-mt-20">
-            <Hero variant="left" className="flex items-center bg-slate min-h-[50vh]">
+            <Hero
+                imageSrc="/images/facilities/auditorium-6.webp"
+                imageAlt="Campus Library and Knowledge Resource Center at VJKM College"
+                variant="left"
+                className="flex items-center bg-slate min-h-[50vh]"
+            >
                 <HeroContent className="max-w-3xl">
                     <Badge variant="outline" className="h-6 bg-sky/10 text-sky-tone border-sky/30 font-medium text-sm [&>svg]:size-3.5! mb-2">
                         <Library />

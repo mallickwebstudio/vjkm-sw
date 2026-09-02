@@ -16,7 +16,12 @@ export function NssOutreachSection() {
 
     return (
         <div id="nss-and-social-outreach" className="scroll-mt-20">
-            <Hero variant="left" className="flex items-center bg-slate min-h-[50vh]">
+            <Hero
+                imageSrc="/images/facilities/ncc-0.webp"
+                imageAlt="NSS and Community Social Outreach Activities at VJKM College"
+                variant="left"
+                className="flex items-center bg-slate min-h-[50vh]"
+            >
                 <HeroContent className="max-w-3xl">
                     <Badge variant="outline" className="h-6 bg-rose/10 text-rose border-rose/30 font-medium text-sm [&>svg]:size-3.5! mb-2">
                         <Heart />

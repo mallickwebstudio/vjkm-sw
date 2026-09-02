@@ -11,7 +11,12 @@ export default async function HeroSection() {
     const t = await getTranslations("aboutTrust.hero");
 
     return (
-        <Hero variant="left" className="flex items-center bg-slate min-h-[60vh]">
+        <Hero
+            imageSrc="/images/facilities/auditorium-0.webp"
+            imageAlt="Vadodara Jilla Kelavani Mandal Trust Campus"
+            variant="left"
+            className="flex items-center bg-slate min-h-[60vh]"
+        >
             <HeroContent className="max-w-3xl">
 
                 <HeroH1 className="h1 font-extrabold text-white">

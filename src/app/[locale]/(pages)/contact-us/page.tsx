@@ -20,7 +20,12 @@ export default async function Page({ params }: { params: Promise<{ locale: Local
 
   return (
     <main className="space-y-0">
-      <Hero variant="left" className="flex items-center bg-slate min-h-[45vh]">
+      <Hero
+        imageSrc="/images/facilities/main-ground-1.webp"
+        imageAlt="Contact Vadodara Jilla Kelavani Mandal College Campus"
+        variant="left"
+        className="flex items-center bg-slate min-h-[45vh]"
+      >
         <HeroContent className="max-w-3xl">
           <Badge variant="outline" className="h-6 bg-amber/10 text-amber-tone border-amber/30 font-medium text-sm [&>svg]:size-3.5! mb-2">
             <MapPin />

@@ -15,7 +15,12 @@ export function AdmissionProcessSection() {
 
     return (
         <div id="admission-process" className="scroll-mt-20">
-            <Hero variant="left" className="flex items-center bg-slate min-h-[50vh]">
+            <Hero
+                imageSrc="/images/facilities/auditorium-3.webp"
+                imageAlt="Admission Process and Counseling at VJKM College"
+                variant="left"
+                className="flex items-center bg-slate min-h-[50vh]"
+            >
                 <HeroContent className="max-w-3xl">
                     <Badge variant="outline" className="h-6 bg-amber/10 text-amber-tone border-amber/30 font-medium text-sm [&>svg]:size-3.5! mb-2">
                         <MousePointerClick />

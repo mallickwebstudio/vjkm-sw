@@ -115,8 +115,8 @@ function DesktopNav() {
             // Reserve ~180px for right action controls (Search + Language toggle)
             const availableWidth = totalWidth - 180;
 
-            // Average width per top nav button is approx 110px
-            const avgItemWidth = 100;
+            // Average width per top nav button is approx 85px
+            const avgItemWidth = 85;
             const count = Math.floor(availableWidth / avgItemWidth);
 
             if (count >= navigationData.length) {

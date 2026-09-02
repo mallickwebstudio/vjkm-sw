@@ -21,7 +21,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 export default function Page() {
   return (
     <main className="space-y-0">
-      <Hero variant="left" className="bg-slate min-h-[50vh] flex items-center">
+      <Hero
+        imageSrc="/images/facilities/auditorium-1.webp"
+        imageAlt="Academic Courses and Degree Programs at VJKM College"
+        variant="left"
+        className="bg-slate min-h-[50vh] flex items-center"
+      >
         <HeroContent>
           <HeroH1>Academic Courses & Professional Degree Tracks</HeroH1>
           <HeroP>Discover our SGGU-affiliated BSW and MSW degree programs designed for field practice, civil services, and leadership.</HeroP>

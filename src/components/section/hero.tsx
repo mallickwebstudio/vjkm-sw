@@ -54,7 +54,7 @@ function Hero({
                 aria-hidden="true"
                 className={cn(
                     "absolute inset-0 pointer-events-none z-1",
-                    "group-data-[variant=left]/hero:bg-linear-to-r group-data-[variant=left]/hero:from-neutral-950/95 group-data-[variant=left]/hero:via-neutral-950/75 group-data-[variant=left]/hero:to-neutral-950/30",
+                    "group-data-[variant=left]/hero:bg-linear-to-r group-data-[variant=left]/hero:from-neutral-950/95 group-data-[variant=left]/hero:via-neutral-950/30 group-data-[variant=left]/hero:to-transparent",
                     "group-data-[variant=center]/hero:bg-radial from-neutral-950/60 via-neutral-950/85 to-neutral-950"
                 )}
             />

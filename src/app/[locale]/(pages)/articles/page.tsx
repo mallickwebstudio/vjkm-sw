@@ -35,7 +35,12 @@ export default async function ArticlesPage({ params }: { params: Promise<{ local
     return (
         <main className="space-y-0">
             {/* HERO HEADER */}
-            <Hero variant="left" className="bg-slate min-h-[45vh] flex items-center">
+            <Hero
+                imageSrc="/images/facilities/auditorium-4.webp"
+                imageAlt="Articles and Academic Insights VJKM College"
+                variant="left"
+                className="bg-slate min-h-[45vh] flex items-center"
+            >
                 <HeroContent>
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-semibold uppercase tracking-wider mb-3">
                         <BookOpen className="w-3.5 h-3.5" /> Educational Blog & Research

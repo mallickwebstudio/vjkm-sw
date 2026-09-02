@@ -97,7 +97,12 @@ export default async function CourseDetailPage({
   return (
     <main className="space-y-0">
       {/* 1. HERO HEADER */}
-      <Hero variant="left" className="relative flex items-center bg-slate min-h-[55vh] py-12">
+      <Hero
+        imageSrc={thumbnail || "/images/facilities/auditorium-2.webp"}
+        imageAlt={`${title} Degree Program at VJKM College`}
+        variant="left"
+        className="relative flex items-center bg-slate min-h-[55vh] py-12"
+      >
         <HeroContent className="max-w-4xl z-10">
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <Badge variant="outline" className="h-6 bg-amber/10 text-amber-tone border-amber/30 font-medium text-xs sm:text-sm">

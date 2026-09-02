@@ -16,7 +16,12 @@ export default async function HeroSection() {
     const courseData = getCoursesData(locale);
 
     return (
-        <Hero variant="left" className="flex items-center bg-slate">
+        <Hero
+            imageSrc="/images/facilities/main-ground-0.webp"
+            imageAlt="VJKM College Campus and Academic Ground"
+            variant="left"
+            className="flex items-center bg-slate"
+        >
             <HeroContent className="max-w-3xl">
                 {/* Badges Bar (Left untouched as per requirement) */}
                 <div className="space-y-2 mb-2">

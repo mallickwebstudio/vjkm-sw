@@ -25,7 +25,7 @@ export default function Footer() {
         { label: t("footer.studentCornerLinks.fieldwork"), href: "/fieldwork#fieldwork-practicum" },
         { label: t("footer.studentCornerLinks.placement"), href: "/fieldwork#placement-cell" },
         { label: t("footer.studentCornerLinks.nss"), href: "/student-life#nss-and-social-outreach" },
-        { label: t("footer.studentCornerLinks.gallery"), href: "/student-life#media-gallery" },
+        { label: t("navigation.gallery"), href: "/gallery" },
     ];
 
     // Governance & Compliance links

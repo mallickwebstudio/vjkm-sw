@@ -37,14 +37,27 @@ export default async function RecentUpdatesFeed() {
 
     return (
         <Section className="bg-slate-muted">
-            <SectionHeader align="center">
-                <SectionTitle>
-                    {t("h2")}
-                </SectionTitle>
-                <SectionDescription>
-                    {t("subheading")}
-                </SectionDescription>
-            </SectionHeader>
+            <div className="lg:flex lg:justify-between lg:items-end">
+                <SectionHeader align="left">
+                    <SectionTitle>
+                        {t("h2")}
+                    </SectionTitle>
+                    <SectionDescription>
+                        {t("subheading")}
+                    </SectionDescription>
+                </SectionHeader>
+
+                <Link
+                    href="/news-and-updates"
+                    className={cn(
+                        buttonVariants({ variant: "outline", size: "lg" }),
+                        "mt-2"
+                    )}
+                >
+                    {t("cta")}
+                    <ArrowRight />
+                </Link>
+            </div>
 
             <SectionContent className="md:grid-cols-3 gap-6">
                 {updates.map((item, idx) => (
@@ -69,18 +82,6 @@ export default async function RecentUpdatesFeed() {
                     </Card>
                 ))}
             </SectionContent>
-
-            <div className="text-center">
-                <Link
-                    href="/news-and-updates"
-                    className={cn(
-                        buttonVariants({ variant: "outline" }),
-                    )}
-                >
-                    {t("cta")}
-                    <ArrowRight />
-                </Link>
-            </div>
         </Section>
     )
 }

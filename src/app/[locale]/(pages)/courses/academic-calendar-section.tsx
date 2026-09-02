@@ -13,7 +13,12 @@ export function AcademicCalendarSection() {
 
     return (
         <div id="academic-calendar" className="scroll-mt-20">
-            <Hero variant="left" className="flex items-center bg-slate min-h-[40vh]">
+            <Hero
+                imageSrc="/images/facilities/auditorium-7.webp"
+                imageAlt="Academic Calendar and Schedule VJKM College"
+                variant="left"
+                className="flex items-center bg-slate min-h-[40vh]"
+            >
                 <HeroContent className="max-w-3xl">
                     <Badge variant="outline" className="h-6 bg-sky/10 text-sky-tone border-sky/30 font-medium text-sm [&>svg]:size-3.5! mb-2">
                         <Calendar />
