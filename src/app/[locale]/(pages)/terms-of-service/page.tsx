@@ -1,6 +1,5 @@
-import { BreadcrumbNavigation } from "@/components/other/breadcrumb-navigation";
 import { routing } from "@/i18n/routing";
-import { getSeoMetadata } from "@/lib/metadata";
+import { getSeoMetadata, siteConfig } from "@/lib/metadata";
 import { LocalePageProps } from "@/types";
 
 export async function generateMetadata({ params }: LocalePageProps) {
@@ -20,132 +19,118 @@ export function generateStaticParams() {
 
 export default async function Page() {
   return (
-    <>
-      <BreadcrumbNavigation
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Terms of Service" },
-        ]}
-      />
-      <section className="relative bg-secondary/30">
-        <div className="relative mx-auto container px-6 py-12 md:px-16 prose lg:prose-xl dark:prose-invert max-w-5xl">
-          <TermsText />
-        </div>
-      </section>
-    </>
+    <section className="relative bg-secondary/30 min-h-screen">
+      <div className="relative mx-auto container px-6 py-12 md:py-16 md:px-16 prose lg:prose-xl dark:prose-invert max-w-5xl">
+        <TermsText />
+      </div>
+    </section>
   );
 }
 
 function TermsText() {
   return (
     <>
-      <h1>Terms and Conditions</h1>
-      <p>
+      <h1 className="font-serif tracking-tight text-foreground">Terms and Conditions</h1>
+      <p className="text-muted-foreground text-sm">
         <strong>Effective Date:</strong> July 2026<br />
         <strong>Last Updated:</strong> July 2026
       </p>
 
-      <hr />
+      <hr className="my-6 border-border" />
 
       <p>
-        Welcome to the official website of Vadodara Jilla Kelavani Mandal (VJKM) and VJKM Self Finance College, accessible via
-        <strong> https://vadodarajillakelavanimandal.com </strong> and affiliated domains (the &quot;Site&quot;). These Terms and Conditions
-        (&quot;Terms&quot;) govern your access to and use of this Site. By accessing, browsing, or using this Site,
-        you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do
-        not agree, please discontinue use of this Site immediately.
+        Welcome to the official web portal of <strong>VJKM Self Finance College</strong> (BSW &amp; MSW Programs), managed by <strong>Vadodara Jilla Kelavani Mandal (VJKM)</strong>, accessible at{" "}
+        <a href={siteConfig.baseUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary">
+          {siteConfig.baseUrl}
+        </a>{" "}
+        (the &quot;Site&quot;).
+      </p>
+      <p>
+        These Terms and Conditions (&quot;Terms&quot;) govern your access to, browsing of, and interaction with this Site. By visiting, browsing, or using any digital service on this Site, you acknowledge that you have read, understood, and irrevocably agree to be bound by these Terms and all applicable laws and regulations. If you do not accept these Terms, please discontinue use of this Site immediately.
       </p>
 
-      <hr />
+      <hr className="my-6 border-border" />
 
-      <h2>1. Informational Purpose and Accuracy of Content</h2>
+      <h2>1. Educational &amp; Informational Scope</h2>
       <p>
-        This Site is maintained strictly as an informational platform to showcase our affiliated colleges,
-        courses, campus infrastructure, and placement opportunities.
+        This portal is operated as an official informational and academic communication resource for <strong>VJKM Self Finance College</strong>, offering Bachelor of Social Work (BSW) and Master of Social Work (MSW) degrees permanently affiliated with <strong>Shri Govind Guru University (SGGU), Godhra</strong>.
       </p>
       <ul>
         <li>
-          <strong>Best of Knowledge:</strong> All academic configurations, fee structures, seat capacities,
-          eligibility criteria, and admission deadlines listed on this Site are accurate to the best of our
-          knowledge at the time of publishing.
+          <strong>Information Accuracy:</strong> Academic curriculum descriptions, faculty rosters, fieldwork practicum outlines, seat matrices, eligibility rules, and admission timelines are published in good faith and accurate to the best of our knowledge at the time of publication.
         </li>
         <li>
-          <strong>Changes Without Prior Notice:</strong> Academic specifications, schedules, and fee models
-          are dynamically governed by university regulations and government norms. The Institution reserves the
-          absolute right to modify, alter, or update any content on this Site at any time without prior notice.
+          <strong>Regulatory Supersession:</strong> Academic norms, admission procedures, examination rules, and fee structures are dynamically determined by the Education Department of Gujarat, <strong>Gujarat Common Admission Services (GCAS)</strong>, and <strong>Shri Govind Guru University (SGGU)</strong>. Official statutory circulars take precedence over web portal summaries.
         </li>
         <li>
-          <strong>Verification Directive:</strong> Content on this website should not be construed as an
-          irrevocable institutional contract. Students and applicants are strictly advised to cross-verify crucial
-          information (such as exam deadlines and final fees) directly with the physical college administrative office.
+          <strong>Verification Obligation:</strong> Content published on this Site does not constitute a legally binding contractual guarantee of admission. Prospective students and parents are strongly encouraged to cross-verify crucial admission cutoff marks, required documentation, and deadlines directly with the on-campus Admission Desk in Dabhoi.
         </li>
       </ul>
 
       <h2>2. Acceptable Use and Anti-Scraping Policy</h2>
       <p>
-        You agree to use this Site purely for lawful, educational, and informational purposes.
+        Users agree to utilize this web portal exclusively for legitimate, lawful, educational, and informational purposes.
       </p>
-      <blockquote>
-        <strong>Strict Prohibition on Data Scraping:</strong> Automated data extraction, data harvesting, web
-        scraping, or utilizing bots, crawlers, or spiders to clone, download, or index data from this Site—including
-        our underlying data modules, assets, student records, or certificate generation pipelines—is strictly prohibited.
+      <blockquote className="border-l-4 border-primary pl-4 my-4 not-italic">
+        <strong>Strict Anti-Scraping Directive:</strong> Automated data mining, bulk content scraping, data harvesting, or utilizing web robots, spiders, crawlers, or AI extraction scripts to systematically duplicate, mirror, or extract institutional content, notice feeds, student databases, or internal document pipelines from this Site without explicit written authorization is strictly prohibited.
       </blockquote>
-      <p>You further agree not to:</p>
+      <p>You specifically agree not to:</p>
       <ul>
-        <li>Submit fraudulent or malicious queries via our embedded inquiry channels or forms.</li>
-        <li>Engage in any activity that stress-tests, disrupts, or compromises the security of our infrastructure hosted via Vercel.</li>
-        <li>Attempt to bypass security features or reverse-engineer the Site&apos;s technical layout.</li>
+        <li>Submit false, fraudulent, spam, or malicious inquiries via our admission desks, contact forms, or communication channels.</li>
+        <li>Conduct unauthorized security vulnerability assessments, load-stress tests, or denial-of-service attempts against our cloud infrastructure.</li>
+        <li>Attempt unauthorized access to administrative backends, private endpoints (including <code>/invoice</code> or <code>/api</code>), or underlying server configuration files.</li>
       </ul>
 
-      <h2>3. Financial Transactions and Donations</h2>
+      <h2>3. Academic Fees and Financial Transactions</h2>
       <p>
-        Currently, this Site does not facilitate standard academic fee collections, admission processing payments,
-        or transactional tuition handling.
+        This website serves as an informational portal. It does not directly solicit credit card transactions or online commercial payments:
       </p>
       <ul>
         <li>
-          <strong>Future Donations:</strong> The Institution may implement secure pathways to accept voluntary
-          charitable contributions or institutional donations through this platform.
+          <strong>Admission Fee Payments:</strong> Official admission registration fees are processed strictly via the centralized Government of Gujarat GCAS Portal (<code>gcas.gujgov.edu.in</code>). Tuition fees for admitted students are payable directly at the designated college bank counter or physical campus accounts office against an authorized receipt.
         </li>
         <li>
-          <strong>Third-Party Compliance:</strong> Any future donations processed through this Site will be
-          subject to the security provisions of our designated payment gateway partners. The Institution is
-          not liable for errors or security failures originating within external banking or payment networks.
+          <strong>Voluntary Trust Donations:</strong> Any future digital contributions or charitable alumni donations toward trust educational initiatives through this portal will be handled via RBI-authorized, PCI-DSS compliant banking payment gateways.
         </li>
       </ul>
 
       <h2>4. Intellectual Property Rights</h2>
       <p>
-        All text, graphic layouts, dynamic component architectures, custom data objects, icons, logs, and overall
-        source code on this platform are the property of Vadodara Jilla Kelavani Mandal or its technical developers.
-        Unauthorized replication, commercial distribution, or modified reuse of any digital asset without explicit
-        written consent from the institutional authority is legally actionable.
+        All digital assets—including text, institutional logos, photo galleries, graphic layouts, course structures, custom software components, and original source code—are the intellectual property of <strong>Vadodara Jilla Kelavani Mandal (VJKM)</strong> and its technical developers, protected under the Copyright Act of India.
+      </p>
+      <p>
+        Unauthorized commercial replication, redistribution, or modification of any photographic or editorial content without explicit written consent from the Board of Trustees is strictly prohibited and subject to legal prosecution.
       </p>
 
       <h2>5. Limitation of Liability</h2>
       <p>
-        Under no circumstances shall Vadodara Jilla Kelavani Mandal, its management, trustees, professors, or technical
-        administrators be held liable for any direct, indirect, incidental, or consequential damages resulting from:
+        Under no circumstances shall <strong>VJKM Self Finance College</strong>, Vadodara Jilla Kelavani Mandal, its trustees, principal, faculty, or technical partners be held liable for any direct, indirect, incidental, or consequential damages resulting from:
       </p>
       <ul>
-        <li>Your reliance on any informational metric or typographical error present on this Site.</li>
-        <li>Temporary technical blackouts, platform downtime, server drops, or hosting disruptions caused by cloud providers (Vercel/Hostinger).</li>
-        <li>Data loss or transmission issues during the submission of external query forms.</li>
+        <li>Any typographical errors, temporary discrepancies, or outdated circulars present on this Site.</li>
+        <li>Temporary platform downtime, maintenance windows, or cloud infrastructure outages.</li>
+        <li>Delays or failures in communication caused by external network disruptions or incorrect contact details provided by users.</li>
       </ul>
 
-      <h2>6. Governing Law and Legal Jurisdiction</h2>
+      <h2>6. Governing Law and Exclusive Legal Jurisdiction</h2>
       <p>
-        These Terms and Conditions shall be governed by, interpreted, and enforced in accordance with the laws of
-        the Republic of India. Any legal disputes, claims, or actions arising from the operation or utilization of
-        this digital asset shall fall under the exclusive legal jurisdiction of the competent courts located in
-        <strong> Vadodara, Gujarat, India </strong>.
+        These Terms and Conditions shall be governed by, interpreted, and enforced in full accordance with the substantive laws of the <strong>Republic of India</strong>. Any legal dispute, arbitration, claim, or proceeding arising from or relating to the utilization of this institutional web portal shall be subject to the exclusive jurisdiction of the competent courts in <strong>Vadodara, Gujarat, India</strong>.
       </p>
 
-      <h2>7. Revisions to the Terms</h2>
+      <h2>7. Modifications to Terms</h2>
       <p>
-        We reserve the right to amend these Terms at our discretion. Any modification updates will go into
-        immediate effect as soon as they are deployed onto this page. Your continued use of the platform following
-        an update indicates your binding acceptance of the revised terms.
+        The Institution reserves the right to revise or amend these Terms and Conditions at any time to reflect changing institutional policies or regulatory mandates. Revisions become effective immediately upon being published on this page.
       </p>
+
+      <h2>8. Contact &amp; Physical Campus</h2>
+      <p>For questions or formal clarifications regarding these Terms:</p>
+      <blockquote className="border-l-4 border-primary pl-4 my-4 not-italic">
+        <strong>VJKM Self Finance College</strong><br />
+        Managed by: Vadodara Jilla Kelavani Mandal (Est. 1959)<br />
+        Campus Address: Station Road, Near VJKM Trust Campus, Ta. Dabhoi, Dist. Vadodara, Gujarat - 391110<br />
+        Telephone Helplines: +91 94095 80986 / +91 82381 34737<br />
+        Administrative Email: <a href="mailto:maulikpatel9028@gmail.com" className="text-primary hover:underline">maulikpatel9028@gmail.com</a>
+      </blockquote>
     </>
   );
 }
