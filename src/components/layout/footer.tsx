@@ -22,9 +22,7 @@ export default function Footer() {
     const studentCornerLinks = [
         { label: t("footer.studentCornerLinks.bsw"), href: "/courses/bsw" },
         { label: t("footer.studentCornerLinks.msw"), href: "/courses/msw" },
-        { label: t("footer.studentCornerLinks.fieldwork"), href: "/fieldwork#fieldwork-practicum" },
-        { label: t("footer.studentCornerLinks.placement"), href: "/fieldwork#placement-cell" },
-        { label: t("footer.studentCornerLinks.nss"), href: "/student-life#nss-and-social-outreach" },
+        { label: t("footer.studentCornerLinks.fieldwork"), href: "/fieldwork" },
         { label: t("navigation.gallery"), href: "/gallery" },
     ];
 

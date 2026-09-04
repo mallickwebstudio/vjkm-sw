@@ -36,9 +36,8 @@ export default function Contact({ locale }: { locale: Locale }) {
           <EnquiryForm />
 
           {/* Contact Cards Container */}
-          <div className="mt-4 border rounded-md grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 overflow-hidden">
+          {/* <div className="mt-4 border rounded-md grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 overflow-hidden">
 
-            {/* Semantic Contact Details Block */}
             <address className="p-4 not-italic font-normal">
               <h3 className="h4 font-bold text-foreground">
                 {t("section.contact.h3One")}
@@ -47,7 +46,6 @@ export default function Contact({ locale }: { locale: Locale }) {
                 {t("section.contact.h3Onep")}
               </p>
 
-              {/* Replaced invalid/unnecessary UL with a flex/grid container for actions */}
               <div className="mt-4 flex flex-col gap-2">
                 <Link
                   className={cn(buttonVariants({ size: "sm" }), "var-phone w-full justify-start gap-2")}
@@ -75,7 +73,6 @@ export default function Contact({ locale }: { locale: Locale }) {
               </div>
             </address>
 
-            {/* Timings Block */}
             <div className="p-4 bg-secondary">
               <h3 className="h4 font-bold text-foreground">
                 {t("section.contact.h3Two")}
@@ -87,14 +84,14 @@ export default function Contact({ locale }: { locale: Locale }) {
                 Feel free to contact or visit us during this time, and we&quot;ll be happy to help.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Column: Visual Map Context */}
         <div className="size-full bg-background aspect-square rounded-md overflow-hidden border">
           <iframe
             className="size-full"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d767.5641538581808!2d73.40823531268963!3d22.131408499185977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fe16e2493c559%3A0x6a0e73a596b8dd69!2sVadodara%20Jilla%20Kelavani%20Mandal!5e1!3m2!1sen!2sin!4v1782736929353!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d760.3423330843193!2d73.40717955629691!3d22.132029031364485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fe197ccdfb7dd%3A0xc387065eb673d598!2sVJKM%20Self%20Finance%20MSW%20-%20BSW%20College!5e1!3m2!1sen!2sin!4v1788341619060!5m2!1sen!2sin"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="VJKM Self Finance College Map Location"

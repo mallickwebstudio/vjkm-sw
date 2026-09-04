@@ -23,10 +23,6 @@ export function FieldworkPracticumSection() {
                 className="flex items-center bg-slate min-h-[50vh]"
             >
                 <HeroContent className="max-w-3xl">
-                    <Badge variant="outline" className="h-6 bg-emerald/10 text-emerald-tone border-emerald/30 font-medium text-sm [&>svg]:size-3.5! mb-2">
-                        <Briefcase />
-                        500+ Hours Mandatory Field Exposure
-                    </Badge>
                     <HeroH1 className="h1 font-extrabold text-white">
                         Fieldwork Practicum & Rural Camps
                     </HeroH1>
@@ -34,15 +30,15 @@ export function FieldworkPracticumSection() {
                         The core pillar of BSW and MSW education — integrating classroom social work theory with hands-on community practice.
                     </HeroP>
                     <HeroCta>
-                        <a href="#placement-cell" className={cn(buttonVariants({ variant: "emerald", size: "lg" }))}>
-                            Placement Cell
+                        <a href="#field-practicum-components" className={cn(buttonVariants({ variant: "emerald", size: "lg" }))}>
+                            Field Practicum Components
                             <ArrowDown className="w-4 h-4 ml-1" />
                         </a>
                     </HeroCta>
                 </HeroContent>
             </Hero>
 
-            <Section className="bg-slate-muted">
+            <Section id="field-practicum-components" className="bg-slate-muted scroll-mt-20">
                 <SectionHeader align="center">
                     <SectionTitle>Field Practicum Components</SectionTitle>
                     <SectionDescription>Comprehensive practical exposure structured across all semesters.</SectionDescription>

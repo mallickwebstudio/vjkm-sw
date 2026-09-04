@@ -28,13 +28,13 @@ export const noticesData: Notice[] = [
     title: 'Annual Campus Placement & CSR Recruiter Drive 2026 Registration Open',
     date: '2026-08-15T11:45:00Z',
     type: 'Placement',
-    href: '/fieldwork#placement-cell',
+    href: '/fieldwork',
   },
   {
     title: 'NSS Blood Donation Camp & Free Health Checkup Drive Announced',
     date: '2026-08-01T15:00:00Z',
     type: 'Notice',
-    href: '/student-life#nss',
+    href: '/news-and-updates',
   },
 ];
 

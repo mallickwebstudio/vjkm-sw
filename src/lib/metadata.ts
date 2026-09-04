@@ -11,6 +11,8 @@ export type SiteConfig = {
   ogImage: string;
   links: {
     phone: string;
+    bswPhone: string;
+    mswPhone: string;
     whatsapp: string;
     email: string;
   };
@@ -30,6 +32,8 @@ export const siteConfig: SiteConfig = {
   ogImage: "https://vjkm-sf-college.in/og.png",
   links: {
     phone: "tel:+919409580986",
+    bswPhone: "tel:+919409580986",
+    mswPhone: "tel:+919409580986",
     whatsapp: "https://wa.me/+919409580986",
     email: "mailto:vjkmmsw@gmail.com",
   },

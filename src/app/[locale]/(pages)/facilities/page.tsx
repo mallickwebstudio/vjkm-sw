@@ -2,8 +2,6 @@ import React from "react";
 import { Locale, routing } from "@/i18n/routing";
 import { getSeoMetadata } from "@/lib/metadata";
 
-import { LibrarySection } from "./library-section";
-import { BookBankSection } from "./book-bank-section";
 import { FacilitiesSection } from "./facilities-section";
 
 export function generateStaticParams() {
@@ -18,8 +16,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 export default function Page() {
   return (
     <main className="space-y-0">
-      <LibrarySection />
-      <BookBankSection />
       <FacilitiesSection />
     </main>
   );

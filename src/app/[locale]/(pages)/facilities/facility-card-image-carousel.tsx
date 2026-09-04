@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Activity } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
   Carousel,
   CarouselContent,
@@ -18,13 +19,17 @@ interface FacilityCardImageCarouselProps {
   thumbnail: string;
   title: string;
   categoryLabel?: string;
+  badgeClassName?: string;
+  categoryIcon?: React.ReactNode;
 }
 
 export function FacilityCardImageCarousel({
   imageSrcs,
   thumbnail,
   title,
-  categoryLabel = "Sports & Fitness",
+  categoryLabel,
+  badgeClassName,
+  categoryIcon,
 }: FacilityCardImageCarouselProps) {
   const images = imageSrcs && imageSrcs.length > 0 ? imageSrcs : [thumbnail];
   const [api, setApi] = useState<CarouselApi>();
@@ -69,12 +74,14 @@ export function FacilityCardImageCarousel({
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 pointer-events-none z-10" />
 
         {/* Top Left Badge */}
-        <div className="absolute top-3 left-3 z-20 pointer-events-none">
-          <Badge className="bg-amber/90 text-amber-foreground font-semibold backdrop-blur-md shadow-sm">
-            <Activity className="w-3.5 h-3.5 mr-1" />
-            {categoryLabel}
-          </Badge>
-        </div>
+        {/* {categoryLabel && (
+          <div className="absolute top-3 left-3 z-20 pointer-events-none">
+            <Badge className={cn("bg-amber/90 text-amber-foreground font-semibold backdrop-blur-md shadow-sm flex items-center gap-1.5", badgeClassName)}>
+              {categoryIcon ? categoryIcon : <Activity className="w-3.5 h-3.5" />}
+              <span>{categoryLabel}</span>
+            </Badge>
+          </div>
+        )} */}
 
         {/* Counter Tag */}
         {count > 1 && (
@@ -104,11 +111,10 @@ export function FacilityCardImageCarousel({
                   api?.scrollTo(idx);
                 }}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  idx === current
+                className={`h-2 rounded-full transition-all duration-300 ${idx === current
                     ? "w-5 bg-amber shadow-sm"
                     : "w-2 bg-white/50 hover:bg-white/90"
-                }`}
+                  }`}
               />
             ))}
           </div>

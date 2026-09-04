@@ -117,105 +117,6 @@ export const navigationData: NavItem[] = [
       },
     ],
   },
-
-  {
-    type: "dropdown",
-    label: "navigation.facilities",
-    href: "/facilities",
-    description: "Central library, Book Bank scheme, sports turf, and gym.",
-    featured: {
-      title: "Digital & Physical Library",
-      description: "Access thousands of books, case journals, e-databases & Book Bank scheme.",
-      href: "/facilities#library",
-      badge: "Knowledge Hub",
-    },
-    children: [
-      {
-        label: "navigation.library",
-        href: "/facilities#library",
-        description: "Books, e-journals, & social science research archives.",
-      },
-      {
-        label: "navigation.bookBank",
-        href: "/facilities#book-bank-scheme",
-        description: "Free complete semester textbook kits for BSW & MSW students.",
-      },
-      {
-        label: "navigation.sportsFitness",
-        href: "/facilities#sports-and-fitness",
-        description: "Cricket turf, football ground, fitness gym, & yoga center.",
-      },
-    ],
-  },
-  {
-    type: "dropdown",
-    label: "navigation.fieldwork",
-    href: "/fieldwork",
-    description: "Fieldwork practicum, corporate CSR placements, and agency partners.",
-    featured: {
-      title: "Fieldwork Practicum & Camps",
-      description: "Weekly concurrent field exposure and 7-day rural immersion camps.",
-      href: "/fieldwork#fieldwork-practicum",
-      badge: "Hands-On",
-    },
-    children: [
-      {
-        label: "navigation.fieldworkPracticum",
-        href: "/fieldwork#fieldwork-practicum",
-        description: "Concurrent fieldwork, 7-day rural camp, & block placements.",
-      },
-      {
-        label: "navigation.placementCell",
-        href: "/fieldwork#placement-cell",
-        description: "Placement objectives, recruitment drive dates, & student officers.",
-      },
-      {
-        label: "navigation.partneringAgencies",
-        href: "/fieldwork#partnering-agencies",
-        description: "NGO partners, corporate CSR units, & govt social defense depts.",
-      },
-      {
-        label: "navigation.placementRecords",
-        href: "/fieldwork#placement-records",
-        description: "Year-on-year placement metrics & top recruiters gallery.",
-      },
-      {
-        label: "navigation.forRecruiters",
-        href: "/fieldwork#for-recruiters",
-        description: "Dean's invitation, batch demographics, & recruiter registration.",
-      },
-    ],
-  },
-  {
-    type: "dropdown",
-    label: "navigation.studentLife",
-    href: "/student-life",
-    description: "NSS outreach, annual cultural festival, and sports meets.",
-    featured: {
-      title: "NSS & Social Outreach",
-      description: "Blood donation camps, village adoption, and community literacy drives.",
-      href: "/student-life#nss-and-social-outreach",
-      badge: "Community",
-    },
-    children: [
-      {
-        label: "navigation.nssSocialOutreach",
-        href: "/student-life#nss-and-social-outreach",
-        description: "Blood donation camps, cleanliness drives, & adopted village work.",
-      },
-      {
-        label: "navigation.eventsCelebrations",
-        href: "/student-life#events-and-celebrations",
-        description: "Annual cultural fest, World Social Work Day, & sports meets.",
-      },
-      {
-        label: "navigation.mediaGallery",
-        href: "/gallery",
-        description: "Filterable photo grid by Course, Academic Year, and Campus Events.",
-      },
-    ],
-  },
-
   {
     type: "dropdown",
     label: "navigation.news",
@@ -247,14 +148,25 @@ export const navigationData: NavItem[] = [
   },
   {
     type: "link",
-    label: "navigation.gallery",
-    href: "/gallery",
+    label: "navigation.facilities",
+    href: "/facilities",
+    description: "Central library, Book Bank scheme, sports turf, and gym.",
   },
   {
     type: "link",
-    label: "navigation.articles",
-    href: "/articles",
+    label: "navigation.fieldwork",
+    href: "/fieldwork",
   },
+  {
+    type: "link",
+    label: "navigation.gallery",
+    href: "/gallery",
+  },
+  // {
+  //   type: "link",
+  //   label: "navigation.articles",
+  //   href: "/articles",
+  // },
 ];
 
 // Helper to extract flat list of explore links for Footer

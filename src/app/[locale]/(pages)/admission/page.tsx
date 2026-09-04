@@ -20,8 +20,7 @@ export default function Page() {
   return (
     <main className="space-y-0">
       <AdmissionProcessSection />
-      <GcasGuide className="bg-background text-foreground scroll-mt-20" />
-      <ScholarshipsSection />
+      <GcasGuide />
       <AdmissionInquirySection />
     </main>
   );

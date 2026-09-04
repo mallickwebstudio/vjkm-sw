@@ -7,7 +7,6 @@ import AboutSnapshot from "./about-snapshot";
 import CoursesSpotlight from "./courses-spotlight";
 import { GcasGuide } from "@/components/shared/gcas-guide";
 import CareerFieldworkGrid from "./career-fieldwork-grid";
-import RecentUpdatesFeed from "./recent-updates-feed";
 import { GalleryPreviewSection } from "./gallery-preview-section";
 import { getNotices } from "@/db/notice";
 
@@ -38,9 +37,8 @@ export default async function Page({ params }: { params: Promise<{ locale: Local
       <AboutSnapshot />
       <CoursesSpotlight />
       <GcasGuide />
-      <CareerFieldworkGrid />
+      {/* <CareerFieldworkGrid /> */}
       <GalleryPreviewSection />
-      <RecentUpdatesFeed />
     </main>
   );
 }

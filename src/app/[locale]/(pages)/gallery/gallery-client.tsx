@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import { galleryData, GalleryImage } from "@/db/gallery";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -31,6 +33,9 @@ interface GalleryClientProps {
 
 export function GalleryClient({ locale }: GalleryClientProps) {
   const isGu = locale === "gu";
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
 
   // 1. Course options from galleryData (e.g. bsw, msw) - NO "ALL"
   const courseOptions = useMemo(() => {
@@ -41,8 +46,17 @@ export function GalleryClient({ locale }: GalleryClientProps) {
     }));
   }, []);
 
-  const initialCourse = courseOptions[0]?.id || "bsw";
-  const [selectedCourse, setSelectedCourse] = useState<string>(initialCourse);
+  const defaultCourse = courseOptions[0]?.id || "bsw";
+
+  // Validate course from URL query params
+  const urlCourse = searchParams.get("course")?.toLowerCase();
+  const selectedCourse = useMemo(() => {
+    if (!urlCourse) return defaultCourse;
+    const match = Object.keys(galleryData).find(
+      (k) => k.toLowerCase() === urlCourse
+    );
+    return match || defaultCourse;
+  }, [urlCourse, defaultCourse]);
 
   // 2. Year options for selected course - NO "ALL"
   const yearOptions = useMemo(() => {
@@ -56,8 +70,19 @@ export function GalleryClient({ locale }: GalleryClientProps) {
     }));
   }, [selectedCourse]);
 
-  const initialYear = yearOptions[0]?.id || "";
-  const [selectedYear, setSelectedYear] = useState<string>(initialYear);
+  const defaultYear = yearOptions[0]?.id || "";
+
+  // Validate year from URL query params
+  const urlYear = searchParams.get("year");
+  const selectedYear = useMemo(() => {
+    if (!urlYear) return defaultYear;
+    const courseObj = galleryData[selectedCourse];
+    if (!courseObj) return defaultYear;
+    const match = Object.keys(courseObj).find(
+      (y) => y.toLowerCase() === urlYear.toLowerCase()
+    );
+    return match || defaultYear;
+  }, [urlYear, selectedCourse, defaultYear]);
 
   // 3. Event options for selected course and year - NO "ALL"
   const eventOptions = useMemo(() => {
@@ -71,31 +96,62 @@ export function GalleryClient({ locale }: GalleryClientProps) {
     }));
   }, [selectedCourse, selectedYear]);
 
-  const initialEvent = eventOptions[0]?.id || "";
-  const [selectedEvent, setSelectedEvent] = useState<string>(initialEvent);
+  const defaultEvent = eventOptions[0]?.id || "";
+
+  // Validate event from URL query params (exact, case-insensitive, or slug match)
+  const urlEvent = searchParams.get("event");
+  const selectedEvent = useMemo(() => {
+    if (!urlEvent) return defaultEvent;
+    const yearObj = galleryData[selectedCourse]?.[selectedYear];
+    if (!yearObj) return defaultEvent;
+
+    // Exact match
+    if (yearObj[urlEvent]) return urlEvent;
+
+    // Case-insensitive or kebab-case slug match
+    const normalized = urlEvent.toLowerCase();
+    const matchedKey = Object.keys(yearObj).find(
+      (key) =>
+        key.toLowerCase() === normalized ||
+        key.toLowerCase().replace(/\s+/g, "-") === normalized
+    );
+    return matchedKey || defaultEvent;
+  }, [urlEvent, selectedCourse, selectedYear, defaultEvent]);
+
+  // Helper to push URL query param updates without scrolling
+  const updateUrlFilters = useCallback(
+    (course: string, year: string, event: string) => {
+      const params = new URLSearchParams();
+      params.set("course", course);
+      params.set("year", year);
+      params.set("event", event);
+      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    },
+    [pathname, router]
+  );
 
   // Handle course change: auto-select the first year and first event
   const handleCourseChange = (newCourse: string) => {
-    setSelectedCourse(newCourse);
     const availableYears = Object.keys(galleryData[newCourse] || {}).sort().reverse();
     const firstYear = availableYears[0] || "";
-    setSelectedYear(firstYear);
     const availableEvents = Object.keys(galleryData[newCourse]?.[firstYear] || {});
     const firstEvent = availableEvents[0] || "";
-    setSelectedEvent(firstEvent);
+    updateUrlFilters(newCourse, firstYear, firstEvent);
+    setLightboxIndex(null);
   };
 
   // Handle year change: auto-select the first event
   const handleYearChange = (newYear: string) => {
-    setSelectedYear(newYear);
     const availableEvents = Object.keys(galleryData[selectedCourse]?.[newYear] || {});
     const firstEvent = availableEvents[0] || "";
-    setSelectedEvent(firstEvent);
+    updateUrlFilters(selectedCourse, newYear, firstEvent);
+    setLightboxIndex(null);
   };
 
   // Handle event change
   const handleEventChange = (newEvent: string) => {
-    setSelectedEvent(newEvent);
+    updateUrlFilters(selectedCourse, selectedYear, newEvent);
+    setLightboxIndex(null);
   };
 
   // Lightbox Modal state
@@ -107,22 +163,19 @@ export function GalleryClient({ locale }: GalleryClientProps) {
     return Array.isArray(items) ? items : [];
   }, [selectedCourse, selectedYear, selectedEvent]);
 
-  // Check if current selection differs from the very first defaults
+  // Check if current selection differs from defaults or has active query params
+  const hasCustomParams = Boolean(
+    searchParams.get("course") || searchParams.get("year") || searchParams.get("event")
+  );
   const isDefaultSelection =
-    selectedCourse === initialCourse &&
-    selectedYear === (yearOptions[0]?.id || "") &&
-    selectedEvent === (eventOptions[0]?.id || "");
+    selectedCourse === defaultCourse &&
+    selectedYear === defaultYear &&
+    selectedEvent === defaultEvent &&
+    !hasCustomParams;
 
   const handleResetFilters = () => {
-    const firstCourse = courseOptions[0]?.id || "bsw";
-    const availableYears = Object.keys(galleryData[firstCourse] || {}).sort().reverse();
-    const firstYear = availableYears[0] || "";
-    const availableEvents = Object.keys(galleryData[firstCourse]?.[firstYear] || {});
-    const firstEvent = availableEvents[0] || "";
-
-    setSelectedCourse(firstCourse);
-    setSelectedYear(firstYear);
-    setSelectedEvent(firstEvent);
+    router.replace(pathname, { scroll: false });
+    setLightboxIndex(null);
   };
 
   const currentLightboxItem =

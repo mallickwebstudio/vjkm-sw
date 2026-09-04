@@ -7,7 +7,6 @@
     "admission": "Admission",
     "facilities": "Facilities",
     "fieldwork": "Fieldwork",
-    "studentLife": "Student Life",
     "committees": "Committees",
     "news": "News & Updates",
     "articles": "Articles",
@@ -44,11 +43,6 @@
     "studentAmenities": "Student Amenities",
     "fieldworkPracticum": "Fieldwork Practicum",
     "placementCell": "Placement Cell",
-    "partneringAgencies": "Partnering Agencies",
-    "placementRecords": "Placement Records",
-    "forRecruiters": "For Recruiters",
-    "nssSocialOutreach": "NSS & Social Outreach",
-    "eventsCelebrations": "Events & Celebrations",
     "clubsCells": "Clubs & Cells",
     "mediaGallery": "Media Gallery",
     "iqac": "IQAC",
@@ -80,8 +74,6 @@
       "bsw": "BSW Course Track",
       "msw": "MSW Course Track",
       "fieldwork": "Fieldwork Practicum",
-      "placement": "Placement Cell & Drives",
-      "nss": "NSS & Social Outreach",
       "gallery": "Media & Event Gallery"
     },
     "governanceLinks": {
@@ -152,49 +144,13 @@
       "urgentNotices": "Urgent Notices",
       "h2": "Notice Board",
       "p": "Keep up with the latest news, events, and announcements from VJKM. Explore upcoming activities and stay connected with our educational initiatives.",
-      "h3": "Latest Updates",
-      "notices": {
-        "n1Title": "GCAS & Self-Finance Admission 2026-27 Open",
-        "n1Desc": "Apply online via gcasstudent.gujgov.edu.in or visit campus desk directly for BSW & MSW admissions.",
-        "n1Tag": "Admission Alert",
-        "n2Title": "Document Verification Desk Active",
-        "n2Desc": "Visit college administrative room 102 daily between 10:00 AM - 4:00 PM.",
-        "n2Tag": "Campus Helpdesk",
-        "n3Title": "SGGU Semester Exam Schedule Announced",
-        "n3Desc": "Official datesheet published for BSW Sem 2, 4, 6 & MSW Sem 2, 4.",
-        "n3Tag": "Exam Cell",
-        "n4Title": "7-Day Rural Camp Orientation for MSW",
-        "n4Desc": "Mandatory pre-fieldwork orientation meeting scheduled for all MSW first-year scholars.",
-        "n4Tag": "Fieldwork"
-      }
+      "h3": "Latest Updates"
     },
     "aboutSnapshot": {
       "badge": "Established 1957 • 67+ Years of Excellence",
       "h2": "Vadodara Jilla Kelavani Mandal (VJKM) Trust",
       "p": "Founded with a profound vision to democratize quality education across rural and semi-urban Gujarat, VJKM Trust has been a cornerstone of socio-educational advancement for over six decades.",
-      "trustee1Name": "Shri Shashikant H. Patel",
-      "trustee1Designation": "President",
-      "trustee2Name": "Shri Dilipbhai N. Patel",
-      "trustee2Designation": "Vice President",
-      "trustee3Name": "Shri Thakorbhai K. Patel",
-      "trustee3Designation": "Secretary",
-      "trustee4Name": "Shri Mukesh V. Vasaiwala",
-      "trustee4Designation": "Joint Secretary",
-      "pillar1Title": "SGGU University Affiliation",
-      "pillar1Desc": "Approved by Shri Govind Guru University, Godhra",
-      "pillar2Title": "Fieldwork Focused Pedagogy",
-      "pillar2Desc": "Weekly field visits, block placements & rural camps",
-      "pillar3Title": "Inclusive Financial Aid",
-      "pillar3Desc": "Support for Digital Gujarat & MYSY scholarships",
-      "pillar4Title": "Dedicated Admission Desk",
-      "pillar4Desc": "On-campus GCAS & Self-Finance helpdesk & verification",
-      "cta": "Learn More About VJKM Trust",
-      "visionTitle": "Our Vision",
-      "visionDesc": "To be a benchmark institution in social work education, empowering youth with empathy, professional ethics, and leadership skills to drive sustainable community transformation.",
-      "missionTitle": "Our Mission",
-      "missionDesc": "Nurture social work professionals through experiential fieldwork, research, inter-disciplinary learning, and institutional partnerships across Gujarat and India.",
-      "valuesTitle": "Core Values",
-      "valuesDesc": "Social Justice, Human Dignity, Community Service, Environmental Stewardship, and Transparent Governance."
+      "cta": "Learn More About VJKM Trust"
     },
     "coursesSpotlight": {
       "badge": "Academic Degree Programs",
@@ -209,9 +165,6 @@
         "eligibilityLabel": "Eligibility:",
         "eligibility": "10+2 Any Stream",
         "highlightsTitle": "Key Highlights",
-        "highlight1": "Weekly mandatory field visits to local NGOs & Panchayats",
-        "highlight2": "7-Day Annual Rural Orientation Camp",
-        "highlight3": "Foundation in Psychology, Sociology & Social Legislation",
         "ctaDetails": "Course Syllabus & Details",
         "ctaApply": "Apply via GCAS / Self-Finance"
       },
@@ -224,9 +177,6 @@
         "eligibilityLabel": "Eligibility:",
         "eligibility": "Bachelor Degree Any Stream",
         "highlightsTitle": "Key Highlights",
-        "highlight1": "Specialization tracks: HR/IR, Medical Social Work & Rural Development",
-        "highlight2": "30-Day Mandatory Corporate / NGO Block Internship",
-        "highlight3": "Research Dissertation & Published Project Work",
         "ctaDetails": "Course Syllabus & Details",
         "ctaApply": "Apply via GCAS / Self-Finance"
       }
@@ -234,99 +184,30 @@
     "gcasGuide": {
       "badge": "Admission Walkthrough 2026-27",
       "h2": "How to Apply via GCAS Portal & Direct Self-Finance",
-      "subheading": "Admissions for BSW and MSW courses can be completed online through the official GCAS Gujarat Government Portal or directly at our college campus under Self-Finance quota.",
-      "step1Title": "Online GCAS Portal or Direct Registration",
-      "step1Desc": "Register online via gcasstudent.gujgov.edu.in or visit our campus admission desk directly for instant form submission.",
-      "step2Title": "Select VJKM SF College (SGGU)",
-      "step2Desc": "Under university preference, select Shri Govind Guru University (SGGU) and choose VJKM Self-Finance College for BSW or MSW programs.",
-      "step3Title": "Campus Verification & Seat Allocation",
-      "step3Desc": "Visit our dedicated campus helpdesk (Room 102) with original marksheets, caste certificate, and LC for instant verification and seat confirmation.",
-      "helpTitle": "Need help with GCAS or Self-Finance admission?",
-      "helpDesc": "Our campus admission counselors assist students free of charge with document scanning, online form submission, and direct seat enrollment.",
-      "ctaPortal": "Open Official GCAS Portal",
-      "ctaGuide": "View Full Step-by-Step Guide"
+      "subheading": "Admissions for BSW and MSW courses can be completed online through the official GCAS Gujarat Government Portal or directly at our college campus under Self-Finance quota."
     },
     "careerFieldwork": {
       "badge": "Field Practicum & Career Pathways",
       "h2": "50+ NGO & CSR Fieldwork Partners",
       "subheading": "Practical field experience is the core of our curriculum. Students gain 500+ hours of hands-on community service and corporate exposure.",
       "rolesLabel": "Career Roles:",
-      "cta": "Explore Fieldwork Manual",
-      "csrTitle": "Corporate Social Responsibility (CSR)",
-      "csrDesc": "Placement in leading industrial houses managing community initiatives, ESG compliance, and rural development grants.",
-      "csrRole1": "CSR Coordinator",
-      "csrRole2": "Community Relations Officer",
-      "csrRole3": "ESG Analyst",
-      "ngoTitle": "NGOs & Rural Development",
-      "ngoDesc": "Direct field immersion with national and grassroots non-profits focusing on tribal welfare, water sanitation, and women empowerment.",
-      "ngoRole1": "NGO Project Manager",
-      "ngoRole2": "Field Coordinator",
-      "ngoRole3": "Rural Development Officer",
-      "healthTitle": "Medical & Psychiatric Health",
-      "healthDesc": "Clinical social work roles in district hospitals, mental health institutes, and rehabilitation centers across Gujarat.",
-      "healthRole1": "Medical Social Worker",
-      "healthRole2": "Psychiatric Counselor",
-      "healthRole3": "Hospital Welfare Officer",
-      "govtTitle": "Government & Social Justice",
-      "govtDesc": "Collaborations with District Child Protection Units (DCPU), Social Defense Department, and Panchayati Raj institutions.",
-      "govtRole1": "Child Protection Officer",
-      "govtRole2": "Probation Officer",
-      "govtRole3": "Social Audit Specialist"
+      "cta": "Explore Fieldwork Manual"
     },
     "amenities": {
       "badge": "Campus Life & Facilities",
       "h2": "Modern Infrastructure Built for Growth",
-      "subheading": "Designed to provide students with a holistic learning environment, combining tech-enabled learning with lush campus spaces.",
-      "item1Title": "Smart AV Classrooms",
-      "item1Desc": "Equipped with interactive projectors, high-speed Wi-Fi, and acoustic seating for dynamic seminars.",
-      "item2Title": "Central Social Work Library",
-      "item2Desc": "5,000+ volumes, government research reports, international journals, and digital e-catalog access.",
-      "item3Title": "Computer & Field Data Lab",
-      "item3Desc": "Dedicated IT hub with statistical analysis software (SPSS) for field survey & research projects.",
-      "item4Title": "Multipurpose Conference Hall",
-      "item4Desc": "Host venue for university workshops, guest lectures, state level NGO meets, and student cultural fests.",
-      "item5Title": "Sports Turf & Recreation",
-      "item5Desc": "Outdoor sports grounds for cricket, volleyball, and indoor games facilities fostering student wellness.",
-      "item6Title": "Safe & Inclusive Campus",
-      "item6Desc": "CCTV monitored premises, dedicated Girls' Common Room, and active Anti-Ragging Cell."
+      "subheading": "Designed to provide students with a holistic learning environment, combining tech-enabled learning with lush campus spaces."
     },
     "recentUpdates": {
       "badge": "News & Events",
       "h2": "Latest Campus Activities & Field Highlights",
       "subheading": "Stay informed about recent rural camps, academic seminars, blood donation drives, and research publications.",
-      "cta": "View All News, Events & Circulars",
-      "u1Category": "Rural Camp",
-      "u1Title": "Annual 7-Day Rural Immersion Camp Organized in Panchmahal",
-      "u1Date": "August 15, 2026",
-      "u1Summary": "MSW scholars conducted PRA (Participatory Rural Appraisal) surveys, health awareness camps, and literacy drives across 5 village panchayats.",
-      "u2Category": "Academic Seminar",
-      "u2Title": "State Level Workshop on CSR Policy & Environmental Ethics",
-      "u2Date": "July 28, 2026",
-      "u2Summary": "Keynote lectures by leading CSR heads from Vadodara industrial cluster detailing modern ESG reporting frameworks for social workers.",
-      "u3Category": "Community Welfare",
-      "u3Title": "Blood Donation & Health Checkup Drive at VJKM Campus",
-      "u3Date": "June 14, 2026",
-      "u3Summary": "In collaboration with Red Cross Society, over 180 units of blood were collected with participation from BSW & MSW student volunteers."
+      "cta": "View All News, Events & Circulars"
     },
     "testimonials": {
       "badge": "Alumni Impact & Voices",
       "h2": "Empowering Careers Across CSR, Healthcare & Public Sector",
-      "subheading": "Hear from VJKM graduates who are leading transformative social initiatives across Gujarat and India.",
-      "t1Quote": "The intensive field practicals at VJKM College laid the exact foundation I needed for corporate CSR. The faculty guided us through real field challenges, from rural PRA surveys to corporate project management.",
-      "t1Name": "Priyanka Parmar",
-      "t1Degree": "MSW Batch 2022",
-      "t1Role": "CSR Project Manager",
-      "t1Org": "Leading Chemical Industrial Group, Vadodara",
-      "t2Quote": "Starting with BSW at VJKM gave me deep clarity on social legislations and community psychology. The on-campus GCAS helpdesk and career counseling ensured a seamless transition into professional practice.",
-      "t2Name": "Ramesh Solanki",
-      "t2Degree": "BSW Batch 2021 & MSW Batch 2023",
-      "t2Role": "District Welfare Officer",
-      "t2Org": "Department of Social Justice, Gujarat",
-      "t3Quote": "VJKM Trust's 67-year educational legacy is evident in their rich NGO network. My 30-day block internship in a healthcare NGO landed me my first role as a Medical Social Worker right after graduation.",
-      "t3Name": "Anjali Patel",
-      "t3Degree": "MSW Batch 2024",
-      "t3Role": "Medical Social Worker",
-      "t3Org": "Multi-Specialty Civil Hospital Network"
+      "subheading": "Hear from VJKM graduates who are leading transformative social initiatives across Gujarat and India."
     },
     "gallery": {
       "h2": "Moments at VJKM",
@@ -356,15 +237,7 @@
       "p": "To emerge as a globally respected, value-driven Centre of Excellence that nurtures enlightened individuals through excellence in education, research, innovation, and community engagement. Rooted in the rich legacy of over seventy years of dedicated public service, the VJKM Campus aspires to empower learners with knowledge, ethical values, creativity, and leadership, contributing to sustainable development and the advancement of society at the regional, national, and global levels."
     },
     "mission": {
-      "h2": "The VJKM Trust shall strive to:",
-      "li1": "Provide high-quality, inclusive, and multidisciplinary education that promotes academic excellence, critical thinking, creativity, and lifelong learning.",
-      "li2": "Foster a culture of research, innovation, entrepreneurship, and interdisciplinary collaboration to address contemporary societal and industrial challenges.",
-      "li3": "Uphold the highest standards of ethics, integrity, transparency, and good govemance in all academic and administrative endeavours.",
-      "li4": "Integrate professional competence with human values, social responsibility, environmental consciousness, and constitutional ideals to develop responsible citizens and compassionate leaders.",
-      "li5": "Strengthen partnerships with industry, government, academic institutions, and civil society to enhance learning, research, skill development, and employability.",
-      "li6": "Promote equitable access to quality education through scholarships, outreach programmes, and inclusive policies, particularly for underserved and marginalized sections of society.",
-      "li7": "Preserve and promote India's cultural heritage while embracing global perspectives, emerging technologies, and international academic collaborations.",
-      "li8": "Contribute to the socio-economic development of Gujarat and the nation through extension activities, knowledge dissemination, innovation, and community service, in keeping with the Trust's longstanding commitment to public welfare."
+      "h2": "The VJKM Trust shall strive to:"
     },
     "motto": "Learning for Life, Leadership for Society"
   },
@@ -429,8 +302,20 @@
     "yourName": "Your Name",
     "vikasSharma": "Vikas Sharma",
     "phoneNo": "Phone No.",
-    "message": "Vikas Sharma",
-    "messageNote": "Leave a message"
+    "course": "Course",
+    "selectCourse": "Select Course",
+    "bsw": "B.S.W. (Bachelor of Social Work)",
+    "msw": "M.S.W. (Master of Social Work)",
+    "message": "Message",
+    "messageNote": "Leave a message or enquiry details...",
+    "submitting": "Submitting...",
+    "submitted": "Submitted",
+    "submit": "Submit Enquiry",
+    "requestCallback": "Request Callback",
+    "optional": "Optional",
+    "success": "Form submitted successfully!",
+    "error": "Failed to submit the form. Please try again.",
+    "validationError": "Please fill in all required fields."
   },
   "aboutTrust": {
     "hero": {
@@ -444,58 +329,17 @@
     "overview": {
       "badge": "Institutional Profile",
       "h2": "Six Decades of Dedicated Educational Public Service",
-      "subheading": "Vadodara Jilla Kelavani Mandal (VJKM) Trust stands as a beacon of learning, moral values, and social upliftment across Vadodara district.",
-      "item1Title": "Founding Vision (1957)",
-      "item1Desc": "Established by visionary leaders in Dabhoi to democratize quality higher education and serve the educational needs of rural and semi-urban Gujarat.",
-      "item2Title": "Multidisciplinary Growth",
-      "item2Desc": "From foundational degree colleges to specialized Self-Finance institutions offering BSW and MSW programs, fostering academic excellence across disciplines.",
-      "item3Title": "Community Outreach & CSR",
-      "item3Desc": "Pioneering fieldwork practicums, weekly village visits, 7-day rural camps, and corporate CSR projects that address contemporary social challenges.",
-      "item4Title": "Ethical Governance",
-      "item4Desc": "Governed with absolute financial transparency, non-profit integrity, and adherence to Shri Govind Guru University (SGGU) & UGC standards.",
-      "principle1Title": "Non-Profit Public Trust",
-      "principle1Desc": "Dedicated purely to educational advancement and community welfare.",
-      "principle2Title": "SGGU & UGC Compliant",
-      "principle2Desc": "Affiliated with Shri Govind Guru University, Godhra & recognized by UGC.",
-      "principle3Title": "Inclusive Financial Aid",
-      "principle3Desc": "Full guidance for Digital Gujarat, MYSY, and Trust scholarship assistance."
+      "subheading": "Vadodara Jilla Kelavani Mandal (VJKM) Trust stands as a beacon of learning, moral values, and social upliftment across Vadodara district."
     },
     "trustees": {
       "badge": "Executive Governance",
       "h2": "Board of Trustees",
-      "subheading": "Meet the governing minds driving Vadodara Jilla Kelavani Mandal forward through ethical leadership, integrity, and dedication.",
-      "t1Name": "Shri Shashikant H. Patel",
-      "t1Role": "President",
-      "t1Bio": "Leading the executive governance of VJKM Trust with strategic vision, fostering academic expansion and community welfare.",
-      "t2Name": "Shri Dilipbhai N. Patel",
-      "t2Role": "Vice President",
-      "t2Bio": "Overseeing campus infrastructure development, institutional policy alignment, and student welfare initiatives.",
-      "t3Name": "Shri Thakorbhai K. Patel",
-      "t3Role": "Secretary",
-      "t3Bio": "Directing administrative operations, university compliance with SGGU, and academic quality assurance.",
-      "t4Name": "Shri Mukesh V. Vasaiwala",
-      "t4Role": "Joint Secretary",
-      "t4Bio": "Managing stakeholder engagement, financial aid programs, and community outreach operations across campuses."
+      "subheading": "Meet the governing minds driving Vadodara Jilla Kelavani Mandal forward through ethical leadership, integrity, and dedication."
     },
     "timeline": {
       "badge": "Historical Journey",
       "h2": "Our Legacy of Progress (1957 - Present)",
-      "subheading": "Over six decades of unwavering dedication to educational excellence, student empowerment, and public welfare.",
-      "m1Year": "1957",
-      "m1Title": "Foundation of VJKM Trust",
-      "m1Desc": "Established by visionary social leaders in Dabhoi to extend accessible, quality higher education across rural and semi-urban Vadodara district.",
-      "m2Year": "1970 - 1990",
-      "m2Title": "Academic Expansion",
-      "m2Desc": "Expansion of campus infrastructure, introducing undergraduate science, arts, and commerce academic tracks under the Trust's governance.",
-      "m3Year": "2000s",
-      "m3Title": "Self-Finance Social Work College Established",
-      "m3Desc": "Launch of VJKM Self-Finance College offering professional BSW (Bachelor of Social Work) and MSW (Master of Social Work) degree programs.",
-      "m4Year": "2020s",
-      "m4Title": "SGGU Affiliation & GCAS Portal Integration",
-      "m4Desc": "Affiliation with Shri Govind Guru University (SGGU), Godhra, and complete integration with Gujarat Common Admission Services (GCAS).",
-      "m5Year": "2026 & Beyond",
-      "m5Title": "Digital Campus & 50+ CSR Partnerships",
-      "m5Desc": "Modern smart classrooms, statistical IT labs, digital library archives, and 50+ NGO/CSR fieldwork partner network."
+      "subheading": "Over six decades of unwavering dedication to educational excellence, student empowerment, and public welfare."
     }
   },
   "aboutCollege": {
@@ -510,20 +354,7 @@
     "principal": {
       "badge": "Leadership & Vision",
       "h2": "Principals' Desk & Academic Leadership",
-      "subheading": "Meet the academic leadership guiding our BSW (Undergraduate) and MSW (Postgraduate) Social Work degree programs.",
-      "bswPrincipal": {
-        "name": "Vankar Jagruti Priteshkumar",
-        "designation": "I/C PRINCIPAL - BSW",
-        "degree": "BCOM, SDOM, MSW",
-        "message": "Welcome to VJKM BSW College. Our undergraduate social work program is committed to developing young change-makers with core field survey skills, community outreach, and social advocacy."
-      },
-      "mswPrincipal": {
-        "name": "Maulikkumar Patel",
-        "designation": "I/C Principal - MSW",
-        "degree": "Ph.D. in Social Work",
-        "expertise": "Gender Studies, Domestic Violence, Mental Health",
-        "message": "Welcome to VJKM MSW College. Our master's program focuses on specialized domains including HRM, CSR leadership, Medical & Psychiatric Social Work, and empirical research."
-      }
+      "subheading": "Meet the academic leadership guiding our BSW (Undergraduate) and MSW (Postgraduate) Social Work degree programs."
     },
     "faculty": {
       "badge": "Academic & Administrative Team",
@@ -533,26 +364,12 @@
     "philosophy": {
       "badge": "Institutional Philosophy",
       "h2": "Vision, Mission & Core Values",
-      "subheading": "The guiding principles shaping our curriculum, student culture, and community engagement initiatives.",
-      "visionTitle": "Our Vision",
-      "visionDesc": "To be a benchmark institution in professional social work education, empowering youth with empathy, ethics, and leadership skills to drive sustainable community transformation.",
-      "missionTitle": "Our Mission",
-      "missionDesc": "Nurture competent social work professionals through rigorous academic instruction, 500+ hours of mandatory field practicums, interdisciplinary research, and active NGO/CSR partnerships.",
-      "valuesTitle": "Core Values",
-      "valuesDesc": "Social Justice, Human Dignity, Community Service, Environmental Stewardship, and Transparent Governance."
+      "subheading": "The guiding principles shaping our curriculum, student culture, and community engagement initiatives."
     },
     "compliance": {
       "badge": "Regulatory Approvals",
-      "h2": "Affiliation & Statutory Compliance",
-      "subheading": "Fully recognized and compliant with state educational bodies, university affiliation frameworks, and UGC guidelines.",
-      "item1Title": "Shri Govind Guru University (SGGU)",
-      "item1Desc": "Affiliated with SGGU, Godhra for BSW and MSW degree programs with updated NEP curriculum structure.",
-      "item2Title": "Government of Gujarat Recognized",
-      "item2Desc": "Approved by the Education Department, Government of Gujarat for higher education instruction.",
-      "item3Title": "GCAS Admission Partner",
-      "item3Desc": "Official institute partner in the Gujarat Common Admission Services portal for transparent seat allotment.",
-      "item4Title": "Statutory Compliance & IQAC",
-      "item4Desc": "Registered under AISHE with active Internal Quality Assurance Cell (IQAC), Anti-Ragging, and POSH committees."
+      "h2": "Affiliation",
+      "subheading": "Fully recognized and compliant with state educational bodies, university affiliation frameworks, and UGC guidelines."
     }
   },
   "facultyAndStaff": {
@@ -566,27 +383,11 @@
     },
     "research": {
       "h2": "Faculty Research & Community Outreach",
-      "subheading": "Promoting empirical social work research, field publications, and active community consultation.",
-      "r1Title": "Fieldwork & Rural Research",
-      "r1Desc": "Empirical survey studies on rural health, PRA techniques, and tribal community development across Gujarat.",
-      "r2Title": "Gender & Social Justice Studies",
-      "r2Desc": "Focused research on domestic violence intervention, women empowerment, and human rights advocacy.",
-      "r3Title": "Mental Health & Clinical Social Work",
-      "r3Desc": "Clinical case consultation, psychiatric social work frameworks, and community mental health outreach.",
-      "r4Title": "CSR & Industrial Relations",
-      "r4Desc": "Corporate social responsibility evaluations, ESG compliance studies, and NGO capacity building."
+      "subheading": "Promoting empirical social work research, field publications, and active community consultation."
     },
     "support": {
       "h2": "Campus Administrative & Support Services",
-      "subheading": "Dedicated administrative officers ensuring seamless student admissions, scholarship aid, and campus management.",
-      "s1Title": "GCAS Admission & Verification Desk",
-      "s1Desc": "Assisting applicants with online portal registration, document verification, and seat confirmation.",
-      "s2Title": "Scholarship & Financial Aid Helpdesk",
-      "s2Desc": "Full guidance for Digital Gujarat, MYSY, and Trust financial support applications.",
-      "s3Title": "Academic Records & Examination Cell",
-      "s3Desc": "Managing SGGU university enrollment, semester exam schedules, and transcript issuance.",
-      "s4Title": "IT & Library Services Desk",
-      "s4Desc": "Maintaining SPSS research software, digital cataloging, and campus IT infrastructure."
+      "subheading": "Dedicated administrative officers ensuring seamless student admissions, scholarship aid, and campus management."
     }
   },
   "governingBody": {
@@ -600,39 +401,15 @@
     },
     "board": {
       "h2": "Board of Governors",
-      "subheading": "The supreme governing body overseeing institutional vision, financial planning, and compliance with SGGU university guidelines.",
-      "roleChair": "Chairperson (President, VJKM Trust)",
-      "roleViceChair": "Vice-Chairperson (Vice President, VJKM Trust)",
-      "roleSec": "Secretary (VJKM Trust)",
-      "roleJointSec": "Member (Joint Secretary, VJKM Trust)",
-      "roleUniversity": "University Nominee (SGGU)",
-      "roleGovt": "State Government Nominee",
-      "rolePrincipalBsw": "Member Secretary (BSW)",
-      "rolePrincipalMsw": "Member Secretary (MSW)"
+      "subheading": "The supreme governing body overseeing institutional vision, financial planning, and compliance with SGGU university guidelines."
     },
     "cdc": {
       "h2": "College Development Committee (CDC)",
-      "subheading": "Statutory committee established as per SGGU guidelines to plan campus infrastructure, student welfare, library resources, and academic growth.",
-      "c1Title": "Infrastructure & Smart Classrooms",
-      "c1Desc": "Campus expansion, IT laboratory upgrades, and digital library resources.",
-      "c2Title": "Student Welfare & Scholarships",
-      "c2Desc": "Financial assistance, MYSY/Digital Gujarat guidance, and NSS community outreach.",
-      "c3Title": "Faculty & Curriculum Planning",
-      "c3Desc": "Fieldwork manual updates, NEP curriculum implementation, and academic seminars.",
-      "c4Title": "Safety & Campus Environment",
-      "c4Desc": "Maintenance of anti-ragging cell, POSH committee, and green campus initiatives."
+      "subheading": "Statutory committee established as per SGGU guidelines to plan campus infrastructure, student welfare, library resources, and academic growth."
     },
     "council": {
       "h2": "Academic & Quality Advisory Council",
-      "subheading": "Advisory body responsible for maintaining high academic standards, fieldwork practicum quality, and university examination compliance.",
-      "a1Title": "SGGU Curriculum Implementation",
-      "a1Desc": "Alignment of BSW & MSW syllabus with NEP guidelines and university examination timelines.",
-      "a2Title": "Fieldwork & CSR Partnership Advisory",
-      "a2Desc": "Evaluation of 500+ hours mandatory field practicum, block placements, and NGO partnerships.",
-      "a3Title": "IQAC Quality Monitoring",
-      "a3Desc": "Continuous internal quality assurance, feedback mechanisms, and academic audits.",
-      "a4Title": "Examination & Result Evaluation",
-      "a4Desc": "Conducting mid-semester assessments and university end-semester exam preparedness."
+      "subheading": "Advisory body responsible for maintaining high academic standards, fieldwork practicum quality, and university examination compliance."
     }
   }
 }

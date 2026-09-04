@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Locale, routing } from "@/i18n/routing";
 import { getSeoMetadata } from "@/lib/metadata";
 import { Hero, HeroContent, HeroH1, HeroP } from "@/components/section/hero";
@@ -52,7 +52,9 @@ export default async function GalleryPage({
       </Hero>
 
       <Section className="bg-slate-muted min-h-[60vh]">
-        <GalleryClient locale={locale} />
+        <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center text-muted-foreground text-sm">Loading gallery...</div>}>
+          <GalleryClient locale={locale} />
+        </Suspense>
       </Section>
     </main>
   );

@@ -6,10 +6,42 @@ import { Badge } from '@/components/ui/badge'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { GraduationCap, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
+import { Locale } from '@/i18n/routing'
+
+const bswHighlights = [
+    {
+        en: "Weekly mandatory field visits to local NGOs & Panchayats",
+        gu: "સ્થાનિક NGOs અને પંચાયતોની સાપ્તાહિક ફરજિયાત ક્ષેત્ર મુલાકાતો",
+    },
+    {
+        en: "7-Day Annual Rural Orientation Camp",
+        gu: "૭-દિવસીય વાર્ષિક ગ્રામીણ ઓરિએન્ટેશન કેમ્પ",
+    },
+    {
+        en: "Foundation in Psychology, Sociology & Social Legislation",
+        gu: "મનોવિજ્ઞાન, સમાજશાસ્ત્ર અને સામાજિક કાયદાઓનો પાયો",
+    },
+]
+
+const mswHighlights = [
+    {
+        en: "Specialization tracks: HR/IR, Medical Social Work & Rural Development",
+        gu: "વિશેષતા શાખાઓ: HR/IR, મેડિકલ સોશિયલ વર્ક અને ગ્રામીણ વિકાસ",
+    },
+    {
+        en: "30-Day Mandatory Corporate / NGO Block Internship",
+        gu: "૩૦-દિવસની ફરજિયાત કોર્પોરેટ / NGO બ્લોક ઇન્ટર્નશિપ",
+    },
+    {
+        en: "Research Dissertation & Published Project Work",
+        gu: "સંશોધન નિબંધ (Dissertation) અને પ્રોજેક્ટ કાર્ય",
+    },
+]
 
 export default async function CoursesSpotlight() {
-    const t = await getTranslations("home.coursesSpotlight");
+    const t = await getTranslations("home.coursesSpotlight")
+    const locale = (await getLocale()) as Locale
 
     return (
         <Section>
@@ -63,18 +95,12 @@ export default async function CoursesSpotlight() {
                             <div className="space-y-2">
                                 <h4 className="text-xs font-bold uppercase text-muted-foreground tracking-wider">{t("bsw.highlightsTitle")}</h4>
                                 <ul className="space-y-2 text-xs text-muted-foreground">
-                                    <li className="flex items-center gap-2">
-                                        <CheckCircle className="w-3.5 h-3.5 text-emerald shrink-0" />
-                                        <span>{t("bsw.highlight1")}</span>
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <CheckCircle className="w-3.5 h-3.5 text-emerald shrink-0" />
-                                        <span>{t("bsw.highlight2")}</span>
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <CheckCircle className="w-3.5 h-3.5 text-emerald shrink-0" />
-                                        <span>{t("bsw.highlight3")}</span>
-                                    </li>
+                                    {bswHighlights.map((highlight, idx) => (
+                                        <li key={idx} className="flex items-center gap-2">
+                                            <CheckCircle className="w-3.5 h-3.5 text-emerald shrink-0" />
+                                            <span>{highlight[locale] || highlight.en}</span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </CardContent>
@@ -109,7 +135,7 @@ export default async function CoursesSpotlight() {
                         200 Intake Seats
                     </div>
                     <div>
-                        <CardHeader className="pt-4">
+                        <CardHeader className='pt-4'>
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="p-3 rounded-xl bg-sky-muted text-sky">
                                     <GraduationCap className="w-7 h-7" />
@@ -143,18 +169,12 @@ export default async function CoursesSpotlight() {
                             <div className="space-y-2">
                                 <h4 className="text-xs font-bold uppercase text-muted-foreground tracking-wider">{t("msw.highlightsTitle")}</h4>
                                 <ul className="space-y-2 text-xs text-muted-foreground">
-                                    <li className="flex items-center gap-2">
-                                        <CheckCircle className="w-3.5 h-3.5 text-sky shrink-0" />
-                                        <span>{t("msw.highlight1")}</span>
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <CheckCircle className="w-3.5 h-3.5 text-sky shrink-0" />
-                                        <span>{t("msw.highlight2")}</span>
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <CheckCircle className="w-3.5 h-3.5 text-sky shrink-0" />
-                                        <span>{t("msw.highlight3")}</span>
-                                    </li>
+                                    {mswHighlights.map((highlight, idx) => (
+                                        <li key={idx} className="flex items-center gap-2">
+                                            <CheckCircle className="w-3.5 h-3.5 text-sky shrink-0" />
+                                            <span>{highlight[locale] || highlight.en}</span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </CardContent>

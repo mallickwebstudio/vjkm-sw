@@ -26,7 +26,7 @@ export default async function Page() {
         <TrustHero />
         <VisionMissionValues />
         <BoardOfTrustees />
-        <LegacyTimeline />
+        {/* <LegacyTimeline /> */}
       </div>
 
       {/* 2. About College Section */}
