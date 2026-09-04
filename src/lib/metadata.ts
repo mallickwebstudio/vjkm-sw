@@ -356,6 +356,52 @@ export const staticMetadataRegistry = {
       ],
     },
   },
+  privacy: {
+    en: {
+      title: "Privacy Policy | Vadodara Jilla Kelavani Mandal & VJKM College",
+      description:
+        "Official Privacy Policy of VJKM and Vadodara Jilla Kelavani Mandal. Learn how we handle student data, DPDP Act compliance, cookies, and analytics.",
+      keywords: [
+        "VJKM privacy policy",
+        "Student data protection",
+        "DPDP act compliance",
+        "Vadodara Jilla Kelavani Mandal privacy",
+      ],
+    },
+    gu: {
+      title: "પ્રાઇવસી પોલિસી | વડોદરા જિલ્લા કેળવણી મંડળ અને VJKM કોલેજ",
+      description:
+        "વડોદરા જિલ્લા કેળવણી મંડળ અને VJKM કોલેજની ગોપનીયતા નીતિ. DPDP કાયદાનું પાલન અને વિદ્યાર્થીઓના ડેટા સુરક્ષાની માહિતી.",
+      keywords: [
+        "VJKM પ્રાઇવસી પોલિસી",
+        "ડેટા સુરક્ષા નિયમો",
+        "ગોપનીયતા નીતિ",
+      ],
+    },
+  },
+  terms: {
+    en: {
+      title: "Terms and Conditions | Vadodara Jilla Kelavani Mandal & VJKM College",
+      description:
+        "Terms and Conditions governing the use of the official website of VJKM Self Finance College and Vadodara Jilla Kelavani Mandal.",
+      keywords: [
+        "VJKM terms and conditions",
+        "Terms of service",
+        "Website usage policy",
+        "Vadodara Jilla Kelavani Mandal terms",
+      ],
+    },
+    gu: {
+      title: "નિયમો અને શરતો | વડોદરા જિલ્લા કેળવણી મંડળ અને VJKM કોલેજ",
+      description:
+        "વડોદરા જિલ્લા કેળવણી મંડળ અને VJKM સેલ્ફ ફાઇનાન્સ કોલેજ વેબસાઇટ ઉપયોગના નિયમો અને શરતો.",
+      keywords: [
+        "VJKM નિયમો અને શરતો",
+        "વેબસાઇટ શરતો",
+        "ટર્મ્સ ઓફ સર્વિસ",
+      ],
+    },
+  },
 } as const satisfies Record<
   string,
   Record<

@@ -76,7 +76,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
       changeFrequency: "yearly" as const,
     },
+    {
+      path: "/privacy-policy",
+      priority: 0.5,
+      changeFrequency: "yearly" as const,
+    },
+    {
+      path: "/terms-of-service",
+      priority: 0.5,
+      changeFrequency: "yearly" as const,
+    },
   ];
+
 
   // 1. Generate Static Pages with alternates for both locales
   for (const locale of routing.locales) {

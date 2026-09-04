@@ -33,6 +33,8 @@ export async function GET() {
 - [Articles & Education](${siteConfig.baseUrl}/en/articles): Faculty and student insights on social work career scope, competitive exams, and welfare policies.
 - [Photo Gallery](${siteConfig.baseUrl}/en/gallery): Visual documentation of campus life, annual functions, rural camps, and community initiatives.
 - [Contact Us](${siteConfig.baseUrl}/en/contact-us): Campus address, telephone numbers, WhatsApp support, and Google Maps directions.
+- [Privacy Policy](${siteConfig.baseUrl}/en/privacy-policy): DPDP compliance, student data handling, analytics disclosure, and Grievance Officer details.
+- [Terms of Service](${siteConfig.baseUrl}/en/terms-of-service): Terms and conditions governing website use, academic accuracy disclaimers, and jurisdiction.
 
 ## Extended Documentation
 - [Full College Context](${siteConfig.baseUrl}/llms-full.txt): Complete institutional documentation including detailed course curricula, admission policies, and syllabus outlines for AI search and discovery.
