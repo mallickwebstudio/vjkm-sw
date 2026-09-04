@@ -13,6 +13,8 @@ import { cn } from "@/lib/utils"
 export interface NoticeItem {
   title: string
   date?: string
+  course?: string
+  badge?: string
   type?: string
   href?: string
 }
@@ -26,33 +28,39 @@ export function NoticeBoardSection({ notices = [], locale }: NoticeBoardSectionP
   const [selectedCategory, setSelectedCategory] = React.useState<string>("all")
   const isGu = locale === "gu"
 
-  // Dynamic filter options generated from available types in notices data
+  // Dynamic filter options generated from available course and badge tags in notices
   const filterOptions = React.useMemo(() => {
     if (!notices || notices.length === 0) return []
 
-    const typesSet = new Set<string>()
+    const tagsSet = new Set<string>()
     notices.forEach((n) => {
-      if (n.type && n.type.trim()) {
-        typesSet.add(n.type.trim())
+      if (n.course && n.course.trim()) {
+        tagsSet.add(n.course.trim())
+      }
+      if (n.badge && n.badge.trim()) {
+        tagsSet.add(n.badge.trim())
+      } else if (n.type && n.type.trim()) {
+        tagsSet.add(n.type.trim())
       }
     })
 
-    const dynamicTypes = Array.from(typesSet).map((typeStr) => ({
-      id: typeStr.toLowerCase(),
-      label: typeStr,
+    const dynamicTags = Array.from(tagsSet).map((tagStr) => ({
+      id: tagStr.toLowerCase(),
+      label: tagStr,
     }))
 
-    return [{ id: "all", label: isGu ? "બધી સૂચનાઓ" : "All Notices" }, ...dynamicTypes]
+    return [{ id: "all", label: isGu ? "બધી સૂચનાઓ" : "All Notices" }, ...dynamicTags]
   }, [notices, isGu])
 
-  // Filtered notices based on selected type filter
+  // Filtered notices based on selected course or badge filter
   const filteredNotices = React.useMemo(() => {
     if (!notices || notices.length === 0) return []
     if (selectedCategory === "all") return notices
     const target = selectedCategory.toLowerCase()
     return notices.filter((n) => {
-      const typeStr = (n.type || "").toLowerCase()
-      return typeStr === target || typeStr.includes(target)
+      const courseStr = (n.course || "").toLowerCase()
+      const badgeStr = (n.badge || n.type || "").toLowerCase()
+      return courseStr === target || badgeStr === target || badgeStr.includes(target)
     })
   }, [notices, selectedCategory])
 
@@ -118,6 +126,8 @@ export function NoticeBoardSection({ notices = [], locale }: NoticeBoardSectionP
                 <NoticeCard
                   title={notice.title}
                   date={notice.date}
+                  course={notice.course}
+                  badge={notice.badge}
                   type={notice.type}
                   href={notice.href}
                   index={index}

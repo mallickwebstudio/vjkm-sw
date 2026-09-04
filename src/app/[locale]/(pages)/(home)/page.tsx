@@ -8,7 +8,7 @@ import CoursesSpotlight from "./courses-spotlight";
 import { GcasGuide } from "@/components/shared/gcas-guide";
 import CareerFieldworkGrid from "./career-fieldwork-grid";
 import { GalleryPreviewSection } from "./gallery-preview-section";
-import { getNotices } from "@/db/notice";
+import { getAnnouncements } from "@/db/notice";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({
@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 
 export default async function Page({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
-  const notices = await getNotices();
+  const { notifications, notices } = await getAnnouncements();
 
   return (
     <main>
       <HeroSection />
-      <NoticeBoard />
+      <NoticeBoard notifications={notifications} />
       <NoticeBoardSection notices={notices} locale={locale} />
       <AboutSnapshot />
       <CoursesSpotlight />
@@ -42,3 +42,4 @@ export default async function Page({ params }: { params: Promise<{ locale: Local
     </main>
   );
 }
+

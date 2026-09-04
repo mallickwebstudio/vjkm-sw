@@ -11,6 +11,7 @@ import { CourseSpecializations } from "./course-specializations";
 import { CourseCurriculum } from "./course-curriculum";
 import { CourseFieldwork } from "./course-fieldwork";
 import { CourseCareerOutcomes } from "./course-career-outcomes";
+import { CourseOpportunities } from "./course-opportunities";
 import { CourseActionBanner } from "./course-action-banner";
 
 export function generateStaticParams() {
@@ -84,7 +85,10 @@ export default async function CourseDetailPage({
       {/* 7. CAREER PATHWAYS & TARGET ROLES */}
       <CourseCareerOutcomes careerOutcomes={course.details.careerOutcomes} />
 
-      {/* 8. ACTION BANNER */}
+      {/* 8. CAREER & EMPLOYMENT OPPORTUNITIES */}
+      <CourseOpportunities course={course} locale={locale} />
+
+      {/* 9. ACTION BANNER */}
       <CourseActionBanner title={course.title} />
     </main>
   );

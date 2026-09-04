@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Course } from "@/types";
 import { Hero, HeroContent, HeroH1, HeroP, HeroCta } from "@/components/section/hero";
 import { Badge } from "@/components/ui/badge";
@@ -15,7 +14,7 @@ export function CourseHero({ course }: { course: Course }) {
       imageSrc={thumbnail || "/images/facilities/auditorium-2.webp"}
       imageAlt={`${title} Degree Program at VJKM College`}
       variant="left"
-      className="relative flex items-center bg-slate min-h-[55vh] py-12"
+      className="flex items-center bg-slate min-h-[50vh]"
     >
       <HeroContent className="max-w-4xl z-10">
         <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -74,19 +73,6 @@ export function CourseHero({ course }: { course: Course }) {
           </a>
         </HeroCta>
       </HeroContent>
-
-      {thumbnail && (
-        <div className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 w-80 h-80 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl opacity-90">
-          <Image
-            src={thumbnail}
-            alt={title}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate via-transparent to-transparent" />
-        </div>
-      )}
     </Hero>
   );
 }

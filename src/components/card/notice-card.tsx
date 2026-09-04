@@ -5,10 +5,13 @@ import { Calendar, ArrowUpRight, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { parseDateSafe } from "@/db/notice"
 
 interface NoticeCardProps {
   title: string
   date?: string
+  course?: string
+  badge?: string
   type?: string
   href?: string
   index?: number
@@ -17,6 +20,8 @@ interface NoticeCardProps {
 export function NoticeCard({
   title,
   date,
+  course,
+  badge,
   type,
   href,
   index = 0,
@@ -25,21 +30,22 @@ export function NoticeCard({
   const rotations = ["-rotate-1", "rotate-0.5", "-rotate-0.5", "rotate-1"]
   const rotationClass = rotations[index % rotations.length]
 
-  // Helper to calculate if timestamp date is within 14 days
+  // Helper to calculate if timestamp date is within 14 days (automatically set based on spreadsheet timestamp)
   const isNew = React.useMemo(() => {
     if (!date) return false
-    const d = new Date(date)
+    const d = parseDateSafe(date)
     const time = d.getTime()
     if (isNaN(time)) return false
     const now = Date.now()
     const diffDays = (now - time) / (1000 * 60 * 60 * 24)
-    return diffDays >= 0 && diffDays <= 14
+    // Return true if within last 14 days (with 1 day buffer for timezones)
+    return diffDays >= -1 && diffDays <= 14
   }, [date])
 
   // Helper to safely format timestamp string (including Google Form / Sheet timestamp)
   const formattedDate = React.useMemo(() => {
     if (!date) return ""
-    const parsedDate = new Date(date)
+    const parsedDate = parseDateSafe(date)
     if (isNaN(parsedDate.getTime())) return date
     return parsedDate.toLocaleDateString("en-IN", {
       day: "numeric",
@@ -47,6 +53,16 @@ export function NoticeCard({
       year: "numeric",
     })
   }, [date])
+
+  // Dynamic badge color per course
+  const courseVariant = React.useMemo(() => {
+    const c = (course || "").toLowerCase()
+    if (c === "bsw") return "sky-outline"
+    if (c === "msw") return "purple-outline"
+    return "slate-outline"
+  }, [course])
+
+  const badgeText = badge || type
 
   return (
     <article
@@ -61,7 +77,7 @@ export function NoticeCard({
       <div className="absolute -top-2 left-6 h-3.5 w-12 -rotate-3 rounded-xs border-y border-amber/30 bg-amber/20 backdrop-blur-xs shadow-xs pointer-events-none" />
 
       <div className="space-y-3">
-        {/* Header Meta Row: NEW Badge & Type Tag */}
+        {/* Header Meta Row: NEW Badge, Course Tag & Custom Badge Tag */}
         <div className="flex flex-wrap items-center justify-between gap-2 pt-0.5">
           <div className="flex flex-wrap items-center gap-1.5">
             {/* NEW Badge if timestamp date <= 14 days */}
@@ -72,10 +88,17 @@ export function NoticeCard({
               </Badge>
             )}
 
-            {/* Notice Type Tag */}
-            {type && (
+            {/* Course Tag */}
+            {course && (
+              <Badge variant={courseVariant} className="font-bold text-[10px] tracking-wider uppercase">
+                {course}
+              </Badge>
+            )}
+
+            {/* Custom Notice Badge / Type Tag */}
+            {badgeText && (
               <Badge variant="amber-outline" className="font-semibold text-[10px]">
-                {type}
+                {badgeText}
               </Badge>
             )}
           </div>
