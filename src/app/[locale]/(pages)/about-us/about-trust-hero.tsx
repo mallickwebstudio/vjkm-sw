@@ -12,7 +12,7 @@ export default async function HeroSection() {
 
     return (
         <Hero
-            imageSrc="/images/facilities/auditorium-0.webp"
+            imageSrc="/images/gallery/short-pick/02.webp"
             imageAlt="Vadodara Jilla Kelavani Mandal Trust Campus"
             variant="left"
             className="flex items-center bg-slate min-h-[60vh]"

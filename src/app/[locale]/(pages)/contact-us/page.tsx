@@ -12,7 +12,11 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
-  return getSeoMetadata({ locale, path: "/contact-us", title: "Contact Us | VJKM College" });
+  return getSeoMetadata({
+    locale,
+    page: "contactUs",
+    path: "/contact-us",
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: Locale }> }) {

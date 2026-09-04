@@ -17,7 +17,7 @@ export function FieldworkPracticumSection() {
     return (
         <div id="fieldwork-practicum" className="scroll-mt-20">
             <Hero
-                imageSrc="/images/facilities/yoga-1.webp"
+                imageSrc="/images/gallery/short-pick/10.webp"
                 imageAlt="Fieldwork Practicum and Rural Exposure at VJKM College"
                 variant="left"
                 className="flex items-center bg-slate min-h-[50vh]"

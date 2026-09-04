@@ -154,22 +154,23 @@ function parseCsv(csvText: string): string[][] {
  * Returns fallback mock data if environment variable is missing or fetch fails.
  */
 export async function getAnnouncements(): Promise<AnnouncementsData> {
-  const sheetUrl = process.env.NEXT_PUBLIC_NOTICES_SHEET_CSV_URL;
+  // const sheetUrl = process.env.NEXT_PUBLIC_NOTICES_SHEET_CSV_URL;
+  const sheetUrl = null;
 
   if (!sheetUrl) {
-    // return {
-    //   notifications: mockNotificationsData,
-    //   notices: mockNoticesData,
-    // };
     return {
-      notifications: [],
-      notices: [],
+      notifications: mockNotificationsData,
+      notices: mockNoticesData,
     };
+    // return {
+    //   notifications: [],
+    //   notices: [],
+    // };
   }
 
   try {
     const response = await fetch(sheetUrl, {
-      next: { revalidate: 10 }, // Revalidate every 10 seconds
+      next: { revalidate: 300 }, // Revalidate every 10 seconds
     });
 
     if (!response.ok) {

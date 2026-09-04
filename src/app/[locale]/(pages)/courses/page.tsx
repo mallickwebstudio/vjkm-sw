@@ -15,14 +15,18 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
-  return getSeoMetadata({ locale, path: "/courses", title: "Academic Courses (BSW & MSW) | VJKM College" });
+  return getSeoMetadata({
+    locale,
+    page: "courses",
+    path: "/courses",
+  });
 }
 
 export default function Page() {
   return (
     <main className="space-y-0">
       <Hero
-        imageSrc="/images/facilities/auditorium-1.webp"
+        imageSrc="/images/gallery/short-pick/06.webp"
         imageAlt="Academic Courses and Degree Programs at VJKM College"
         variant="left"
         className="bg-slate min-h-[50vh] flex items-center"

@@ -19,10 +19,8 @@ export async function generateMetadata({
   const { locale } = await params;
   return getSeoMetadata({
     locale,
+    page: "gallery",
     path: "/gallery",
-    title: "Campus Photo Gallery & Media Events | VJKM College",
-    description:
-      "Explore photo archives of BSW and MSW campus events, Janmashtami celebrations, Gandhi Jayanti outreach, 7-Day Rural Camps, and Sports Meets.",
   });
 }
 

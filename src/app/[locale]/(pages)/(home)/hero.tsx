@@ -81,27 +81,15 @@ export default async function HeroSection() {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-border/50 w-full">
                     <div className="flex flex-col gap-0.5">
                         <span className="text-2xl md:text-3xl font-extrabold text-white flex items-center">
-                            67+ <span className="text-emerald-tone text-lg ml-0.5">Yrs</span>
-                        </span>
-                        <span className="text-xs text-slate-foreground/70 font-medium">Trust Educational Legacy</span>
-                    </div>
-                    <div className="flex flex-col gap-0.5">
-                        <span className="text-2xl md:text-3xl font-extrabold text-white flex items-center">
                             270 <span className="text-sky-tone text-lg ml-0.5">Seats</span>
                         </span>
                         <span className="text-xs text-slate-foreground/70 font-medium">BSW (70) & MSW (200)</span>
                     </div>
                     <div className="flex flex-col gap-0.5">
                         <span className="text-2xl md:text-3xl font-extrabold text-white flex items-center">
-                            50+ <span className="text-amber-tone text-lg ml-0.5">NGOs</span>
+                            2 <span className="text-amber-tone text-lg ml-0.5">Days</span>
                         </span>
-                        <span className="text-xs text-slate-foreground/70 font-medium">Fieldwork Partner Network</span>
-                    </div>
-                    <div className="flex flex-col gap-0.5">
-                        <span className="text-2xl md:text-3xl font-extrabold text-white flex items-center">
-                            100%
-                        </span>
-                        <span className="text-xs text-slate-foreground/70 font-medium">Field Placement Support</span>
+                        <span className="text-xs text-slate-foreground/70 font-medium">Fieldwork / Week</span>
                     </div>
                 </div>
             </HeroContent>

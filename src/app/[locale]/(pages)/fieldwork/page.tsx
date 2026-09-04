@@ -10,7 +10,11 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
-  return getSeoMetadata({ locale, path: "/fieldwork", title: "Fieldwork Practicum | VJKM College" });
+  return getSeoMetadata({
+    locale,
+    page: "fieldwork",
+    path: "/fieldwork",
+  });
 }
 
 export default function Page() {

@@ -1,5 +1,5 @@
 import { Locale, routing } from "@/i18n/routing";
-import { getSeoMetadata } from "@/lib/metadata";
+import { getSeoMetadata, getEducationalOrgJsonLd } from "@/lib/metadata";
 import HeroSection from "./hero";
 import NoticeBoard from "./notice-board";
 import NoticeBoardSection from "./notice-board-section";
@@ -28,9 +28,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 export default async function Page({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   const { notifications, notices } = await getAnnouncements();
+  const jsonLd = getEducationalOrgJsonLd(locale);
 
   return (
     <main>
+      {/* Schema.org Structured Data for Higher Education Institution */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <HeroSection />
       <NoticeBoard notifications={notifications} />
       <NoticeBoardSection notices={notices} locale={locale} />
@@ -42,4 +48,5 @@ export default async function Page({ params }: { params: Promise<{ locale: Local
     </main>
   );
 }
+
 

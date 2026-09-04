@@ -100,7 +100,7 @@ export function AdmissionProcessSection() {
     return (
         <div id="admission-process" className="scroll-mt-20">
             <Hero
-                imageSrc="/images/facilities/auditorium-3.webp"
+                imageSrc="/images/gallery/short-pick/09.webp"
                 imageAlt="Admission Process and Counseling at VJKM College"
                 variant="left"
                 className="flex items-center bg-slate min-h-[50vh]"

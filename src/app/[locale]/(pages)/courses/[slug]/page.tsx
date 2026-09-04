@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
-import { getSeoMetadata } from "@/lib/metadata";
+import { getSeoMetadata, getCourseJsonLd } from "@/lib/metadata";
 import { getCourseBySlug } from "@/lib/fetcher";
 
 import { CourseHero } from "./course-hero";
@@ -42,8 +42,11 @@ export async function generateMetadata({
     });
   }
 
+  const pageKey = slug === "bsw" ? "bsw" : slug === "msw" ? "msw" : "courses";
+
   return getSeoMetadata({
     locale,
+    page: pageKey,
     path: `/courses/${slug}`,
     title: `${course.title} | VJKM Self-Finance College`,
     description: course.desc,
@@ -62,8 +65,16 @@ export default async function CourseDetailPage({
     notFound();
   }
 
+  const courseJsonLd = (slug === "bsw" || slug === "msw") ? getCourseJsonLd(slug, locale) : null;
+
   return (
     <main className="space-y-0">
+      {courseJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+        />
+      )}
       {/* 1. HERO HEADER */}
       <CourseHero course={course} />
 

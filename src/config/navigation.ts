@@ -117,35 +117,35 @@ export const navigationData: NavItem[] = [
       },
     ],
   },
-  {
-    type: "dropdown",
-    label: "navigation.news",
-    href: "/news-and-updates",
-    description: "Official campus circulars, exam datesheets, and press media clippings.",
-    featured: {
-      title: "Urgent Notices & Circulars",
-      description: "Stay updated with exam timetables, cutoff dates, & university circulars.",
-      href: "/news-and-updates#notices-and-circulars",
-      badge: "Announcements",
-    },
-    children: [
-      {
-        label: "navigation.noticesCirculars",
-        href: "/news-and-updates#notices-and-circulars",
-        description: "Filterable notice table: Academic, Exam, GCAS Admission, & Admin.",
-      },
-      {
-        label: "navigation.upcomingEvents",
-        href: "/news-and-updates#upcoming-events",
-        description: "Seminars, guest lectures, & upcoming workshop cards.",
-      },
-      {
-        label: "navigation.newsClippings",
-        href: "/news-and-updates#news-clippings",
-        description: "Press articles, media coverage, & university highlights gallery.",
-      },
-    ],
-  },
+  // {
+  //   type: "dropdown",
+  //   label: "navigation.news",
+  //   href: "/news-and-updates",
+  //   description: "Official campus circulars, exam datesheets, and press media clippings.",
+  //   featured: {
+  //     title: "Urgent Notices & Circulars",
+  //     description: "Stay updated with exam timetables, cutoff dates, & university circulars.",
+  //     href: "/news-and-updates#notices-and-circulars",
+  //     badge: "Announcements",
+  //   },
+  //   children: [
+  //     {
+  //       label: "navigation.noticesCirculars",
+  //       href: "/news-and-updates#notices-and-circulars",
+  //       description: "Filterable notice table: Academic, Exam, GCAS Admission, & Admin.",
+  //     },
+  //     {
+  //       label: "navigation.upcomingEvents",
+  //       href: "/news-and-updates#upcoming-events",
+  //       description: "Seminars, guest lectures, & upcoming workshop cards.",
+  //     },
+  //     {
+  //       label: "navigation.newsClippings",
+  //       href: "/news-and-updates#news-clippings",
+  //       description: "Press articles, media coverage, & university highlights gallery.",
+  //     },
+  //   ],
+  // },
   {
     type: "link",
     label: "navigation.facilities",

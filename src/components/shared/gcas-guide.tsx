@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section, SectionContent, SectionDescription, SectionHeader, SectionTitle } from '@/components/section/section'
 import { Card } from '@/components/ui/card'
-import { MousePointerClick, Building, FileCheck, type LucideIcon } from 'lucide-react'
+import { MousePointerClick, Building, FileCheck, ExternalLink, type LucideIcon } from 'lucide-react'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { Locale } from '@/i18n/routing'
 
@@ -13,6 +13,11 @@ interface StepItem {
         gu: string
     }
     description: {
+        en: string
+        gu: string
+    }
+    href?: string
+    linkText?: {
         en: string
         gu: string
     }
@@ -29,6 +34,11 @@ const gcasSteps: StepItem[] = [
         description: {
             en: "Register online via gcasstudent.gujgov.edu.in or visit our campus admission desk directly for instant form submission.",
             gu: "gcasstudent.gujgov.edu.in ની મુલાકાત લો અથવા ત્વરિત નોંધણી માટે અમારા કેમ્પસ એડમિશન હેલ્પડેસ્કની સીધી મુલાકાત લો.",
+        },
+        href: "https://gcasstudent.gujgov.edu.in",
+        linkText: {
+            en: "Visit GCAS Portal",
+            gu: "GCAS પોર્ટલની મુલાકાત લો",
         },
     },
     {
@@ -57,6 +67,30 @@ const gcasSteps: StepItem[] = [
     },
 ]
 
+function renderDescription(text: string) {
+    const portalUrl = "gcasstudent.gujgov.edu.in"
+    if (!text.includes(portalUrl)) {
+        return text
+    }
+
+    const parts = text.split(portalUrl)
+    return (
+        <>
+            {parts[0]}
+            <a
+                href="https://gcasstudent.gujgov.edu.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-bold text-amber-300 hover:text-amber-200 underline underline-offset-4 decoration-amber-400/60 hover:decoration-amber-300 bg-amber-400/15 hover:bg-amber-400/25 px-1.5 py-0.5 rounded transition-all text-xs sm:text-[13px] break-all my-0.5"
+            >
+                <span>{portalUrl}</span>
+                <ExternalLink className="size-3 shrink-0" />
+            </a>
+            {parts[1]}
+        </>
+    )
+}
+
 export async function GcasGuide({ className }: { className?: string }) {
     const t = await getTranslations("home.gcasGuide")
     const locale = (await getLocale()) as Locale
@@ -79,15 +113,35 @@ export async function GcasGuide({ className }: { className?: string }) {
                     const description = item.description[locale] || item.description.en
 
                     return (
-                        <Card key={idx} className="bg-slate-800/80 border-slate-700 text-slate-100 relative overflow-hidden shadow-lg hover:border-emerald/50 transition-all group p-6">
-                            <div className="absolute top-0 right-0 bg-emerald text-white font-extrabold text-lg px-4 py-2 rounded-bl-xl shadow-sm">
-                                {item.step}
+                        <Card key={idx} className="bg-slate-800/80 border-slate-700 text-slate-100 relative overflow-hidden shadow-lg hover:border-emerald/50 transition-all group p-6 flex flex-col justify-between gap-5">
+                            <div className="space-y-4">
+                                <div className="flex items-center justify-between">
+                                    <div className="p-3 rounded-xl bg-slate-700/60 text-emerald-tone w-fit group-hover:scale-105 transition-transform">
+                                        <IconComp className="w-7 h-7" />
+                                    </div>
+                                    <div className="bg-emerald text-white font-extrabold text-lg px-3.5 py-1.5 rounded-lg shadow-sm">
+                                        {item.step}
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-bold text-white pt-1">{title}</h3>
+                                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                    {renderDescription(description)}
+                                </p>
                             </div>
-                            <div className="p-3 rounded-xl bg-slate-700/60 text-emerald-tone w-fit group-hover:scale-105 transition-transform">
-                                <IconComp className="w-7 h-7" />
-                            </div>
-                            <h3 className="text-xl font-bold text-white pt-2">{title}</h3>
-                            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{description}</p>
+
+                            {item.href && item.linkText && (
+                                <div className="pt-3 border-t border-slate-700/80">
+                                    <a
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-300 hover:text-amber-200 hover:underline transition-colors"
+                                    >
+                                        <span>{item.linkText[locale] || item.linkText.en}</span>
+                                        <ExternalLink className="size-3.5" />
+                                    </a>
+                                </div>
+                            )}
                         </Card>
                     )
                 })}
@@ -95,3 +149,4 @@ export async function GcasGuide({ className }: { className?: string }) {
         </Section>
     )
 }
+

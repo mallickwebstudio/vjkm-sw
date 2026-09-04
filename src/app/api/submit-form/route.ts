@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server"
 
 const GOOGLE_FORM_ACTION_URL =
-    // "https://docs.google.com/forms/d/e/1FAIpQLScdlsaV8Grq8cDfYmDEovQU2LlP544PHzSKDvFOn-8hu5wtDQ/formResponse";
-    "https://docs.google.com/forms/d/e/drftyui/formResponse";
+    process.env.GOOGLE_FORM_ACTION_URL ||
+    "https://docs.google.com/forms/d/e/1FAIpQLScdlsaV8Grq8cDfYmDEovQU2LlP544PHzSKDvFOn-8hu5wtDQ/formResponse";
+
 
 const GOOGLE_FORM_ENTRIES = {
     NAME: "entry.1400592005",

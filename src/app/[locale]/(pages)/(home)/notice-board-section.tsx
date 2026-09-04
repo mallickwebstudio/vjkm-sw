@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Filter, Pin, ArrowRight } from "lucide-react"
+import { Filter, Pin, ArrowRight, Bell, Sparkles } from "lucide-react"
 import { Locale } from "@/i18n/routing"
 import { Section, SectionContent, SectionHeader, SectionTitle, SectionDescription } from "@/components/section/section"
 import { NoticeCard } from "@/components/card/notice-card"
@@ -68,34 +68,69 @@ export function NoticeBoardSection({ notices = [], locale }: NoticeBoardSectionP
   const displayedNotices = filteredNotices.slice(0, 8)
 
   return (
-    <Section id="notices" className="bg-background">
-      {/* Header & CTA Link aligned with other homepage sections */}
-      <div className="lg:flex lg:justify-between lg:items-end">
-        <SectionHeader align="left">
-          <SectionTitle>
-            {isGu ? "સૂચના બોર્ડ અને પરિપત્રો" : "Notice Board & Announcements"}
+    <Section
+      id="notices"
+      className={cn(
+        "relative w-full overflow-hidden",
+        // The board covers the whole section with physical frame bevels and green felt baize backing
+        "border-y-4 sm:border-y-8 border-[#262f29] bg-[#11261b] dark:bg-[#0c1c14]",
+        "shadow-[inset_0_10px_35px_rgba(0,0,0,0.7),inset_0_-10px_35px_rgba(0,0,0,0.7)]",
+      )}
+    >
+      {/* Physical Board Texture (Deep Academic Green Felt Baize weave) */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-45"
+        style={{
+          backgroundImage: "radial-gradient(#1f4a34 1.5px, transparent 1.5px)",
+          backgroundSize: "20px 20px",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* 4 Corner Real-World Mounting Hardware Screws */}
+      <div className="absolute top-3 left-3 size-3.5 sm:size-4 rounded-full bg-gradient-to-br from-neutral-300 via-neutral-400 to-neutral-600 border border-neutral-700 shadow-md flex items-center justify-center pointer-events-none" aria-hidden="true">
+        <div className="w-2 h-0.5 bg-neutral-900/80 rotate-45" />
+      </div>
+      <div className="absolute top-3 right-3 size-3.5 sm:size-4 rounded-full bg-gradient-to-br from-neutral-300 via-neutral-400 to-neutral-600 border border-neutral-700 shadow-md flex items-center justify-center pointer-events-none" aria-hidden="true">
+        <div className="w-2 h-0.5 bg-neutral-900/80 -rotate-45" />
+      </div>
+      <div className="absolute bottom-3 left-3 size-3.5 sm:size-4 rounded-full bg-gradient-to-br from-neutral-300 via-neutral-400 to-neutral-600 border border-neutral-700 shadow-md flex items-center justify-center pointer-events-none" aria-hidden="true">
+        <div className="w-2 h-0.5 bg-neutral-900/80 -rotate-45" />
+      </div>
+      <div className="absolute bottom-3 right-3 size-3.5 sm:size-4 rounded-full bg-gradient-to-br from-neutral-300 via-neutral-400 to-neutral-600 border border-neutral-700 shadow-md flex items-center justify-center pointer-events-none" aria-hidden="true">
+        <div className="w-2 h-0.5 bg-neutral-900/80 rotate-45" />
+      </div>
+
+      {/* Header & CTA Link directly inside the board */}
+      <div className="relative z-10 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 pb-6 border-b border-emerald-950/70 sm:border-white/10">
+        <SectionHeader align="left" className="text-left">
+          <SectionTitle className="flex items-center gap-2.5 text-white">
+            <span className="p-2 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-400/30 inline-flex shadow-xs">
+              <Bell className="size-5 sm:size-6" />
+            </span>
+            <span className="drop-shadow-sm">{isGu ? "સૂચના બોર્ડ અને પરિપત્રો" : "Notice Board & Circulars"}</span>
           </SectionTitle>
-          <SectionDescription>
+          <SectionDescription className="text-emerald-100/85 dark:text-emerald-200/75 text-sm sm:text-base max-w-2xl font-medium leading-relaxed">
             {isGu
               ? "શ્રી ગોવિંદ ગુરુ યુનિવર્સિટી (SGGU) અને કોલેજ સંલગ્ન સત્તાવાર સૂચનાઓ, પરીક્ષા કાર્યક્રમ અને પ્રવેશ જાહેરાતો."
-              : "Official university notifications, examination timetables, admission alerts, and campus circulars."}
+              : "Official university circulars, examination schedules, admission alerts, and campus notifications."}
           </SectionDescription>
         </SectionHeader>
 
         <Link
           href="/news-and-updates"
-          className={cn(buttonVariants({ variant: "amber", size: "lg" }), "mt-2")}
+          className={cn(buttonVariants({ variant: "amber", size: "lg" }), "shrink-0 shadow-md hover:shadow-lg font-bold gap-2")}
         >
           <span>{isGu ? "તમામ સૂચનાઓ જુઓ" : "View All Notices"}</span>
-          <ArrowRight />
+          <ArrowRight className="size-4" />
         </Link>
       </div>
 
-      {/* Filter Shelf: clean theme-aligned pill buttons */}
+      {/* Physical Index Filter Tabs (pinned tabs on the board rail) */}
       {notices.length > 0 && filterOptions.length > 1 && (
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar pt-1">
-          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-muted border border-border">
-            <Filter className="size-3.5 text-amber-tone ml-2 mr-1 shrink-0" />
+        <div className="relative z-10 flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-black/40 border border-white/10 backdrop-blur-xs">
+            <Filter className="size-3.5 text-amber-400 ml-2 mr-1 shrink-0" />
             {filterOptions.map((opt) => {
               const isSelected = selectedCategory === opt.id
               return (
@@ -103,13 +138,14 @@ export function NoticeBoardSection({ notices = [], locale }: NoticeBoardSectionP
                   key={opt.id}
                   onClick={() => setSelectedCategory(opt.id)}
                   className={cn(
-                    "shrink-0 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all duration-200 cursor-pointer",
+                    "shrink-0 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all duration-200 cursor-pointer flex items-center gap-1",
                     isSelected
-                      ? "bg-amber text-amber-foreground shadow-xs font-bold"
-                      : "text-slate-tone hover:text-foreground hover:bg-card"
+                      ? "bg-gradient-to-r from-amber-500 to-amber-600 text-amber-950 font-bold shadow-md scale-100"
+                      : "text-neutral-300 hover:text-white hover:bg-white/10"
                   )}
                 >
-                  {opt.label}
+                  {isSelected && <Pin className="size-2.5 fill-amber-950" />}
+                  <span>{opt.label}</span>
                 </button>
               )
             })}
@@ -117,10 +153,10 @@ export function NoticeBoardSection({ notices = [], locale }: NoticeBoardSectionP
         </div>
       )}
 
-      {/* Notice Cards Grid */}
-      <SectionContent className="space-y-6">
+      {/* Notice Cards Grid on Felt Pinboard Canvas */}
+      <SectionContent className="relative z-10 space-y-6">
         {displayedNotices.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-7">
             {displayedNotices.map((notice, index) => (
               <FadeInUp key={notice.title + index} index={index}>
                 <NoticeCard
@@ -136,22 +172,28 @@ export function NoticeBoardSection({ notices = [], locale }: NoticeBoardSectionP
             ))}
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center py-14 px-4 text-center rounded-2xl border border-dashed border-border bg-slate-muted/50">
-            <div className="p-3 rounded-full bg-amber/10 text-amber-tone mb-3">
+          /* Authentic Pinned Empty-Note State */
+          <div className="relative mx-auto my-8 max-w-md p-6 rounded-xl bg-[#fefefe] dark:bg-[#1a231f] text-neutral-800 dark:text-neutral-200 shadow-xl border border-neutral-300 dark:border-white/10 text-center -rotate-1">
+            {/* Pushpin at top */}
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 size-4 rounded-full bg-rose-600 border border-white shadow-md flex items-center justify-center">
+              <div className="size-1 rounded-full bg-white/80" />
+            </div>
+            <div className="p-3 rounded-full bg-amber-500/10 text-amber-600 mx-auto w-fit mb-3">
               <Pin className="size-6 rotate-45" />
             </div>
-            <p className="text-sm font-semibold text-foreground">
+            <p className="text-sm font-semibold">
               {notices.length === 0
-                ? (isGu ? "હાલમાં કોઈ નવી સૂચના કે જાહેરાત ઉપલબ્ધ નથી." : "No active notices or announcements available at this time.")
-                : (isGu ? "પસંદ કરેલ ફિલ્ટરમાં કોઈ સૂચના મળી નથી." : "No notices found under this filter.")}
+                ? (isGu ? "હાલમાં કોઈ નવી સૂચના કે જાહેરાત બોર્ડ પર ઉપલબ્ધ નથી." : "No active notices or announcements pinned on the board.")
+                : (isGu ? "પસંદ કરેલ ફિલ્ટરમાં કોઈ સૂચના મળી નથી." : "No circulars found under this category filter.")}
             </p>
 
             {notices.length > 0 && selectedCategory !== "all" && (
               <button
                 onClick={() => setSelectedCategory("all")}
-                className="mt-3 text-xs font-semibold text-amber-tone hover:underline cursor-pointer"
+                className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-amber-600 hover:text-amber-700 hover:underline cursor-pointer"
               >
-                {isGu ? "બધી સૂચનાઓ જુઓ" : "Reset Filter"}
+                <Sparkles className="size-3" />
+                <span>{isGu ? "તમામ સૂચનાઓ રીસેટ કરો" : "Reset Category Filter"}</span>
               </button>
             )}
           </div>
@@ -162,3 +204,4 @@ export function NoticeBoardSection({ notices = [], locale }: NoticeBoardSectionP
 }
 
 export default NoticeBoardSection
+

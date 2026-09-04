@@ -91,8 +91,37 @@ export default async function BoardOfTrustees() {
     const locale = (await getLocale()) as Locale
 
     return (
-        <Section id="trustees">
-            <SectionHeader align="center">
+        <Section
+            id="trustees"
+            className="relative w-full bg-slate-muted/50 dark:bg-slate-950/40 border-y border-border/80 overflow-hidden"
+        >
+            {/* Ambient Warm Amber Glow from the Top */}
+            <div
+                className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-80 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(217,119,6,0.12),transparent_70%)] pointer-events-none select-none"
+                aria-hidden="true"
+            />
+
+            {/* Subtle Geometric Architectural Dot Grid Pattern */}
+            <div
+                className="absolute inset-0 pointer-events-none opacity-45 dark:opacity-20 select-none"
+                style={{
+                    backgroundImage: "radial-gradient(var(--border) 1.25px, transparent 1.25px)",
+                    backgroundSize: "24px 24px"
+                }}
+                aria-hidden="true"
+            />
+
+            {/* Soft Ambient Corner Accents */}
+            <div
+                className="absolute -top-24 -left-24 size-80 rounded-full bg-amber-500/5 blur-3xl pointer-events-none select-none"
+                aria-hidden="true"
+            />
+            <div
+                className="absolute -bottom-24 -right-24 size-80 rounded-full bg-emerald-500/5 blur-3xl pointer-events-none select-none"
+                aria-hidden="true"
+            />
+
+            <SectionHeader align="center" className="relative z-10">
                 <SectionTitle>
                     {t("h2")}
                 </SectionTitle>
@@ -101,14 +130,14 @@ export default async function BoardOfTrustees() {
                 </SectionDescription>
             </SectionHeader>
 
-            <SectionContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <SectionContent className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {trusteesData.map((trustee, idx) => {
                     const name = trustee.name[locale] || trustee.name.en
                     const designation = trustee.designation[locale] || trustee.designation.en
                     const bio = trustee.bio[locale] || trustee.bio.en
 
                     return (
-                        <Card key={idx} className="py-0 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+                        <Card key={idx} className="py-0 shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden border-border/80 bg-card hover:-translate-y-1">
                             <div className="relative aspect-4/5 w-full overflow-hidden bg-muted">
                                 <Image
                                     src={trustee.imageSrc}
@@ -123,7 +152,7 @@ export default async function BoardOfTrustees() {
                                     </Badge>
                                 </div>
                             </div>
-                            <CardContent className=" space-y-2">
+                            <CardContent className="space-y-2 p-5">
                                 <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors">
                                     {name}
                                 </h3>
@@ -138,3 +167,4 @@ export default async function BoardOfTrustees() {
         </Section>
     )
 }
+
